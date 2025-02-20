@@ -1,3 +1,6 @@
 .v-theme--light {
-    --v-theme-background: 30,30,30 !important;
-  }
+  --v-theme-background: 30, 30, 30 !important;
+  --v-theme-primary: #28e98c !important;
+  --v-theme-gray1: #999 !important;
+  --v-theme-gray2: #565656 !important;
+}
