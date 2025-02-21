@@ -18,6 +18,11 @@ onMounted(() => {
 <template>
   <v-app>
     <v-main>
+
+      <div class="wip-banner">
+        <span class="text-subtitle-1">Work in progress</span>
+      </div>
+
       <Background />
       <ProfileCard />
       <Navigation v-if=lgAndUp />
@@ -25,3 +30,17 @@ onMounted(() => {
     </v-main>
   </v-app>
 </template>
+
+<style scoped>
+.wip-banner {
+  position: fixed;
+  width: 100%;
+  height: 22px;
+  background: var(--v-theme-primary);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+</style>
