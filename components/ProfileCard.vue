@@ -32,7 +32,7 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
     />
     <div class="text-center">
       <div class="mt-12">
-        <span class="text-h5">contact@zurdi.dev: {{ name }}</span>
+        <span class="text-h5">contact@zurdi.dev</span>
       </div>
       <div class="d-flex justify-center mt-6 social">
         <a href="https://github.com/zurdi15" target="_blank">
