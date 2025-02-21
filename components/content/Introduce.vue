@@ -8,13 +8,13 @@ const { lgAndUp, mdAndDown } = useDisplay();
     class="position-relative"
     :class="{
       'px-10': mdAndDown,
-      'main-section-desktop': lgAndUp,
-      'main-section-mobile': mdAndDown,
+      'section-desktop': lgAndUp,
+      'section-mobile': mdAndDown,
     }"
   >
-    <div class="main-container-content ma-auto py-0 px-1">
+    <div class="section-inner-container ma-auto py-0 px-1">
       <div
-        class="content text-white ml-auto"
+        class="text-white ml-auto"
         :class="{ 'ml-auto': lgAndUp, 'mx-auto': mdAndDown }"
       >
         <h4
@@ -28,7 +28,8 @@ const { lgAndUp, mdAndDown } = useDisplay();
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Say Hi from <span>Zurdi</span>, MLOps and Full Stack developer.
+          Say Hi from <span class="accent">Zurdi</span>, MLOps and Full Stack
+          developer.
         </h1>
         <div data-aos-delay="200" data-aos="fade-up" class="mt-10 mb-16 quote">
           <p class="text-grey">
@@ -36,46 +37,17 @@ const { lgAndUp, mdAndDown } = useDisplay();
             easy if both are frozen" - Edward V. Berard.
           </p>
         </div>
+        <div id="go-to-projects" class="mt-6" data-aos-delay="220" data-aos="fade-down"><h2>Go to my projects<v-icon>mdi-chevron-down</v-icon></h2></div>
       </div>
     </div>
   </section>
 </template>
 <style scoped>
-.main-section-desktop {
-  overflow: hidden;
-  margin: 140px 0;
-  padding-left: 100px;
+#go-to-projects {
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
-.main-section-mobile {
-  overflow: hidden;
-  margin: 80px 0px;
-}
-.main-container-content {
-  max-width: 1130px;
-}
-.content {
-  max-width: 770px;
-  width: 100%;
-}
-.content h4 {
-  border: 1px solid var(--v-theme-gray2);
-  border-radius: 30px;
-  font-size: 12px;
-  margin: 0 0 50px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-}
-.content h4 .v-icon {
-  margin-bottom: 1px;
-}
-.content h1 {
-  font-size: 75px;
-  line-height: 90px;
-}
-.content h1 span {
+#go-to-projects:hover {
   color: var(--v-theme-primary);
-}
-.content .quote {
-  max-width: 500px;
 }
 </style>
