@@ -30,7 +30,7 @@ const { lgAndUp, mdAndDown } = useDisplay();
         >
           Say Hi from <span>Zurdi</span>, MLOps and Full Stack developer.
         </h1>
-        <div data-aos-delay="200" data-aos="fade-up" class="mt-10 quote">
+        <div data-aos-delay="200" data-aos="fade-up" class="mt-10 mb-16 quote">
           <p class="text-grey">
             "Walking on water and developing software from a specification are
             easy if both are frozen" - Edward V. Berard.
@@ -44,6 +44,7 @@ const { lgAndUp, mdAndDown } = useDisplay();
 .main-section-desktop {
   overflow: hidden;
   margin: 140px 0;
+  padding-left: 100px;
 }
 .main-section-mobile {
   overflow: hidden;

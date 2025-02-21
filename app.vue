@@ -20,8 +20,8 @@ onMounted(() => {
     <v-main>
       <Background />
       <ProfileCard />
-      <!-- <Navigation v-if=lgAndUp /> -->
-      <Introduction />
+      <Navigation v-if=lgAndUp />
+      <Content />
     </v-main>
   </v-app>
 </template>

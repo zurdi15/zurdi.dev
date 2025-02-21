@@ -5,21 +5,6 @@
       <v-col cols="12">
         <v-icon @click="" size="22">mdi-home-outline</v-icon>
       </v-col>
-      <v-col cols="12" class="mt-5">
-        <v-icon size="22">mdi-home-outline</v-icon>
-      </v-col>
-      <v-col cols="12" class="mt-5">
-        <v-icon size="22">mdi-home-outline</v-icon>
-      </v-col>
-      <v-col cols="12" class="mt-5">
-        <v-icon size="22">mdi-home-outline</v-icon>
-      </v-col>
-      <v-col cols="12" class="mt-5">
-        <v-icon size="22">mdi-home-outline</v-icon>
-      </v-col>
-      <v-col cols="12" class="mt-5">
-        <v-icon size="22">mdi-home-outline</v-icon>
-      </v-col>
     </v-row>
   </div>
 </template>
@@ -30,7 +15,7 @@
   background-color: black;
   position: fixed;
   right: 70px;
-  top: 32%;
+  top: calc(50% - 105px);  /* 105px is based on the height of the menu divided by 2 */
   width: 55px;
   z-index: 1;
 }
