@@ -48,7 +48,7 @@ const { lgAndUp, mdAndDown } = useDisplay();
 }
 .main-section-mobile {
   overflow: hidden;
-  margin: 40px 0;
+  margin: 80px 0px;
 }
 .main-container-content {
   max-width: 1130px;
