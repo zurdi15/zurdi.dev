@@ -2,7 +2,6 @@
 import { onMounted } from "vue";
 import { useDisplay } from "vuetify";
 import AOS from "aos";
-import Introduction from "./components/Introduction.vue";
 
 const { lgAndUp } = useDisplay();
 
@@ -20,10 +19,8 @@ onMounted(() => {
   <v-app>
     <v-main>
       <Background />
-      <template v-if="lgAndUp">
-        <ProfileCard />
-        <Navigation />
-      </template>
+      <ProfileCard />
+      <Navigation v-if=lgAndUp />
       <Introduction />
     </v-main>
   </v-app>

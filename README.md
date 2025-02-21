@@ -1,3 +1,1 @@
-# Zurdotopia
-
 https://zurdi.dev

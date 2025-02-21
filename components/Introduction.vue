@@ -57,7 +57,7 @@ const { lgAndUp, mdAndDown } = useDisplay();
   width: 100%;
 }
 .content h4 {
-  border: 1px solid #565656;
+  border: 1px solid var(--v-theme-gray2);
   border-radius: 30px;
   font-size: 12px;
   margin: 0 0 50px;
@@ -72,7 +72,7 @@ const { lgAndUp, mdAndDown } = useDisplay();
   line-height: 90px;
 }
 .content h1 span {
-  color: #28e98c;
+  color: var(--v-theme-primary);
 }
 .content .quote {
   max-width: 500px;

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useDisplay } from "vuetify";
+
+const { lgAndUp, name } = useDisplay();
 const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
 </script>
 <template>
@@ -29,7 +32,7 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
     />
     <div class="text-center">
       <div class="mt-12">
-        <span class="text-h5">contact@zurdi.dev</span>
+        <span class="text-h5">contact@zurdi.dev: {{ name }}</span>
       </div>
       <div class="d-flex justify-center mt-6 social">
         <a href="https://github.com/zurdi15" target="_blank">
@@ -47,13 +50,13 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
 </template>
 <style scoped>
 .profile-card {
-  border: 1px solid var(--v-theme-gray2);
-  padding: 50px;
-  position: fixed;
-  left: 50px;
-  top: 15%;
-  width: 400px;
-  z-index: 1;
+  border: 1px solid var(--v-theme-gray2) !important;
+  padding: 50px !important;
+  top: 15% !important;
+  z-index: 1 !important;
+  position: fixed !important;
+  left: 50px! important;
+  margin: 50px !important;
 }
 .profile-img,
 .profile-card {
