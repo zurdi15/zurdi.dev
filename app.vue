@@ -18,7 +18,7 @@ onMounted(() => {
 <template>
   <v-app>
     <v-main>
-      <WipBanner />
+      <!-- <WipBanner /> -->
       <Background />
 
       <ProfileCard />

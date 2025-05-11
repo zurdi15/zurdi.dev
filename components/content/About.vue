@@ -23,24 +23,47 @@ const { lgAndUp, mdAndDown } = useDisplay();
         >
           <v-icon size="15" class="mr-2">mdi-account-outline</v-icon>About
         </h4>
-        <h2
-          class="scroll-animation font-weight-regular"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Every great design begin with an even <span class="accent">better story</span>
-        </h2>
-        <div data-aos-delay="200" data-aos="fade-up" class="mt-10 mb-16 quote">
-          <p class="text-grey">
-            Since beginning my journey as a freelance designer nearly 8 years
-            ago, I've done remote work for agencies, consulted for startups, and
-            collaborated with talented people to create digital products for
-            both business and consumer use. I'm quietly confident, naturally
-            curious, and perpetually working on improving my chopsone design
-            problem at a time.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 </template>
+<style scoped>
+.section-desktop {
+  overflow: hidden;
+  margin: 140px 0;
+  padding-left: 100px;
+}
+.section-mobile {
+  overflow: hidden;
+  margin: 80px 0px;
+}
+.section-inner-container {
+  max-width: 1130px;
+}
+.section-inner-container > div {
+  max-width: 770px;
+  width: 100%;
+}
+.section-inner-container > div > h4 {
+  border: 1px solid var(--v-theme-gray2);
+  border-radius: 30px;
+  font-size: 12px;
+  margin: 0 0 50px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.section-inner-container > div > h4 .v-icon {
+  margin-bottom: 1px;
+}
+.section-inner-container > div > h1 {
+  font-size: 75px;
+  line-height: 90px;
+}
+.section-inner-container > div > h2 {
+  font-size: 50px;
+  line-height: 60px;
+}
+.quote {
+  max-width: 500px;
+}
+</style>

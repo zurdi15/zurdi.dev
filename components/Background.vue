@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
     <video class="background" muted autoplay loop>
       <source src="/bg.mp4" type="video/mp4" />
