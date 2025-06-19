@@ -23,14 +23,15 @@ const { lgAndUp, mdAndDown } = useDisplay();
         >
           <v-icon size="15" class="mr-2">mdi-home-outline</v-icon>Introduce
         </h4>
-        <h1
-          class="scroll-animation font-weight-regular"
+        <h2
+          class="font-weight-regular"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Say Hi from <span class="accent">Zurdi</span>, MLOps and Full Stack
-          developer.
-        </h1>
+          Say Hi from <span class="accent">Zurdi</span>,<br>
+          <span class="accent">MLOps</span> and <span class="accent">Data Engineer</span> by profession,<br>
+          <span class="accent">Full Stack</span> developer by passion.
+        </h2>
           <p data-aos-delay="200" data-aos="fade-up" class="mt-10 mb-16 quote text-grey">
             "Walking on water and developing software from a specification are
             easy if both are frozen" - Edward V. Berard.
@@ -62,7 +63,7 @@ const { lgAndUp, mdAndDown } = useDisplay();
   max-width: 1130px;
 }
 .section-inner-container > div {
-  max-width: 770px;
+  max-width: 950px;
   width: 100%;
 }
 .section-inner-container > div > h4 {

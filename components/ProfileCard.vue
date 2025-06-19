@@ -36,12 +36,15 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
         <span class="text-h5">contact@zurdi.dev</span>
       </div>
       <div class="d-flex justify-center mt-6 social">
-        <a href="https://github.com/zurdi15" target="_blank">
-          <v-icon size="20">mdi-github</v-icon>
+        <a href="https://www.linkedin.com/in/alejandro-atance-fernandez/" target="_blank">
+          <v-icon size="20">mdi-linkedin</v-icon>
         </a>
         <a href="https://github.com/zurdi15" class="ml-2" target="_blank">
-          <v-icon size="20">mdi-email-outline</v-icon>
+          <v-icon size="20">mdi-github</v-icon>
         </a>
+        <!-- <a href="https://github.com/zurdi15" class="ml-2" target="_blank">
+          <v-icon size="20">mdi-email-outline</v-icon>
+        </a> -->
       </div>
       <div class="text-grey mt-6">
         <span class="text-caption">© 2025 Zurdi. All rights reserved.</span>
