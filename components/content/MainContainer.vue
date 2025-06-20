@@ -1,9 +1,9 @@
 <template>
   <ContentIntroduce />
-  <ContentAbout class="section" />
+  <ContentAbout class="mt-150" />
 </template>
 <style scoped>
-.section {
+.mt-150 {
   margin-top: 150px;
 }
 </style>

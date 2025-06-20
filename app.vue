@@ -29,15 +29,18 @@ onMounted(() => {
     <v-main>
       <Background />
       <v-fade-transition>
-        <v-row v-if="displayReady" no-gutters>
+        <v-row v-show="displayReady" no-gutters>
           <v-col
             :cols="lgAndUp ? 'auto' : 12"
             :class="{ 'mt-10': !lgAndUp }"
             class="px-10"
           >
-            <ProfileCard
-              :class="{ 'position-fixed profile-card-desktop': lgAndUp }"
-            />
+            <v-slide-x-transition>
+              <ProfileCard
+                v-if="displayReady"
+                :class="{ 'position-fixed profile-card-desktop': lgAndUp }"
+              />
+            </v-slide-x-transition>
           </v-col>
           <v-col
             :class="{
@@ -46,7 +49,7 @@ onMounted(() => {
             }"
             class="mt-16"
           >
-            <ContentMainContainer />
+            <ContentMainContainer v-if="displayReady" />
           </v-col>
         </v-row>
       </v-fade-transition>
