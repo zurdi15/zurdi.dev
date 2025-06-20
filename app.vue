@@ -12,7 +12,7 @@ useHead({
 });
 
 onMounted(() => {
-  AOS.init({ offset: 10, duration: 500 });
+  AOS.init({ offset: lgAndUp ? 100 : 500, duration: 500 });
   // Wait for the first value of lgAndUp to be set
   watch(
     () => lgAndUp.value,
@@ -54,7 +54,7 @@ onMounted(() => {
         </v-row>
       </v-fade-transition>
 
-      <v-card elevation="0" :height="50" class="transparent" />
+      <v-card elevation="0" :height="150" class="transparent" />
     </v-main>
   </v-app>
 </template>

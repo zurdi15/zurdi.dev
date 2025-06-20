@@ -5,13 +5,14 @@ const { lgAndUp } = useDisplay();
 </script>
 <template>
   <ContentIntroduce :class="{ 'mt-100': lgAndUp }" />
-  <ContentAbout class="mt-120" />
+  <ContentAbout class="mt-150" />
+  <ContentResume class="mt-150" />
 </template>
 <style scoped>
 .mt-100 {
   margin-top: 100px;
 }
-.mt-120 {
-  margin-top: 120px;
+.mt-150 {
+  margin-top: 150px;
 }
 </style>

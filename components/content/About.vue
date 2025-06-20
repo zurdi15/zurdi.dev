@@ -14,7 +14,7 @@ const { lgAndUp } = useDisplay();
           <span class="accent">Automating</span> with purpose,<br>
           <span class="accent">scaling</span> with precision
         </h2>
-        <p data-aos="fade-up" class="mt-10 mb-16 quote text-grey">
+        <p data-aos="fade-up" data-aos-delay="1" class="mt-10 mb-16 quote text-grey">
           MLOps Engineer with a solid background in cloud environments
           (primarily Azure) and previous experience as a data engineer.
           Specialized in automating training and deployment pipelines,
