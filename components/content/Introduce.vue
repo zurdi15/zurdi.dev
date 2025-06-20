@@ -1,31 +1,15 @@
-<script setup lang="ts">
-import { useDisplay } from "vuetify";
-
-const { lgAndUp, mdAndDown } = useDisplay();
-</script>
 <template>
-  <section
-    class="position-relative"
-    :class="{
-      'px-10': mdAndDown,
-      'section-desktop': lgAndUp,
-      'section-mobile': mdAndDown,
-    }"
-  >
+  <section class="position-relative">
     <div class="section-inner-container ma-auto py-0 px-1">
-      <div
-        class="text-white ml-auto"
-        :class="{ 'ml-auto': lgAndUp, 'mx-auto': mdAndDown }"
-      >
+      <div class="text-white">
         <h4 class="d-inline-flex font-weight-regular align-center">
           <v-icon size="15" class="mr-2">mdi-home-outline</v-icon>Introduce
         </h4>
-        <h2 class="font-weight-regular">
+        <h1 class="font-weight-regular">
           Say Hi from <span class="accent">Zurdi</span>,<br />
-          <span class="accent">MLOps</span> and
-          <span class="accent">Data Engineer</span> by profession,<br />
-          <span class="accent">Full Stack</span> developer by passion.
-        </h2>
+          <span class="accent">MLOps</span> by profession,<br />
+          <span class="accent">Full Stack</span> by passion.
+        </h1>
         <p class="mt-10 mb-16 quote text-grey">
           "Walking on water and developing software from a specification are
           easy if both are frozen" - Edward V. Berard.
@@ -71,7 +55,7 @@ const { lgAndUp, mdAndDown } = useDisplay();
   line-height: 60px;
 }
 .quote {
-  max-width: 500px;
+  max-width: 800px;
 }
 #go-to-projects {
   cursor: pointer;

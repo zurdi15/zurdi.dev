@@ -1,28 +1,23 @@
-<script setup lang="ts">
-import { useDisplay } from "vuetify";
-
-const { lgAndUp, mdAndDown } = useDisplay();
-</script>
 <template>
-  <section
-    class="position-relative"
-    :class="{
-      'px-10': mdAndDown,
-      'section-desktop': lgAndUp,
-      'section-mobile': mdAndDown,
-    }"
-  >
+  <section class="position-relative">
     <div class="section-inner-container ma-auto py-0 px-1">
-      <div
-        class="text-white ml-auto"
-        :class="{ 'ml-auto': lgAndUp, 'mx-auto': mdAndDown }"
-      >
-        <h4
-          class="d-inline-flex font-weight-regular align-center"
-          data-aos="fade-left"
-        >
+      <div class="text-white">
+        <h4 class="d-inline-flex font-weight-regular align-center">
           <v-icon size="15" class="mr-2">mdi-account-outline</v-icon>About
         </h4>
+        <h2 class="font-weight-thin">
+          <span class="accent">Automating</span> with purpose,
+          <span class="accent">scaling</span> with precision
+        </h2>
+        <p class="mt-10 mb-16 quote text-grey">
+          MLOps Engineer with a solid background in cloud environments
+          (primarily Azure) and previous experience as a data engineer.
+          Specialized in automating training and deployment pipelines,
+          infrastructure as code, and DevOps practices applied to the ML
+          lifecycle. I consider myself a proactive individual with a strong
+          ability to learn, who enjoys collaborating with multidisciplinary and
+          multicultural teams.
+        </p>
       </div>
     </div>
   </section>
@@ -64,6 +59,6 @@ const { lgAndUp, mdAndDown } = useDisplay();
   line-height: 60px;
 }
 .quote {
-  max-width: 500px;
+  max-width: 800px;
 }
 </style>

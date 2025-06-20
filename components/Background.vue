@@ -1,7 +1,7 @@
 <template>
-    <video class="background" muted autoplay loop>
-      <source src="/bg.mp4" type="video/mp4" />
-    </video>
+  <video class="background" muted autoplay loop>
+    <source src="/bg.mp4" type="video/mp4" />
+  </video>
 </template>
 
 <style scoped>

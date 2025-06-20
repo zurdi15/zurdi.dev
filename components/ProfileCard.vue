@@ -1,14 +1,8 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify";
-
-const { lgAndUp } = useDisplay();
-const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
+const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
 </script>
 <template>
-  <div
-    class="profile-card text-white"
-    :class="{ 'position-fixed ml-16': lgAndUp, 'ma-10': !lgAndUp }"
-  >
+  <v-card class="profile-card text-white position-relative transparent">
     <v-row no-gutters class="justify-space-between">
       <v-col class="d-flex align-center">
         <span class="text-h3 font-weight-bold">Zurdi</span>
@@ -24,17 +18,24 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
         </div>
       </v-col>
     </v-row>
-    <v-img
-      class="profile-img grayscale mx-auto mt-6"
-      :src="profileImg"
-      width="300"
-    />
+    <v-card class="transparent" elevation="0">
+      <v-card-text class="text-center">
+        <v-img
+          class="profile-img grayscale mx-auto mt-6"
+          :src="profileImg"
+          width="280"
+        />
+      </v-card-text>
+    </v-card>
     <div class="text-center">
       <div class="mt-12">
         <span class="text-h5">contact@zurdi.dev</span>
       </div>
       <div class="d-flex justify-center mt-6 social">
-        <a href="https://www.linkedin.com/in/alejandro-atance-fernandez/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/alejandro-atance-fernandez/"
+          target="_blank"
+        >
           <v-icon size="20">mdi-linkedin</v-icon>
         </a>
         <a href="https://github.com/zurdi15" class="ml-2" target="_blank">
@@ -45,22 +46,23 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
         <span class="text-caption">© 2025 Zurdi. All rights reserved.</span>
       </div>
     </div>
-  </div>
+  </v-card>
 </template>
 <style scoped>
 .profile-card {
   border: 1px solid var(--v-theme-gray2) !important;
   padding: 50px !important;
-  top: calc(50% - 310px) !important; /* 310px is based on the height of the menu divided by 2 */
-  z-index: 1 !important;
-  left: 50px !important;
+  z-index: 100 !important;
 }
-.profile-img,
-.profile-card {
+.profile-card,
+.profile-img {
   border-radius: 30px;
 }
 .grayscale {
   filter: grayscale(100%);
+}
+.transparent {
+  background-color: transparent !important;
 }
 .designation {
   font-size: 14px;
