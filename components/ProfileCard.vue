@@ -6,8 +6,6 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
 </script>
 <template>
   <div
-    data-aos="fade-right"
-    data-aos-delay="200"
     class="profile-card text-white"
     :class="{ 'position-fixed ml-16': lgAndUp, 'ma-10': !lgAndUp }"
   >
@@ -42,9 +40,6 @@ const profileImg = new URL("@/assets/img/profile.jpg", import.meta.url).href;
         <a href="https://github.com/zurdi15" class="ml-2" target="_blank">
           <v-icon size="20">mdi-github</v-icon>
         </a>
-        <!-- <a href="https://github.com/zurdi15" class="ml-2" target="_blank">
-          <v-icon size="20">mdi-email-outline</v-icon>
-        </a> -->
       </div>
       <div class="text-grey mt-6">
         <span class="text-caption">© 2025 Zurdi. All rights reserved.</span>

@@ -17,34 +17,19 @@ const { lgAndUp, mdAndDown } = useDisplay();
         class="text-white ml-auto"
         :class="{ 'ml-auto': lgAndUp, 'mx-auto': mdAndDown }"
       >
-        <h4
-          class="d-inline-flex font-weight-regular align-center"
-          data-aos="fade-left"
-        >
+        <h4 class="d-inline-flex font-weight-regular align-center">
           <v-icon size="15" class="mr-2">mdi-home-outline</v-icon>Introduce
         </h4>
-        <h2
-          class="font-weight-regular"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Say Hi from <span class="accent">Zurdi</span>,<br>
-          <span class="accent">MLOps</span> and <span class="accent">Data Engineer</span> by profession,<br>
+        <h2 class="font-weight-regular">
+          Say Hi from <span class="accent">Zurdi</span>,<br />
+          <span class="accent">MLOps</span> and
+          <span class="accent">Data Engineer</span> by profession,<br />
           <span class="accent">Full Stack</span> developer by passion.
         </h2>
-          <p data-aos-delay="200" data-aos="fade-up" class="mt-10 mb-16 quote text-grey">
-            "Walking on water and developing software from a specification are
-            easy if both are frozen" - Edward V. Berard.
-          </p>
-        <!-- TODO: check why scroll is being saved -->
-        <!-- <div
-          id="go-to-projects"
-          class="mt-6"
-          data-aos-delay="220"
-          data-aos="fade-down"
-        >
-          <h2>Go to my projects<v-icon>mdi-chevron-down</v-icon></h2>
-        </div> -->
+        <p class="mt-10 mb-16 quote text-grey">
+          "Walking on water and developing software from a specification are
+          easy if both are frozen" - Edward V. Berard.
+        </p>
       </div>
     </div>
   </section>
