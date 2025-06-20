@@ -64,9 +64,6 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
 .grayscale {
   filter: grayscale(100%);
 }
-.transparent {
-  background-color: transparent !important;
-}
 .designation {
   font-size: 14px;
 }

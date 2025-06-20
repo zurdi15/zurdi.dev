@@ -9,11 +9,15 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
   <section class="position-relative">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <h4 class="d-inline-flex font-weight-regular align-center">
+        <h4
+          class="d-inline-flex font-weight-regular align-center"
+        >
           <v-icon size="15" class="mr-2">mdi-home-outline</v-icon>Introduce
         </h4>
-        <h1 class="font-weight-regular" :class="{ 'desktop': lgAndUp, 'mobile': !lgAndUp }">
-          Say Hi from <span class="accent">Zurdi</span>,<br />
+        <h1
+          class="font-weight-regular"
+          :class="{ 'desktop': lgAndUp, 'mobile': !lgAndUp }"
+        >
           <span class="accent">MLOps</span> by profession,<br />
           <span class="accent">Full Stack</span> by passion.
         </h1>
@@ -23,16 +27,24 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
         </p>
         <v-row no-gutters>
           <v-col cols="6" lg="4">
-            <h1 class="font-weight-regular" :class="{ 'desktop': lgAndUp, 'mobile': !lgAndUp }">
+            <h1
+              class="font-weight-regular"
+              :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
+            >
               <span class="accent">{{ yearsOfExperience }}+</span>
             </h1>
             <h5 class="text-grey text-uppercase">years of experience</h5>
           </v-col>
           <v-col cols="6" lg="4">
-            <h1 class="font-weight-regular" :class="{ 'desktop': lgAndUp, 'mobile': !lgAndUp }">
+            <h1
+              class="font-weight-regular"
+              :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
+            >
               <span class="accent">30+</span>
             </h1>
-            <h5 class="text-grey text-uppercase">ML projects scaled using MLOps standards</h5>
+            <h5 class="text-grey text-uppercase">
+              ML projects scaled using MLOps standards
+            </h5>
           </v-col>
         </v-row>
       </div>

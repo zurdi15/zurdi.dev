@@ -12,7 +12,7 @@ useHead({
 });
 
 onMounted(() => {
-  AOS.init();
+  AOS.init({ offset: 10, duration: 500 });
   // Wait for the first value of lgAndUp to be set
   watch(
     () => lgAndUp.value,
@@ -53,12 +53,14 @@ onMounted(() => {
           </v-col>
         </v-row>
       </v-fade-transition>
+
+      <v-card elevation="0" :height="50" class="transparent" />
     </v-main>
   </v-app>
 </template>
-<style scoped>
+<style>
 .content-container-desktop {
-  margin-left: 450px;
+  margin-left: 550px;
 }
 .profile-card {
   position: relative;
@@ -67,5 +69,8 @@ onMounted(() => {
 .profile-card-desktop {
   margin-top: calc(50dvh - 316px);
   margin-left: 100px;
+}
+.transparent {
+  background-color: transparent !important;
 }
 </style>
