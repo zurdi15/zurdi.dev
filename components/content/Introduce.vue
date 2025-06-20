@@ -22,17 +22,17 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
           easy if both are frozen" - Edward V. Berard.
         </p>
         <v-row no-gutters>
-          <v-col lg="4">
+          <v-col cols="6" lg="4">
             <h1 class="font-weight-regular" :class="{ 'desktop': lgAndUp, 'mobile': !lgAndUp }">
               <span class="accent">{{ yearsOfExperience }}+</span>
             </h1>
             <h5 class="text-grey text-uppercase">years of experience</h5>
           </v-col>
-          <v-col lg="4">
+          <v-col cols="6" lg="4">
             <h1 class="font-weight-regular" :class="{ 'desktop': lgAndUp, 'mobile': !lgAndUp }">
-              <span class="accent">20+</span>
+              <span class="accent">30+</span>
             </h1>
-            <h5 class="text-grey text-uppercase">teams supported</h5>
+            <h5 class="text-grey text-uppercase">ML projects scaled using MLOps standards</h5>
           </v-col>
         </v-row>
       </div>

@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      allowedHosts: ["ginnugagap"],
+      allowedHosts: ["ginnugagap", "dev.zurdi.dev.ginnugagap.net"],
     },
   },
 });

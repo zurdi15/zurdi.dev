@@ -26,7 +26,7 @@ onMounted(() => {
 
 <template>
   <v-app>
-    <v-main>
+    <v-main class="mb-16">
       <Background />
       <v-fade-transition>
         <v-row v-show="displayReady" no-gutters>
@@ -65,7 +65,7 @@ onMounted(() => {
   z-index: 100;
 }
 .profile-card-desktop {
-  margin-top: calc(50vh - 350px);
+  margin-top: calc(50dvh - 316px);
   margin-left: 100px;
 }
 </style>
