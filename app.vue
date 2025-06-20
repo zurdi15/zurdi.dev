@@ -32,8 +32,8 @@ onMounted(() => {
         <v-row v-show="displayReady" no-gutters>
           <v-col
             :cols="lgAndUp ? 'auto' : 12"
-            :class="{ 'mt-10': !lgAndUp }"
-            class="px-10"
+            :class="{ 'mt-5': !lgAndUp }"
+            class="px-5"
           >
             <v-slide-x-transition>
               <ProfileCard
