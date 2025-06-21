@@ -46,7 +46,7 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
         </a>
       </div>
       <div class="text-grey mt-6">
-        <span class="text-caption">© 2025 Zurdi. All rights reserved.</span>
+        <span class="text-caption">© 2025 Zurdi. {{$t("all-rights-reserved")}}.</span>
       </div>
     </div>
   </v-card>

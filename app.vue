@@ -2,6 +2,7 @@
 import { onMounted, ref, watch } from "vue";
 import { useDisplay } from "vuetify";
 import AOS from "aos";
+import { useI18n } from "#imports";
 
 const { lgAndUp } = useDisplay();
 const displayReady = ref(false);
@@ -22,14 +23,46 @@ onMounted(() => {
     { immediate: true }
   );
 });
+const { locales, locale, setLocale } = useI18n();
 </script>
 
 <template>
   <v-app>
-    <v-main class="mb-16">
+    <!-- <div
+      class="language-toggle"
+      style="position: absolute; top: 16px; right: 16px; z-index: 200"
+    >
+      <v-btn
+        v-for="l in locales"
+        :key="l.code"
+        :class="{
+          'accent': l.code === locale,
+          'text-grey': l.code !== locale,
+        }"
+        class="mx-1"
+        size="small"
+        variant="outlined"
+        @click="setLocale(l.code)"
+      >
+        {{ l.code.toUpperCase() }}
+      </v-btn>
+    </div> -->
+    <div
+      class="language-toggle"
+      style="position: fixed; top: 16px; right: 16px; z-index: 2"
+    >
+      <v-btn
+        class="text-grey"
+        size="small"
+        variant="outlined"
+        @click=""
+        icon="mdi-cog"
+      />
+    </div>
+    <v-main>
       <Background />
       <v-fade-transition>
-        <v-row v-show="displayReady" no-gutters>
+        <v-row v-show="displayReady" no-gutters id="main-container">
           <v-col
             :cols="lgAndUp ? 'auto' : 12"
             :class="{ 'mt-5': !lgAndUp }"
@@ -44,17 +77,15 @@ onMounted(() => {
           </v-col>
           <v-col
             :class="{
-              'px-16 content-container-desktop': lgAndUp,
-              'px-10': !lgAndUp,
+              'content-container-desktop': lgAndUp,
+              '': !lgAndUp,
             }"
-            class="mt-16"
+            class="mt-16 px-8"
           >
             <ContentMainContainer v-if="displayReady" />
           </v-col>
         </v-row>
       </v-fade-transition>
-
-      <v-card elevation="0" :height="150" class="transparent" />
     </v-main>
   </v-app>
 </template>
@@ -67,10 +98,11 @@ onMounted(() => {
   z-index: 100;
 }
 .profile-card-desktop {
-  margin-top: calc(50dvh - 316px);
+  margin-top: calc(50dvh - 330px);
   margin-left: 100px;
 }
-.transparent {
-  background-color: transparent !important;
+
+#main-container {
+  margin-bottom: 150px;
 }
 </style>

@@ -6,10 +6,19 @@ export default defineNuxtConfig({
     "@/assets/css/themes.css",
     "aos/dist/aos.css",
   ],
-  modules: ["vuetify-nuxt-module"],
+  modules: ["vuetify-nuxt-module", "@nuxtjs/i18n"],
   vuetify: {
     moduleOptions: {},
     vuetifyOptions: {},
+  },
+  i18n: {
+    locales: [
+      { code: "es", name: "Español", iso: "es-ES", file: "es.json" },
+      { code: "en", name: "English", iso: "en-US", file: "en.json" },
+    ],
+    defaultLocale: "en",
+    lazy: true,
+    langDir: "locales/",
   },
   vite: {
     server: {

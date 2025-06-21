@@ -4,94 +4,95 @@ import { useDisplay } from "vuetify";
 const { lgAndUp } = useDisplay();
 </script>
 <template>
-  <section class="position-relative">
+  <section class="position-relative" :class="{ 'mr-65': !lgAndUp }">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
         <h4
           data-aos="fade-up"
-          data-aos-delay="1"
           class="d-inline-flex font-weight-regular align-center"
         >
           <v-icon size="15" class="mr-2">mdi-briefcase</v-icon>resume
         </h4>
         <h2
           data-aos="fade-up"
-          data-aos-delay="1"
           class="font-weight-thin"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
           Education & <span class="accent">Experience</span>
         </h2>
-        <v-hover>
-          <template #default="{ props, isHovering }">
-            <div
-              v-bind="props"
-              data-aos="fade-left"
-              data-aos-delay="1"
-              class="mt-10"
-            >
-              <div :class="['date-container', { hovering: isHovering }]">
-                <span class="date" :class="{ accent: isHovering }"
-                  >Feb 2022 - Present</span
-                >
-                <h2 class="mt-8">Technology Consultant at TMC Spain</h2>
-                <p class="date-description">Senior MLOps at Inditex</p>
+        <v-row no-gutters class="pl-5">
+          <v-hover>
+            <template #default="{ props, isHovering }">
+              <div v-bind="props" data-aos="fade-right" class="mt-10">
+                <div :class="['date-container', { hovering: isHovering }]">
+                  <span class="date" :class="{ accent: isHovering }"
+                    >Feb 2022 - Present</span
+                  >
+                  <h2 class="mt-8">Technology Consultant at TMC Spain</h2>
+                  <p class="date-description">Senior MLOps at Inditex</p>
+                </div>
               </div>
-            </div>
-          </template>
-        </v-hover>
-        <v-hover>
-          <template #default="{ props, isHovering }">
-            <div v-bind="props" data-aos="fade-right" data-aos-delay="1">
-              <div :class="['date-container', { hovering: isHovering }]">
-                <span class="date" :class="{ accent: isHovering }"
-                  >Jan 2021 - Feb 2022</span
-                >
-                <h2 class="mt-8">Technology Consultant at TMC Spain</h2>
-                <p class="date-description">Senior Data Engineer at Atresmedia</p>
+            </template>
+          </v-hover>
+          <v-hover>
+            <template #default="{ props, isHovering }">
+              <div v-bind="props" data-aos="fade-left">
+                <div :class="['date-container', { hovering: isHovering }]">
+                  <span class="date" :class="{ accent: isHovering }"
+                    >Jan 2021 - Feb 2022</span
+                  >
+                  <h2 class="mt-8">Technology Consultant at TMC Spain</h2>
+                  <p class="date-description">
+                    Senior Data Engineer at Atresmedia
+                  </p>
+                </div>
               </div>
-            </div>
-          </template>
-        </v-hover>
-        <v-hover>
-          <template #default="{ props, isHovering }">
-            <div v-bind="props" data-aos="fade-left" data-aos-delay="1">
-              <div :class="['date-container', { hovering: isHovering }]">
-                <span class="date" :class="{ accent: isHovering }"
-                  >Dec 2019 - Jan 2021</span
-                >
-                <h2 class="mt-8">Technology Consultant at TMC Spain</h2>
-                <p class="date-description">Data Engineer at Orange España</p>
+            </template>
+          </v-hover>
+          <v-hover>
+            <template #default="{ props, isHovering }">
+              <div v-bind="props" data-aos="fade-right">
+                <div :class="['date-container', { hovering: isHovering }]">
+                  <span class="date" :class="{ accent: isHovering }"
+                    >Dec 2019 - Jan 2021</span
+                  >
+                  <h2 class="mt-8">Technology Consultant at TMC Spain</h2>
+                  <p class="date-description">Data Engineer at Orange España</p>
+                </div>
               </div>
-            </div>
-          </template>
-        </v-hover>
-        <v-hover>
-          <template #default="{ props, isHovering }">
-            <div v-bind="props" data-aos="fade-right" data-aos-delay="1">
-              <div :class="['date-container', { hovering: isHovering }]">
-                <span class="date" :class="{ accent: isHovering }"
-                  >May 2017 - Dec 2019</span
-                >
-                <h2 class="mt-8">Technology Consultant at Alten</h2>
-                <p class="date-description">Data Engineer at Unidad Editorial</p>
+            </template>
+          </v-hover>
+          <v-hover>
+            <template #default="{ props, isHovering }">
+              <div v-bind="props" data-aos="fade-left">
+                <div :class="['date-container', { hovering: isHovering }]">
+                  <span class="date" :class="{ accent: isHovering }"
+                    >May 2017 - Dec 2019</span
+                  >
+                  <h2 class="mt-8">Technology Consultant at Alten</h2>
+                  <p class="date-description">
+                    Data Engineer at Unidad Editorial
+                  </p>
+                </div>
               </div>
-            </div>
-          </template>
-        </v-hover>
-        <v-hover>
-          <template #default="{ props, isHovering }">
-            <div v-bind="props" data-aos="fade-left" data-aos-delay="1">
-              <div :class="['date-container', { hovering: isHovering }]">
-                <span class="date" :class="{ accent: isHovering }">2011</span>
-                <h2 class="mt-8">
-                  Bachelor's Degree in Computer Engineering, 2011
-                </h2>
-                <p class="date-description">Universidad of Alcalá de Henares, Madrid, España</p>
+            </template>
+          </v-hover>
+          <v-hover>
+            <template #default="{ props, isHovering }">
+              <div v-bind="props" data-aos="fade-right">
+                <div :class="['date-container', { hovering: isHovering }]">
+                  <span class="date" :class="{ accent: isHovering }">2011</span>
+                  <h2 class="mt-8">
+                    Bachelor's Degree in Computer Engineering, 2011
+                  </h2>
+                  <p class="date-description">
+                    Universidad of Alcalá de Henares, Madrid, España
+                  </p>
+                </div>
               </div>
-            </div>
-          </template>
-        </v-hover>
+            </template>
+          </v-hover>
+        </v-row>
       </div>
     </div>
   </section>
@@ -134,13 +135,6 @@ h4 .v-icon {
 }
 .quote {
   max-width: 800px;
-}
-#go-to-projects {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-#go-to-projects:hover {
-  color: var(--v-theme-primary);
 }
 .date-container {
   padding-left: 74px;
