@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "en",
     langDir: "locales/",
+    detectBrowserLanguage: false,
   },
   vite: {
     server: {
