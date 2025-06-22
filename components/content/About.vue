@@ -70,11 +70,4 @@ h4 .v-icon {
 .quote {
   max-width: 800px;
 }
-#go-to-projects {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-#go-to-projects:hover {
-  color: var(--v-theme-primary);
-}
 </style>

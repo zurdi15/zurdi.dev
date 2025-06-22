@@ -72,41 +72,4 @@ h4 .v-icon {
 .quote {
   max-width: 800px;
 }
-.date-container {
-  padding-left: 74px;
-  padding-bottom: 68px;
-  margin-left: 20px;
-}
-.date-container::before {
-  background: #656565;
-  border-radius: 50%;
-  content: "";
-  height: 12px;
-  left: -6px;
-  position: absolute;
-  top: 7px;
-  transition: 0.3s;
-  width: 12px;
-  transition: background 0.5s ease;
-}
-.date-container.hovering::before {
-  background: var(--v-theme-primary);
-}
-.date-container::after {
-  background: #333;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 10px;
-  width: 1px;
-  z-index: -1;
-}
-.date {
-  color: #999;
-  transition: color 0.5s ease;
-}
-.date-description {
-  color: #999;
-}
 </style>

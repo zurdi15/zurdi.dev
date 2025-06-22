@@ -125,10 +125,10 @@ h4 .v-icon {
   z-index: -1;
 }
 .date {
-  color: #999;
+  color: var(--v-theme-primary);
   transition: color 0.5s ease;
 }
 .date-description {
-  color: #999;
+  color: var(--v-theme-gray2);
 }
 </style>
