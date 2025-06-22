@@ -1,9 +1,14 @@
-<script setup lang="ts"></script>
 <template>
-  <div data-aos="fade-left" data-aos-delay="50" class="main-menu text-white">
-    <v-row no-gutters class="text-center py-5">
+  <div data-aos="fade-left" data-aos-delay="60" class="main-menu text-white">
+    <v-row no-gutters class="text-center py-4">
       <v-col cols="12">
-        <v-icon @click="" size="22">mdi-home-outline</v-icon>
+        <v-icon class="my-3" @click="" size="22">mdi-home-outline</v-icon>
+      </v-col>
+      <v-col cols="12">
+        <v-icon class="my-3" @click="" size="22">mdi-account-outline</v-icon>
+      </v-col>
+      <v-col cols="12">
+        <v-icon class="my-3" @click="" size="22">mdi-briefcase-outline</v-icon>
       </v-col>
     </v-row>
   </div>
@@ -15,7 +20,7 @@
   background-color: black;
   position: fixed;
   right: 70px;
-  top: calc(50% - 105px);  /* 105px is based on the height of the menu divided by 2 */
+  top: calc(50dvh - 105px);  /* 105px is based on the height of the menu divided by 2 */
   width: 55px;
   z-index: 1;
 }

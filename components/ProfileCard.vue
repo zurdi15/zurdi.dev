@@ -5,7 +5,7 @@ const { lgAndUp } = useDisplay();
 const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
 </script>
 <template>
-  <v-card class="profile-card text-white position-relative transparent">
+  <v-card data-aos="fade-right" data-aos-delay="60" class="profile-card text-white position-relative transparent">
     <v-row no-gutters class="justify-space-between">
       <v-col class="d-flex align-center">
         <span class="text-h3 font-weight-bold">Zurdi</span>

@@ -11,7 +11,7 @@ const { lgAndUp } = useDisplay();
           data-aos="fade-up"
           class="d-inline-flex font-weight-regular align-center"
         >
-          <v-icon size="15" class="mr-2">mdi-briefcase</v-icon>resume
+          <v-icon size="15" class="mr-2">mdi-briefcase-outline</v-icon>resume
         </h4>
         <h2
           data-aos="fade-up"

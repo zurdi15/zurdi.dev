@@ -6,6 +6,15 @@ import { useI18n } from "#imports";
 
 const { lgAndUp } = useDisplay();
 const displayReady = ref(false);
+const settings = ref(false);
+
+function openSettings() {
+  settings.value = true;
+}
+
+function closeSettings() {
+  settings.value = false;
+}
 
 useHead({
   title: "zurdi.dev",
@@ -28,39 +37,14 @@ const { locales, locale, setLocale } = useI18n();
 
 <template>
   <v-app>
-    <!-- <div
-      class="language-toggle"
-      style="position: absolute; top: 16px; right: 16px; z-index: 200"
-    >
-      <v-btn
-        v-for="l in locales"
-        :key="l.code"
-        :class="{
-          'accent': l.code === locale,
-          'text-grey': l.code !== locale,
-        }"
-        class="mx-1"
-        size="small"
-        variant="outlined"
-        @click="setLocale(l.code)"
-      >
-        {{ l.code.toUpperCase() }}
-      </v-btn>
-    </div> -->
-    <div
-      class="language-toggle"
-      style="position: fixed; top: 16px; right: 16px; z-index: 2"
-    >
-      <v-btn
-        class="text-grey"
-        size="small"
-        variant="outlined"
-        @click=""
-        icon="mdi-cog"
-      />
-    </div>
     <v-main>
       <Background />
+      <SettingsBtn @open:settings="settings = true" />
+      <SettingsDrawer
+        v-model="settings"
+        @close="closeSettings"
+        />
+      <Navigation v-if="lgAndUp" />
       <v-fade-transition>
         <v-row v-show="displayReady" no-gutters id="main-container">
           <v-col
@@ -101,7 +85,6 @@ const { locales, locale, setLocale } = useI18n();
   margin-top: calc(50dvh - 330px);
   margin-left: 100px;
 }
-
 #main-container {
   margin-bottom: 150px;
 }

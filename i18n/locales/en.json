@@ -1,5 +1,8 @@
 {
   "all-rights-reserved": "All rights reserved.",
+  "settings": {
+    "language": "Language"
+  },
   "introduce": {
     "title": "Introduce",
     "by-profession": "by profession",
