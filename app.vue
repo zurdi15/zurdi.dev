@@ -82,7 +82,7 @@ const { locales, locale, setLocale } = useI18n();
   z-index: 100;
 }
 .profile-card-desktop {
-  margin-top: calc(50dvh - 330px);
+  margin-top: calc(50dvh - 346px);
   margin-left: 100px;
 }
 #main-container {
