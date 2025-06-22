@@ -32,7 +32,7 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
     </v-card>
     <div class="text-center">
       <div :class="{ 'mt-12': lgAndUp, 'mt-6': !lgAndUp }">
-        <span class="text-h5">contact@zurdi.dev</span>
+        <span class="text-h6">contact@<span class="accent">zurdi.dev</span></span>
       </div>
       <div class="d-flex justify-center mt-6 social">
         <a

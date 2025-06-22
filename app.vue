@@ -2,15 +2,10 @@
 import { onMounted, ref, watch } from "vue";
 import { useDisplay } from "vuetify";
 import AOS from "aos";
-import { useI18n } from "#imports";
 
 const { lgAndUp } = useDisplay();
 const displayReady = ref(false);
 const settings = ref(false);
-
-function openSettings() {
-  settings.value = true;
-}
 
 function closeSettings() {
   settings.value = false;
@@ -32,7 +27,6 @@ onMounted(() => {
     { immediate: true }
   );
 });
-const { locales, locale, setLocale } = useI18n();
 </script>
 
 <template>
@@ -40,10 +34,7 @@ const { locales, locale, setLocale } = useI18n();
     <v-main>
       <Background />
       <SettingsBtn @open:settings="settings = true" />
-      <SettingsDrawer
-        v-model="settings"
-        @close="closeSettings"
-        />
+      <SettingsDrawer v-model="settings" @close="closeSettings" />
       <Navigation v-if="lgAndUp" />
       <v-fade-transition>
         <v-row v-show="displayReady" no-gutters id="main-container">
@@ -62,11 +53,16 @@ const { locales, locale, setLocale } = useI18n();
           <v-col
             :class="{
               'content-container-desktop': lgAndUp,
-              '': !lgAndUp,
             }"
             class="mt-16 px-8"
           >
-            <ContentMainContainer v-if="displayReady" />
+            <template v-if="displayReady">
+              <ContentIntroduce :class="{ 'mt-100': lgAndUp }" />
+              <ContentAbout class="mt-150" />
+              <ContentResume class="mt-150" />
+              <ContentSkills class="mt-150" />
+              <ContentProjects class="mt-150" />
+            </template>
           </v-col>
         </v-row>
       </v-fade-transition>

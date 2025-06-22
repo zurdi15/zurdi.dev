@@ -10,6 +10,12 @@
       <v-col cols="12">
         <v-icon class="my-3" @click="" size="22">mdi-briefcase-outline</v-icon>
       </v-col>
+      <v-col cols="12">
+        <v-icon class="my-3" @click="" size="22">mdi-shape-outline</v-icon>
+      </v-col>
+      <v-col cols="12">
+        <v-icon class="my-3" @click="" size="22">mdi-apps</v-icon>
+      </v-col>
     </v-row>
   </div>
 </template>
@@ -20,7 +26,7 @@
   background-color: black;
   position: fixed;
   right: 70px;
-  top: calc(50dvh - 105px);  /* 105px is based on the height of the menu divided by 2 */
+  top: calc(50dvh - 132px);  /* 132px is based on the height of the menu divided by 2 */
   width: 55px;
   z-index: 1;
 }

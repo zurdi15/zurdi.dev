@@ -1,16 +1,7 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
-import { useI18n } from "vue-i18n";
 
 const { lgAndUp } = useDisplay();
-const { tm } = useI18n();
-const resume = computed(() =>
-  (tm("resume.items") as any[]).map((item) => ({
-    title: item.title,
-    date: item.date,
-    description: item.description,
-  }))
-);
 </script>
 <template>
   <section class="position-relative" :class="{ 'mr-65': !lgAndUp }">
@@ -20,34 +11,24 @@ const resume = computed(() =>
           data-aos="fade-up"
           class="d-inline-flex font-weight-regular align-center"
         >
-          <v-icon size="15" class="mr-2">mdi-briefcase-outline</v-icon
-          >{{ $t("resume.title") }}
+          <v-icon size="15" class="mr-2">mdi-apps</v-icon
+          >{{ $t("projects.title") }}
         </h4>
         <h2
           data-aos="fade-up"
-          class="font-weight-thin mb-10"
+          class="font-weight-thin"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
-          {{ $t("resume.education") }} &
-          <span class="accent">{{ $t("resume.experience") }}</span>
+          <i18n-t keypath="projects.personal-projects">
+            <template #projects>{{ $t("projects.projects") }}</template>
+            <template #personal
+              ><span class="accent">{{
+                $t("projects.personal")
+              }}</span></template
+            >
+          </i18n-t>
         </h2>
-        <v-row no-gutters class="pl-5">
-          <v-hover v-for="(item, index) in resume" :key="index">
-            <template #default="{ props, isHovering }">
-              <div v-bind="props" data-aos="fade-right">
-                <div :class="['date-container', { hovering: isHovering }]">
-                  <span class="date" :class="{ accent: isHovering }">{{
-                    item.date
-                  }}</span>
-                  <h2 class="mt-8">{{ item.title }}</h2>
-                  <p class="date-description">
-                    {{ item.description }}
-                  </p>
-                </div>
-              </div>
-            </template>
-          </v-hover>
-        </v-row>
+        <v-row no-gutters class="pl-5"> </v-row>
       </div>
     </div>
   </section>
