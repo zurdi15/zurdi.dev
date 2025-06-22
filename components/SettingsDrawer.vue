@@ -35,6 +35,7 @@ const { locales, locale, setLocale } = useI18n();
         <v-list-item class="text-h6 mb-2">{{
           $t("settings.language")
         }}</v-list-item>
+        {{ locale }}
         <v-btn
           v-for="l in locales"
           :key="l.code"
