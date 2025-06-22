@@ -10,5 +10,19 @@
     "quote": "Walking on water and developing software from a specification are easy if both are frozen",
     "years-of-experience": "Years of experience",
     "ml-projects": "ML projects scaled using MLOps standards"
+  },
+  "about": {
+    "title": "About",
+    "automating": "Automating",
+    "automating-purpose": "with purpose",
+    "scaling": "scaling",
+    "scaling-purpose": "with precision",
+    "quote1": "MLOps Engineer with a solid background in cloud environments (primarily Azure) and previous experience as a data engineer. Specialized in automating training and deployment pipelines, infrastructure as code, and DevOps practices applied to the ML lifecycle",
+    "quote2": "I consider myself a proactive individual with a strong ability to learn, who enjoys collaborating with multidisciplinary and multicultural teams"
+  },
+  "resume": {
+    "title": "Resume",
+    "education": "Education",
+    "experience": "Experience"
   }
 }

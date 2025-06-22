@@ -10,14 +10,17 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
         <h4 class="d-inline-flex font-weight-regular align-center">
-          <v-icon size="15" class="mr-2">mdi-home-outline</v-icon>{{$t("introduce.title")}}
+          <v-icon size="15" class="mr-2">mdi-home-outline</v-icon
+          >{{ $t("introduce.title") }}
         </h4>
         <h1
           class="font-weight-regular"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
-          <span class="accent">MLOps</span> {{ $t("introduce.by-profession") }},<br />
-          <span class="accent">Full Stack</span> {{ $t("introduce.by-passion") }}.
+          <span class="accent">MLOps</span>
+          {{ $t("introduce.by-profession") }},<br />
+          <span class="accent">Full Stack</span>
+          {{ $t("introduce.by-passion") }}.
         </h1>
         <p class="mt-10 mb-16 pl-1 quote text-grey">
           "{{ $t("introduce.quote") }}" - Edward V. Berard.
@@ -30,7 +33,9 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
             >
               <span class="accent">{{ yearsOfExperience }}+</span>
             </h1>
-            <h5 class="text-grey text-uppercase">{{ $t("introduce.years-of-experience") }}</h5>
+            <h5 class="text-grey text-uppercase">
+              {{ $t("introduce.years-of-experience") }}
+            </h5>
           </v-col>
           <v-col cols="6" lg="4">
             <h1

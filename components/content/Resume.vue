@@ -11,14 +11,14 @@ const { lgAndUp } = useDisplay();
           data-aos="fade-up"
           class="d-inline-flex font-weight-regular align-center"
         >
-          <v-icon size="15" class="mr-2">mdi-briefcase-outline</v-icon>resume
+          <v-icon size="15" class="mr-2">mdi-briefcase-outline</v-icon>{{ $t("resume.title") }}
         </h4>
         <h2
           data-aos="fade-up"
           class="font-weight-thin"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
-          Education & <span class="accent">Experience</span>
+          {{ $t("resume.education") }} & <span class="accent">{{ $t("resume.experience") }}</span>
         </h2>
         <v-row no-gutters class="pl-5">
           <v-hover>
