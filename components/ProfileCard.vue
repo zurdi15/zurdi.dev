@@ -5,10 +5,16 @@ const { lgAndUp } = useDisplay();
 const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
 </script>
 <template>
-  <v-card data-aos="fade-right" data-aos-delay="60" class="profile-card text-white position-relative transparent">
+  <v-card
+    data-aos="fade-right"
+    data-aos-delay="60"
+    class="profile-card text-white position-relative transparent"
+  >
     <v-row no-gutters class="justify-space-between">
       <v-col class="d-flex align-center">
-        <span class="text-h3 font-weight-bold"><span class="accent">Z</span>urdi</span>
+        <span class="text-h3 font-weight-bold"
+          ><span class="accent">Z</span>urdi</span
+        >
       </v-col>
       <v-col>
         <div class="d-flex align-center justify-end text-subtitle-1">
@@ -32,7 +38,8 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
     </v-card>
     <div class="text-center">
       <div :class="{ 'mt-12': lgAndUp, 'mt-6': !lgAndUp }">
-        <span class="text-h6">contact@<span class="accent">zurdi.dev</span></span>
+        <v-icon class="mr-2">mdi-email-outline</v-icon
+        ><span class="text-h6">contact@zurdi.dev</span>
       </div>
       <div class="d-flex justify-center mt-6 social">
         <a
@@ -46,7 +53,9 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
         </a>
       </div>
       <div class="text-grey mt-6">
-        <span class="text-caption">© 2025 Zurdi. {{$t("all-rights-reserved")}}.</span>
+        <span class="text-caption"
+          >© 2025 Zurdi. {{ $t("all-rights-reserved") }}.</span
+        >
       </div>
     </div>
   </v-card>
