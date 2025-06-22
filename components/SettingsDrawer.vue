@@ -20,9 +20,21 @@ const { locales, locale, setLocale } = useI18n();
     mobile
     @update:model-value="emit('update:modelValue', $event)"
   >
-    <v-row class="pa-4">
+    <v-row class="ma-2 text-right" no-gutters>
+      <v-col>
+        <v-btn
+          icon="mdi-close"
+          variant="text"
+          rounded="0"
+          @click="emit('update:modelValue', false)"
+        />
+      </v-col>
+    </v-row>
+    <v-row class="pa-4" no-gutters>
       <v-col class="text-center">
-        <v-list-item class="text-h6 mb-2">{{ $t('settings.language') }}</v-list-item>
+        <v-list-item class="text-h6 mb-2">{{
+          $t("settings.language")
+        }}</v-list-item>
         <v-btn
           v-for="l in locales"
           :key="l.code"
