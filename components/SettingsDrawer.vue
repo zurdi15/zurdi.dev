@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "#imports";
 import { defineEmits } from "vue";
+import { onMounted } from "vue";
 
 defineProps<{
   modelValue: boolean;
@@ -11,6 +12,18 @@ const emit = defineEmits<{
 }>();
 
 const { locales, locale, setLocale } = useI18n();
+
+function changeLocale(newLocale: "en" | "es") {
+  localStorage.setItem("locale", newLocale);
+  setLocale(newLocale);
+}
+
+onMounted(() => {
+  // This code now runs _after_ the component is mounted in the browser
+  const currentLocale = localStorage.getItem("locale") || "en";
+  localStorage.setItem("locale", currentLocale);
+  setLocale(currentLocale as "en" | "es");
+});
 </script>
 <template>
   <v-navigation-drawer
@@ -45,7 +58,7 @@ const { locales, locale, setLocale } = useI18n();
           class="mx-1"
           size="small"
           variant="outlined"
-          @click="setLocale(l.code)"
+          @click="changeLocale(l.code)"
         >
           {{ l.code.toUpperCase() }}
         </v-btn>
