@@ -11,6 +11,13 @@ const emit = defineEmits<{
 }>();
 
 const { locales, locale, setLocale } = useI18n();
+console.log("locale:", locale.value, "locales:", locales.value);
+
+onMounted(() => {
+  setLocale(locale.value);
+
+  console.log("locale:", locale.value, "locales:", locales.value);
+});
 </script>
 <template>
   <v-navigation-drawer
@@ -37,6 +44,7 @@ const { locales, locale, setLocale } = useI18n();
         }}</v-list-item>
         <v-btn
           v-for="l in locales"
+          :key="l.code"
           :class="{
             accent: l.code === locale,
             'text-grey': l.code !== locale,
