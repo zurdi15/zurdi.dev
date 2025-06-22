@@ -13,7 +13,7 @@ const resume = computed(() =>
 );
 </script>
 <template>
-  <section class="position-relative" :class="{ 'mr-65': !lgAndUp }">
+  <section id="resume" class="position-relative" :class="{ 'mr-65': !lgAndUp }">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
         <h4
@@ -34,7 +34,10 @@ const resume = computed(() =>
         <v-row no-gutters class="pl-5">
           <v-hover v-for="(item, index) in resume" :key="index">
             <template #default="{ props, isHovering }">
-              <div v-bind="props" data-aos="fade-right">
+              <div
+                v-bind="props"
+                :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+              >
                 <div :class="['date-container', { hovering: isHovering }]">
                   <span class="date" :class="{ accent: isHovering }">{{
                     item.date

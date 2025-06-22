@@ -4,7 +4,7 @@ import { useDisplay } from "vuetify";
 const { lgAndUp } = useDisplay();
 </script>
 <template>
-  <section class="position-relative" :class="{ 'mr-65': !lgAndUp }">
+  <section id="projects" class="position-relative" :class="{ 'mr-65': !lgAndUp }">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
         <h4

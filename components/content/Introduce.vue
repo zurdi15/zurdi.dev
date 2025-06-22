@@ -6,7 +6,7 @@ const { lgAndUp } = useDisplay();
 const yearsOfExperience = ref(new Date().getFullYear() - 2017);
 </script>
 <template>
-  <section class="position-relative">
+  <section id="intro" class="position-relative">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
         <h4 class="d-inline-flex font-weight-regular align-center">

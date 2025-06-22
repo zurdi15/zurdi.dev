@@ -33,9 +33,9 @@ onMounted(() => {
   <v-app>
     <v-main>
       <Background />
-      <SettingsBtn @open:settings="settings = true" />
+      <!-- <SettingsBtn @open:settings="settings = true" /> -->
       <SettingsDrawer v-model="settings" @close="closeSettings" />
-      <Navigation v-if="lgAndUp" />
+      <Navigation @open:settings="settings = true" v-if="lgAndUp" />
       <v-fade-transition>
         <v-row v-show="displayReady" no-gutters id="main-container">
           <v-col

@@ -37,7 +37,10 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
       </v-card-text>
     </v-card>
     <div class="text-center">
-      <div :class="{ 'mt-12': lgAndUp, 'mt-6': !lgAndUp }">
+      <div
+        class="d-flex align-center justify-center"
+        :class="{ 'mt-12': lgAndUp, 'mt-6': !lgAndUp }"
+      >
         <v-icon class="mr-2">mdi-email-outline</v-icon
         ><span class="text-h6">contact@zurdi.dev</span>
       </div>
