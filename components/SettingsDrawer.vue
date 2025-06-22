@@ -11,13 +11,6 @@ const emit = defineEmits<{
 }>();
 
 const { locales, locale, setLocale } = useI18n();
-console.log("locale:", locale.value, "locales:", locales.value);
-
-onMounted(() => {
-  setLocale(locale.value);
-
-  console.log("locale:", locale.value, "locales:", locales.value);
-});
 </script>
 <template>
   <v-navigation-drawer
