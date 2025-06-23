@@ -7,30 +7,23 @@ export default defineNuxtConfig({
           name: "description",
           content: "MLOps by profession, Full Stack by passion.",
         },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1.0, user-scalable=no",
+        },
         // Open Graph
         { property: "og:title", content: "MLOps and Full Stack | zurdi.dev" },
-        { property: "og:url", content: "https://zurdi.dev" },
         { property: "og:type", content: "website" },
         {
           property: "og:description",
           content: "MLOps by profession, Full Stack by passion.",
         },
-
-        // {
-        //   property: "og:image",
-        //   content: "https://zurdi.dev/social-preview.png",
-        // },
-        // { property: "og:image:type", content: "image/png" },
-        // { property: "og:image:width", content: "1200" },
-        // { property: "og:image:height", content: "630" },
+        { property: "og:url", content: "https://zurdi.dev" },
 
         {
           property: "og:image",
-          content: "https://zurdi.dev/social-preview-whatsapp.png",
+          content: "https://zurdi.dev/social-preview.png",
         },
-        { property: "og:image:type", content: "image/png" },
-        { property: "og:image:width", content: "400" },
-        { property: "og:image:height", content: "210" },
 
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
