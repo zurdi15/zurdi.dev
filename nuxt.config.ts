@@ -1,4 +1,20 @@
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: "Zurdi — MLOps Engineer | zurdi.dev",
+      meta: [
+        {
+          name: "description",
+          content: "MLOps by profession, Full Stack by passion.",
+        },
+        {
+          name: "robots",
+          content: "index, follow",
+        },
+      ],
+      link: [{ rel: "canonical", href: "https://zurdi.dev" }],
+    },
+  },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   css: [
