@@ -2,7 +2,6 @@
 import { useDisplay } from "vuetify";
 
 const { lgAndUp } = useDisplay();
-
 const skills = [
   { name: "Azure", icon: "mdi-microsoft-azure", delay: 100 },
   { name: "Python", icon: "mdi-language-python", delay: 200 },

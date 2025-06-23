@@ -57,7 +57,7 @@ onMounted(() => {
             class="mt-16 px-8"
           >
             <template v-if="displayReady">
-              <ContentIntroduce :class="{ 'mt-100': lgAndUp }" />
+              <ContentIntroduce :class="{ 'mt-50': lgAndUp }" />
               <ContentAbout class="mt-150" />
               <ContentResume class="mt-150" />
               <ContentSkills class="mt-150" />
