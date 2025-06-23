@@ -49,9 +49,9 @@ export default () => ({
         description: "Data Engineer at Unidad Editorial",
       },
       {
-        title: "Bachelor's Degree in Computer Engineering, 2011",
+        title: "University of Alcalá de Henares, Madrid, Spain",
         date: "2011",
-        description: "University of Alcalá de Henares, Madrid, Spain",
+        description: "Bachelor's Degree in Computer Engineering",
       },
     ],
   },

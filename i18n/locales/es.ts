@@ -49,9 +49,9 @@ export default () => ({
         description: "Data Engineer en Unidad Editorial",
       },
       {
-        title: "Grado en Ingeniería Informática, 2011",
+        title: "Universidad de Alcalá de Henares, Madrid, España",
         date: "2011",
-        description: "Universidad de Alcalá de Henares, Madrid, España",
+        description: "Grado en Ingeniería Informática",
       },
     ],
   },

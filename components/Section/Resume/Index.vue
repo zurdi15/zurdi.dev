@@ -78,14 +78,15 @@ const resume = computed(() =>
   transition: color 0.5s ease;
 }
 .date {
+  color: var(--v-theme-gray1);
   transition: color 0.5s ease;
 }
 .date-title {
   font-size: 23px;
   line-height: 36px;
+  color: var(--v-theme-gray1);
 }
 .date-description {
-  color: var(--v-theme-gray1);
   font-size: 20px;
 }
 </style>
