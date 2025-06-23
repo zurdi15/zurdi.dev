@@ -14,5 +14,6 @@
   opacity: 0.3;
   -o-object-fit: cover;
   object-fit: cover;
+  z-index: 0!important;
 }
 </style>

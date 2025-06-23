@@ -30,9 +30,9 @@ onMounted(() => {
 </script>
 
 <template>
+  <Background />
   <v-app>
     <v-main>
-      <Background />
       <!-- <SettingsBtn @open:settings="settings = true" /> -->
       <SettingsDrawer v-model="settings" @close="closeSettings" />
       <Navigation @open:settings="settings = true" v-if="lgAndUp" />
@@ -70,8 +70,8 @@ onMounted(() => {
   </v-app>
 </template>
 <style>
-.content-container-desktop {
-  margin-left: 550px;
+#main-container {
+  margin-bottom: 150px;
 }
 .profile-card {
   position: relative;
@@ -81,7 +81,7 @@ onMounted(() => {
   margin-top: calc(50dvh - 346px);
   margin-left: 100px;
 }
-#main-container {
-  margin-bottom: 150px;
+.content-container-desktop {
+  margin-left: 550px;
 }
 </style>

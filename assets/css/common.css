@@ -17,6 +17,54 @@ html {
   margin-top: 150px;
 }
 
+h1.desktop {
+  font-size: 75px;
+  line-height: 90px;
+}
+h1.mobile {
+  font-size: 50px;
+  line-height: 60px;
+}
+h2.desktop {
+  font-size: 50px;
+  line-height: 60px;
+}
+h2.mobile {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.section-desktop {
+  overflow: hidden;
+  margin: 140px 0;
+  padding-left: 100px;
+}
+.section-mobile {
+  overflow: hidden;
+  margin: 80px 0px;
+}
+.section-inner-container {
+  max-width: 1130px;
+}
+.section-inner-container > div {
+  max-width: 950px;
+  width: 100%;
+}
+.section-chip {
+  border: 1px solid var(--v-theme-gray2);
+  border-radius: 30px;
+  font-size: 12px;
+  margin: 0 0 50px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.section-chip .v-icon {
+  margin-bottom: 1px;
+}
+.quote {
+  max-width: 800px;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -32,7 +80,6 @@ html {
   border: transparent;
 }
 
-/* For Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #28e98c #3d3d3d;

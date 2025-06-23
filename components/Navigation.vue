@@ -57,7 +57,7 @@ function scrollTo(section: string) {
 .main-menu {
   border: 1px solid var(--v-theme-gray2);
   border-radius: 30px;
-  background-color: black;
+  background-color: var(--v-theme-gray3);
   position: fixed;
   right: 70px;
   top: calc(

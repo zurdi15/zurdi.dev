@@ -13,16 +13,13 @@ const resume = computed(() =>
 );
 </script>
 <template>
-  <section id="resume" class="position-relative" :class="{ 'mr-65': !lgAndUp }">
+  <section id="resume" :class="{ 'mr-65': !lgAndUp }">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <h4
-          data-aos="fade-up"
-          class="d-inline-flex font-weight-regular align-center"
-        >
-          <v-icon size="15" class="mr-2">mdi-briefcase-outline</v-icon
-          >{{ $t("resume.title") }}
-        </h4>
+        <ContentSectionChip
+          icon="mdi-briefcase-outline"
+          section="resume"
+        />
         <h2
           data-aos="fade-up"
           class="font-weight-thin mb-10"
@@ -38,7 +35,7 @@ const resume = computed(() =>
             class="date-container"
           >
             <span class="date">{{ item.date }}</span>
-            <h2 class="mt-8">{{ item.title }}</h2>
+            <h3 class="date-title mt-8">{{ item.title }}</h3>
             <p class="date-description">
               {{ item.description }}
             </p>
@@ -49,44 +46,6 @@ const resume = computed(() =>
   </section>
 </template>
 <style scoped>
-h2.desktop {
-  font-size: 50px;
-  line-height: 60px;
-}
-h2.mobile {
-  font-size: 30px;
-  line-height: 36px;
-}
-h4 {
-  border: 1px solid var(--v-theme-gray2);
-  border-radius: 30px;
-  font-size: 12px;
-  margin: 0 0 50px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-}
-h4 .v-icon {
-  margin-bottom: 1px;
-}
-.section-desktop {
-  overflow: hidden;
-  margin: 140px 0;
-  padding-left: 100px;
-}
-.section-mobile {
-  overflow: hidden;
-  margin: 80px 0px;
-}
-.section-inner-container {
-  max-width: 1130px;
-}
-.section-inner-container > div {
-  max-width: 950px;
-  width: 100%;
-}
-.quote {
-  max-width: 800px;
-}
 .date-container {
   padding-left: 74px;
   padding-bottom: 68px;
@@ -123,6 +82,10 @@ h4 .v-icon {
 }
 .date {
   transition: color 0.5s ease;
+}
+.date-title {
+  font-size: 30px;
+  line-height: 36px;
 }
 .date-description {
   color: var(--v-theme-gray1);
