@@ -17,6 +17,14 @@ export default defineNuxtConfig({
           property: "og:image",
           content: "https://zurdi.dev/social-preview.png",
         },
+        {
+          property: "og:image:width",
+          content: "1200",
+        },
+        {
+          property: "og:image:height",
+          content: "630",
+        },
         { property: "og:url", content: "https://zurdi.dev" },
         { property: "og:type", content: "website" },
 
