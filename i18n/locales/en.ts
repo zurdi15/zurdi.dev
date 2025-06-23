@@ -17,10 +17,14 @@ export default () => ({
     automating: "Automating",
     "automating-purpose": "with purpose",
     scaling: "scaling",
-    "scaling-purpose": "with precision",
+    "scaling-precision": "with precision",
+    driven: "driven",
+    "driven-design": "by design",
     quote1:
-      "MLOps Engineer with a solid background in cloud environments (primarily Azure) and previous experience as a data engineer. Specialized in automating training and deployment pipelines, infrastructure as code, and DevOps practices applied to the ML lifecycle",
+      "As a MLOps Engineer with a solid background in cloud environments and previous experience as a data engineer, I am specialized in automating training and deployment pipelines, infrastructure as code, and DevOps practices applied to the ML lifecycle",
     quote2:
+      "As a full stack developer, I founded The RomM project, an open-source, self-hosted solution that helps manage retro game libraries, focused on design and user experience",
+    quote3:
       "I consider myself a proactive individual with a strong ability to learn, who enjoys collaborating with multidisciplinary and multicultural teams",
   },
   resume: {

@@ -10,17 +10,21 @@ export default () => ({
     quote:
       "Caminar sobre el agua y desarrollar software a partir de una especificación son fáciles si ambos están congelados",
     "years-of-experience": "Años de experiencia",
-    "ml-projects": "Proyectos de ML escalados utilizando estándares de MLOps",
+    "ml-projects": "Proyectos de ML escalados utilizando estándares MLOps",
   },
   about: {
     title: "Acerca de",
-    automating: "Automatización",
+    automating: "Automatizado",
     "automating-purpose": "con propósito",
     scaling: "escalado",
-    "scaling-purpose": "con precisión",
+    "scaling-precision": "con precisión",
+    driven: "guiado",
+    "driven-design": "por el diseño",
     quote1:
-      "MLOps Engineer con una sólida experiencia en entornos de nube (principalmente Azure) y experiencia previa como ingeniero de datos. Especializado en la automatización de pipelines de entrenamiento y despliegue, infraestructura como código y prácticas de DevOps aplicadas al ciclo de vida de ML",
+      "Como ingeniero MLOps con una sólida experiencia en entornos de nube y experiencia previa como ingeniero de datos, estoy especializado en la automatización de pipelines de entrenamiento y despliegue, infraestructura como código y prácticas de DevOps aplicadas al ciclo de vida de ML",
     quote2:
+      "Como desarrollador full stack, fundé el proyecto RomM, una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
+    quote3:
       "Me considero una persona proactiva con una gran capacidad de aprendizaje, que disfruta colaborar con equipos multidisciplinarios y multiculturales",
   },
   resume: {
