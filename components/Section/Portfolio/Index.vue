@@ -4,23 +4,23 @@ import { useDisplay } from "vuetify";
 const { lgAndUp } = useDisplay();
 </script>
 <template>
-  <section id="projects">
+  <section id="portfolio">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
         <SectionChip
           icon="mdi-image-filter-none"
-          section="projects"
+          section="portfolio"
         />
         <h2
           data-aos="fade-up"
           class="font-weight-thin"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
-          <i18n-t keypath="projects.personal-projects">
-            <template #projects>{{ $t("projects.projects") }}</template>
+          <i18n-t keypath="portfolio.personal-projects">
+            <template #projects>{{ $t("portfolio.projects") }}</template>
             <template #personal
               ><span class="accent">{{
-                $t("projects.personal")
+                $t("portfolio.personal")
               }}</span></template
             >
           </i18n-t>

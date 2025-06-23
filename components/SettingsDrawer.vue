@@ -31,7 +31,7 @@ const sections = [
     icon: "mdi-shape-outline",
   },
   {
-    id: "projects",
+    id: "portfolio",
     icon: "mdi-image-filter-none",
   },
 ];

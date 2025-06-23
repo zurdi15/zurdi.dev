@@ -74,7 +74,7 @@ onMounted(() => {
               <SectionSkills
                 :class="{ 'mt-150': lgAndUp, 'mt-100': !lgAndUp }"
               />
-              <SectionProjects
+              <SectionPortfolio
                 :class="{ 'mt-150': lgAndUp, 'mt-100': !lgAndUp }"
               />
             </template>

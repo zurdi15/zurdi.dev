@@ -61,7 +61,7 @@ export default () => ({
     tech: "Tecnológico",
     stack: "Stack",
   },
-  projects: {
+  portfolio: {
     title: "Portfolio",
     "personal-projects": "{projects} {personal}",
     personal: "Personales",
