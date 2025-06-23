@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Zurdi — MLOps Engineer | zurdi.dev",
+      title: "MLOps and Full Stack | zurdi.dev",
       meta: [
         {
           name: "description",
