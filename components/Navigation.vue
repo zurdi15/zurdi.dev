@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
 defineEmits(["open:settings"]);
 
 const sections = [
@@ -24,6 +26,27 @@ const sections = [
   },
 ];
 
+const currentSection = ref("");
+
+function onScroll() {
+  let closestSection = "";
+  let closestDistance = Infinity;
+
+  for (const section of sections) {
+    const el = document.getElementById(section.id);
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      const distance = Math.abs(rect.top - 100); // adjust threshold
+      if (distance < closestDistance && rect.top < window.innerHeight) {
+        closestDistance = distance;
+        closestSection = section.id;
+      }
+    }
+  }
+
+  currentSection.value = closestSection;
+}
+
 function scrollTo(section: string) {
   let scrollNegativeOffset = 50;
   if (import.meta.client) {
@@ -35,11 +58,20 @@ function scrollTo(section: string) {
     }
   }
 }
+
+onMounted(() => {
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll(); // initialize on mount
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", onScroll);
+});
 </script>
 <template>
   <div data-aos="fade-left" data-aos-delay="60" class="main-menu text-white">
     <v-row no-gutters class="text-center py-2">
-      <v-col class="section-btn" cols="12" v-for="section in sections" :key="section.id">
+      <v-col class="section-btn" cols="12" v-for="section in sections" :key="section.id" :class="{ current: currentSection === section.id }">
         <v-icon class="my-3" @click="scrollTo(section.id)" size="22">{{
           section.icon
         }}</v-icon>
@@ -73,7 +105,8 @@ function scrollTo(section: string) {
   transition: color 0.3s, transform 0.3s;
 }
 .section-btn:hover,
-#settings-button:hover {
+#settings-button:hover,
+.section-btn.current {
   color: var(--v-theme-primary);
   transform: scale(1.15);
 }
