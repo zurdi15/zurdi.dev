@@ -16,3 +16,24 @@ html {
 .mt-150 {
   margin-top: 150px;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px; /* More rounded */
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px; /* More rounded */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #28e98c #3d3d3d;
+  border-radius: 6px; /* More rounded */
+  border: transparent;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #28e98c #3d3d3d;
+}

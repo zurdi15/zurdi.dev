@@ -9,7 +9,9 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
   <section id="intro" class="position-relative">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <h4 class="d-inline-flex font-weight-regular align-center">
+        <h4
+          class="d-inline-flex font-weight-regular align-center"
+        >
           <v-icon size="15" class="mr-2">mdi-home-outline</v-icon
           >{{ $t("introduce.title") }}
         </h4>
@@ -17,12 +19,19 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
           class="font-weight-regular mb-10"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
-          <span class="accent">MLOps</span>
-          {{ $t("introduce.by-profession") }},<br />
-          <span class="accent">Full Stack</span>
-          {{ $t("introduce.by-passion") }}.
+          <i18n-t keypath="introduce.mlops-by-profession">
+            <template #mlops><span class="accent">MLOps</span></template>
+          </i18n-t>
+          <br />
+          <i18n-t keypath="introduce.fullstack-by-passion">
+            <template #fullstack
+              ><span class="accent">Full Stack</span></template
+            > </i18n-t
+          >.
         </h1>
-        <p class="mb-16 pl-1 quote text-grey">
+        <p
+          class="mb-16 pl-1 quote text-grey"
+        >
           "{{ $t("introduce.quote") }}" - Edward V. Berard.
         </p>
         <v-row class="pl-1" no-gutters>

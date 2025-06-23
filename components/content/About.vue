@@ -22,7 +22,6 @@ const { lgAndUp } = useDisplay();
         </h2>
         <p
           data-aos="fade-up"
-          data-aos-delay="1"
           class="mb-16 pl-1 quote text-grey"
         >
           {{ $t("about.quote1") }}<br /><br />{{ $t("about.quote2") }}

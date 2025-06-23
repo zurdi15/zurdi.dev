@@ -5,8 +5,8 @@ export default () => ({
   },
   introduce: {
     title: "Introduce",
-    "by-profession": "by profession",
-    "by-passion": "by passion",
+    "mlops-by-profession": "{mlops} by profession",
+    "fullstack-by-passion": "{fullstack} by passion",
     quote:
       "Walking on water and developing software from a specification are easy if both are frozen",
     "years-of-experience": "Years of experience",
