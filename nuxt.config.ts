@@ -18,6 +18,10 @@ export default defineNuxtConfig({
           content: "https://zurdi.dev/social-preview.png",
         },
         {
+          property: "og:image:type",
+          content: "image/png",
+        },
+        {
           property: "og:image:width",
           content: "1200",
         },
@@ -25,6 +29,24 @@ export default defineNuxtConfig({
           property: "og:image:height",
           content: "630",
         },
+
+        {
+          property: "og:image",
+          content: "https://zurdi.dev/social-preview-whatsapp.png",
+        },
+        {
+          property: "og:image:type",
+          content: "image/png",
+        },
+        {
+          property: "og:image:width",
+          content: "400",
+        },
+        {
+          property: "og:image:height",
+          content: "210",
+        },
+
         { property: "og:url", content: "https://zurdi.dev" },
         { property: "og:type", content: "website" },
 
