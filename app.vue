@@ -20,8 +20,8 @@ useHead({
 onMounted(() => {
   AOS.init({ offset: lgAndUp ? 100 : 500, duration: 500 });
   const currentBackground = ref(localStorage.getItem("background") || "geometric");
-  // Wait for the first value of lgAndUp to be set
   watch(
+    // Wait for the first value of lgAndUp to be set
     () => lgAndUp.value,
     () => {
       displayReady.value = true;
