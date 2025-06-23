@@ -24,7 +24,7 @@ const { lgAndUp } = useDisplay();
           data-aos="fade-up"
           class="mb-16 pl-1 quote text-grey"
         >
-          {{ $t("about.quote1") }}<br /><br />{{ $t("about.quote2") }}
+          {{ $t("about.quote1") }}.<br /><br />{{ $t("about.quote2") }}.
         </p>
       </div>
     </div>

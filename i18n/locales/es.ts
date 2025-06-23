@@ -19,9 +19,9 @@ export default () => ({
     scaling: "escalado",
     "scaling-purpose": "con precisión",
     quote1:
-      "MLOps Engineer con una sólida experiencia en entornos de nube (principalmente Azure) y experiencia previa como ingeniero de datos. Especializado en la automatización de pipelines de entrenamiento y despliegue, infraestructura como código y prácticas de DevOps aplicadas al ciclo de vida de ML.",
+      "MLOps Engineer con una sólida experiencia en entornos de nube (principalmente Azure) y experiencia previa como ingeniero de datos. Especializado en la automatización de pipelines de entrenamiento y despliegue, infraestructura como código y prácticas de DevOps aplicadas al ciclo de vida de ML",
     quote2:
-      "Me considero una persona proactiva con una gran capacidad de aprendizaje, que disfruta colaborar con equipos multidisciplinarios y multiculturales.",
+      "Me considero una persona proactiva con una gran capacidad de aprendizaje, que disfruta colaborar con equipos multidisciplinarios y multiculturales",
   },
   resume: {
     title: "Currículum",
