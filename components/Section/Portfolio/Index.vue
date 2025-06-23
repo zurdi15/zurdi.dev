@@ -23,7 +23,7 @@ const { lgAndUp } = useDisplay();
           </i18n-t>
         </h2>
         <v-row no-gutters class="pl-1">
-          <v-col cols="12">
+          <v-col cols="12" data-aos="fade-up">
             <a
               href="https://romm.app"
               target="_blank"
@@ -33,7 +33,6 @@ const { lgAndUp } = useDisplay();
               <div class="preview-img-container mb-5">
                 <v-img
                   src="/personal_projects/romm-preview.webp"
-                  data-aos="fade-up"
                   class="preview-img"
                 />
               </div>
