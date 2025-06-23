@@ -57,7 +57,7 @@ function scrollTo(section: string) {
 </template>
 <style scoped>
 .main-menu {
-  background-color: var(--v-theme-gray3);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--v-theme-gray2);
   border-radius: 30px;
   position: fixed;

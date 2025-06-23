@@ -1,3 +1,5 @@
+import Background from "~/components/Background.vue";
+
 export default () => ({
   "all-rights-reserved": "All rights reserved.",
   settings: {

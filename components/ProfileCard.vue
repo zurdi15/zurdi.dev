@@ -65,6 +65,7 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
 </template>
 <style scoped>
 .profile-card {
+  backdrop-filter: blur(8px);
   border: 1px solid var(--v-theme-gray2) !important;
   padding: 50px !important;
   z-index: 100 !important;

@@ -1,11 +1,22 @@
+<script setup lang="ts">
+const props = withDefaults(
+  defineProps<{
+    bg?: string;
+  }>(),
+  {
+    bg: "geometric",
+  }
+);
+</script>
+
 <template>
-  <video class="background" muted autoplay loop>
-    <source src="/bg.mp4" type="video/mp4" />
+  <video id="background" muted autoplay loop :key="props.bg">
+    <source :src="`/bg_${props.bg}.mp4`" type="video/mp4" />
   </video>
 </template>
 
 <style scoped>
-.background {
+#background {
   width: 100%;
   height: 100%;
   top: 0;
