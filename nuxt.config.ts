@@ -7,12 +7,7 @@ export default defineNuxtConfig({
           name: "description",
           content: "MLOps by profession, Full Stack by passion.",
         },
-        {
-          name: "robots",
-          content: "index, follow",
-        },
       ],
-      link: [{ rel: "canonical", href: "https://zurdi.dev" }],
     },
   },
   compatibilityDate: "2024-11-01",

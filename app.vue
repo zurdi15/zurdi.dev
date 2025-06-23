@@ -13,20 +13,6 @@ function closeSettings() {
   settings.value = false;
 }
 
-useHead({
-  title: 'MLOps and Full Stack | zurdi.dev',
-  meta: [
-    {
-      name: 'description',
-      content: 'MLOps by profession, Full Stack by passion.',
-    },
-    {
-      name: 'robots',
-      content: 'index, follow',
-    },
-  ]
-});
-
 onMounted(() => {
   AOS.init({ offset: lgAndUp ? 100 : 500, duration: 500 });
   currentBackground.value = localStorage.getItem("background") || "geometric";
