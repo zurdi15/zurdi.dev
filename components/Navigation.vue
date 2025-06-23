@@ -38,7 +38,7 @@ function scrollTo(section: string) {
       </v-col>
       <v-col cols="12">
         <v-icon class="my-3" @click="scrollTo('projects')" size="22"
-          >mdi-apps</v-icon
+          >mdi-image-filter-none</v-icon
         >
       </v-col>
       <v-divider class="my-2" />

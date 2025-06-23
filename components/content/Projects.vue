@@ -11,7 +11,7 @@ const { lgAndUp } = useDisplay();
           data-aos="fade-up"
           class="d-inline-flex font-weight-regular align-center"
         >
-          <v-icon size="15" class="mr-2">mdi-apps</v-icon
+          <v-icon size="15" class="mr-2">mdi-image-filter-none</v-icon
           >{{ $t("projects.title") }}
         </h4>
         <h2
