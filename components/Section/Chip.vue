@@ -5,7 +5,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <span class="d-inline-flex font-weight-regular align-center section-chip">
+  <span data-aos="fade-up" class="d-inline-flex font-weight-regular align-center section-chip">
     <v-icon size="15" class="mr-2">{{ icon }}</v-icon
     >{{ $t(section) }}
   </span>
