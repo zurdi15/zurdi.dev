@@ -16,13 +16,13 @@ export default defineNuxtConfig({
           content: "MLOps by profession, Full Stack by passion.",
         },
 
-        {
-          property: "og:image",
-          content: "https://zurdi.dev/social-preview.png",
-        },
-        { property: "og:image:type", content: "image/png" },
-        { property: "og:image:width", content: "1200" },
-        { property: "og:image:height", content: "630" },
+        // {
+        //   property: "og:image",
+        //   content: "https://zurdi.dev/social-preview.png",
+        // },
+        // { property: "og:image:type", content: "image/png" },
+        // { property: "og:image:width", content: "1200" },
+        // { property: "og:image:height", content: "630" },
 
         {
           property: "og:image",
