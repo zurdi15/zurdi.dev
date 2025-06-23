@@ -7,7 +7,32 @@ export default defineNuxtConfig({
           name: "description",
           content: "MLOps by profession, Full Stack by passion.",
         },
+        // Open Graph
+        { property: "og:title", content: "MLOps and Full Stack | zurdi.dev" },
+        {
+          property: "og:description",
+          content: "MLOps by profession, Full Stack by passion.",
+        },
+        {
+          property: "og:image",
+          content: "https://zurdi.dev/social-preview.png",
+        },
+        { property: "og:url", content: "https://zurdi.dev" },
+        { property: "og:type", content: "website" },
+
+        // Twitter Card
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "MLOps and Full Stack | zurdi.dev" },
+        {
+          name: "twitter:description",
+          content: "MLOps by profession, Full Stack by passion.",
+        },
+        {
+          name: "twitter:image",
+          content: "https://zurdi.dev/social-preview.png",
+        },
       ],
+      link: [{ rel: "canonical", href: "https://zurdi.dev" }],
     },
   },
   compatibilityDate: "2024-11-01",
