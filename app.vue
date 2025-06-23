@@ -14,8 +14,17 @@ function closeSettings() {
 }
 
 useHead({
-  title: "zurdi.dev",
-  meta: [{ name: "description", content: "zurdi.dev" }],
+  title: 'Zurdi — MLOps Engineer | zurdi.dev',
+  meta: [
+    {
+      name: 'description',
+      content: 'MLOps by profession, Full Stack by passion.',
+    },
+    {
+      name: 'robots',
+      content: 'index, follow',
+    },
+  ]
 });
 
 onMounted(() => {
