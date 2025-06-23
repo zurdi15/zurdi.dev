@@ -12,7 +12,7 @@ const { lgAndUp } = useDisplay();
           >{{ $t("about.title") }}
         </h4>
         <h2
-          class="font-weight-thin"
+          class="font-weight-thin mb-10"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
           <span class="accent">{{ $t("about.automating") }}</span>
@@ -23,7 +23,7 @@ const { lgAndUp } = useDisplay();
         <p
           data-aos="fade-up"
           data-aos-delay="1"
-          class="mt-10 mb-16 pl-1 quote text-grey"
+          class="mb-16 pl-1 quote text-grey"
         >
           {{ $t("about.quote1") }}<br /><br />{{ $t("about.quote2") }}
         </p>

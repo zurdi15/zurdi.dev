@@ -14,7 +14,7 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
           >{{ $t("introduce.title") }}
         </h4>
         <h1
-          class="font-weight-regular"
+          class="font-weight-regular mb-10"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
           <span class="accent">MLOps</span>
@@ -22,11 +22,11 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
           <span class="accent">Full Stack</span>
           {{ $t("introduce.by-passion") }}.
         </h1>
-        <p class="mt-10 mb-16 pl-1 quote text-grey">
+        <p class="mb-16 pl-1 quote text-grey">
           "{{ $t("introduce.quote") }}" - Edward V. Berard.
         </p>
         <v-row class="pl-1" no-gutters>
-          <v-col cols="6" lg="4">
+          <v-col data-aos="fade-up" data-aos-delay="100" cols="6" lg="4">
             <h1
               class="font-weight-regular"
               :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
@@ -37,7 +37,7 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
               {{ $t("introduce.years-of-experience") }}
             </h5>
           </v-col>
-          <v-col cols="6" lg="4">
+          <v-col data-aos="fade-up" data-aos-delay="200" cols="6" lg="4">
             <h1
               class="font-weight-regular"
               :class="{ desktop: lgAndUp, mobile: !lgAndUp }"

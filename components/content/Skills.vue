@@ -2,9 +2,19 @@
 import { useDisplay } from "vuetify";
 
 const { lgAndUp } = useDisplay();
+
+const skills = [
+  { name: "Azure", icon: "mdi-microsoft-azure", delay: 100 },
+  { name: "Python", icon: "mdi-language-python", delay: 200 },
+  { name: "Docker", icon: "mdi-docker", delay: 300 },
+  { name: "Terraform", icon: "mdi-terraform", delay: 400 },
+  { name: "AWS", icon: "mdi-aws", delay: 500 },
+  { name: "Bash", icon: "mdi-bash", delay: 600 },
+  { name: "Vue.js", icon: "mdi-vuejs", delay: 700 },
+];
 </script>
 <template>
-  <section id="skills" class="position-relative" :class="{ 'mr-65': !lgAndUp }">
+  <section id="skills" class="position-relative">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
         <h4
@@ -16,15 +26,21 @@ const { lgAndUp } = useDisplay();
         </h4>
         <h2
           data-aos="fade-up"
-          class="font-weight-thin"
+          class="font-weight-thin mb-10"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
           <i18n-t keypath="skills.tech-stack">
             <template #tech>{{ $t("skills.tech") }}</template>
-            <template #stack><span class="accent">{{ $t("skills.stack") }}</span></template>
+            <template #stack
+              ><span class="accent">{{ $t("skills.stack") }}</span></template
+            >
           </i18n-t>
         </h2>
-        <v-row no-gutters class="pl-5"> </v-row>
+        <v-row no-gutters class="pl-1">
+          <v-col cols="6" sm="4" md="3" v-for="(skill, index) in skills">
+            <ContentSkillChip :skill="skill" :key="index" />
+          </v-col>
+        </v-row>
       </div>
     </div>
   </section>

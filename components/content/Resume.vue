@@ -32,24 +32,17 @@ const resume = computed(() =>
           <span class="accent">{{ $t("resume.experience") }}</span>
         </h2>
         <v-row no-gutters class="pl-5">
-          <v-hover v-for="(item, index) in resume" :key="index">
-            <template #default="{ props, isHovering }">
-              <div
-                v-bind="props"
-                :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-              >
-                <div :class="['date-container', { hovering: isHovering }]">
-                  <span class="date" :class="{ accent: isHovering }">{{
-                    item.date
-                  }}</span>
-                  <h2 class="mt-8">{{ item.title }}</h2>
-                  <p class="date-description">
-                    {{ item.description }}
-                  </p>
-                </div>
-              </div>
-            </template>
-          </v-hover>
+          <div
+            v-for="(item, index) in resume"
+            :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+            class="date-container"
+          >
+            <span class="date">{{ item.date }}</span>
+            <h2 class="mt-8">{{ item.title }}</h2>
+            <p class="date-description">
+              {{ item.description }}
+            </p>
+          </div>
         </v-row>
       </div>
     </div>
@@ -111,7 +104,7 @@ h4 .v-icon {
   width: 12px;
   transition: background 0.5s ease;
 }
-.date-container.hovering::before {
+.date-container:hover::before {
   background: var(--v-theme-primary);
 }
 .date-container::after {
@@ -124,11 +117,14 @@ h4 .v-icon {
   width: 1px;
   z-index: -1;
 }
-.date {
+.date-container:hover > .date {
   color: var(--v-theme-primary);
   transition: color 0.5s ease;
 }
+.date {
+  transition: color 0.5s ease;
+}
 .date-description {
-  color: var(--v-theme-gray2);
+  color: var(--v-theme-gray1);
 }
 </style>
