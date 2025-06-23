@@ -9,46 +9,28 @@ export default defineNuxtConfig({
         },
         // Open Graph
         { property: "og:title", content: "MLOps and Full Stack | zurdi.dev" },
+        { property: "og:url", content: "https://zurdi.dev" },
+        { property: "og:type", content: "website" },
         {
           property: "og:description",
           content: "MLOps by profession, Full Stack by passion.",
         },
+
         {
           property: "og:image",
           content: "https://zurdi.dev/social-preview.png",
         },
-        {
-          property: "og:image:type",
-          content: "image/png",
-        },
-        {
-          property: "og:image:width",
-          content: "1200",
-        },
-        {
-          property: "og:image:height",
-          content: "630",
-        },
+        { property: "og:image:type", content: "image/png" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
 
         {
           property: "og:image",
           content: "https://zurdi.dev/social-preview-whatsapp.png",
         },
-        {
-          property: "og:image:type",
-          content: "image/png",
-        },
-        {
-          property: "og:image:width",
-          content: "400",
-        },
-        {
-          property: "og:image:height",
-          content: "210",
-        },
-
-        { property: "og:url", content: "https://zurdi.dev" },
-        { property: "og:type", content: "website" },
+        { property: "og:image:type", content: "image/png" },
+        { property: "og:image:width", content: "400" },
+        { property: "og:image:height", content: "210" },
 
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
@@ -57,6 +39,8 @@ export default defineNuxtConfig({
           name: "twitter:description",
           content: "MLOps by profession, Full Stack by passion.",
         },
+        { name: "twitter:domain", content: "zurdi.dev" },
+        { name: "twitter:url", content: "https://zurdi.dev" },
         {
           name: "twitter:image",
           content: "https://zurdi.dev/social-preview.png",
