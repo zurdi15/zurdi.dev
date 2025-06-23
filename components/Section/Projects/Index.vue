@@ -7,7 +7,7 @@ const { lgAndUp } = useDisplay();
   <section id="projects">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <ContentSectionChip
+        <SectionChip
           icon="mdi-image-filter-none"
           section="projects"
         />

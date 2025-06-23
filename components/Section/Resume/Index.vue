@@ -16,10 +16,7 @@ const resume = computed(() =>
   <section id="resume" :class="{ 'mr-65': !lgAndUp }">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <ContentSectionChip
-          icon="mdi-briefcase-outline"
-          section="resume"
-        />
+        <SectionChip icon="mdi-briefcase-outline" section="resume" />
         <h2
           data-aos="fade-up"
           class="font-weight-thin mb-10"
@@ -29,17 +26,18 @@ const resume = computed(() =>
           <span class="accent">{{ $t("resume.experience") }}</span>
         </h2>
         <v-row no-gutters class="pl-5">
-          <div
+          <v-col
             v-for="(item, index) in resume"
+            cols="12"
             :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
             class="date-container"
           >
             <span class="date">{{ item.date }}</span>
-            <h3 class="date-title mt-8">{{ item.title }}</h3>
+            <p class="date-title mt-8">{{ item.title }}</p>
             <p class="date-description">
               {{ item.description }}
             </p>
-          </div>
+          </v-col>
         </v-row>
       </div>
     </div>
@@ -47,9 +45,8 @@ const resume = computed(() =>
 </template>
 <style scoped>
 .date-container {
-  padding-left: 74px;
-  padding-bottom: 68px;
-  margin-left: 20px;
+  padding-left: 74px!important;
+  padding-bottom: 68px!important;
 }
 .date-container::before {
   background: #656565;
@@ -84,10 +81,11 @@ const resume = computed(() =>
   transition: color 0.5s ease;
 }
 .date-title {
-  font-size: 30px;
+  font-size: 23px;
   line-height: 36px;
 }
 .date-description {
   color: var(--v-theme-gray1);
+  font-size: 20px;
 }
 </style>

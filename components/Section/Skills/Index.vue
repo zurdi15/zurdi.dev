@@ -16,7 +16,7 @@ const skills = [
   <section id="skills">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <ContentSectionChip
+        <SectionChip
           icon="mdi-shape-outline"
           section="skills"
         />
@@ -34,7 +34,7 @@ const skills = [
         </h2>
         <v-row no-gutters class="pl-1">
           <v-col cols="6" sm="4" md="3" v-for="(skill, index) in skills">
-            <ContentSkillChip :skill="skill" :key="index" />
+            <SectionSkillsChip :skill="skill" :key="index" />
           </v-col>
         </v-row>
       </div>

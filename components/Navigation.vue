@@ -55,14 +55,13 @@ function scrollTo(section: string) {
 </template>
 <style scoped>
 .main-menu {
+  background-color: var(--v-theme-gray3);
   border: 1px solid var(--v-theme-gray2);
   border-radius: 30px;
-  background-color: var(--v-theme-gray3);
   position: fixed;
   right: 70px;
-  top: calc(
-    50dvh - 132px
-  ); /* 132px is based on the height of the menu divided by 2 */
+  /* 132px is based on the height of the menu divided by 2 */
+  top: calc(50dvh - 132px);
   width: 55px;
   z-index: 1;
 }

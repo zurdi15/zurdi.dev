@@ -9,7 +9,7 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
   <section id="intro">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <ContentSectionChip
+        <SectionChip
           icon="mdi-home-outline"
           section="introduce"
         />

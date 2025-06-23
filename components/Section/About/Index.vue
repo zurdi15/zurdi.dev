@@ -7,7 +7,7 @@ const { lgAndUp } = useDisplay();
   <section id="about">
     <div class="section-inner-container ma-auto py-0 px-1">
       <div class="text-white">
-        <ContentSectionChip
+        <SectionChip
           icon="mdi-account-outline"
           section="about"
         />
