@@ -2,6 +2,7 @@
 import { onMounted, ref, watch } from "vue";
 import { useDisplay } from "vuetify";
 import AOS from "aos";
+import MenuBtn from "./components/MenuBtn.vue";
 
 const { lgAndUp } = useDisplay();
 const displayReady = ref(false);
@@ -19,7 +20,7 @@ useHead({
 
 onMounted(() => {
   AOS.init({ offset: lgAndUp ? 100 : 500, duration: 500 });
-  const currentBackground = ref(localStorage.getItem("background") || "geometric");
+  currentBackground.value = localStorage.getItem("background") || "geometric";
   watch(
     // Wait for the first value of lgAndUp to be set
     () => lgAndUp.value,
@@ -35,6 +36,7 @@ onMounted(() => {
   <Background :bg="currentBackground" />
   <v-app>
     <v-main>
+      <MenuBtn v-if="!lgAndUp" @open:settings="settings = true" />
       <SettingsDrawer
         v-model="settings"
         @close="closeSettings"

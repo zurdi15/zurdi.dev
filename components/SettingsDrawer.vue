@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "#imports";
 import { onMounted } from "vue";
+import { useDisplay } from "vuetify";
 
 defineProps<{
   modelValue: boolean;
@@ -11,9 +12,44 @@ const emit = defineEmits<{
   (e: "update:background", value: string): void;
 }>();
 
+const { lgAndUp } = useDisplay();
+const sections = [
+  {
+    id: "introduce",
+    icon: "mdi-home-outline",
+  },
+  {
+    id: "about",
+    icon: "mdi-account-outline",
+  },
+  {
+    id: "resume",
+    icon: "mdi-briefcase-outline",
+  },
+  {
+    id: "skills",
+    icon: "mdi-shape-outline",
+  },
+  {
+    id: "projects",
+    icon: "mdi-image-filter-none",
+  },
+];
 const { locales, locale, setLocale } = useI18n();
 const backgrounds = ["geometric", "rounded"];
-const currentBackground = ref("")
+const currentBackground = ref("");
+
+function scrollTo(section: string) {
+  let scrollNegativeOffset = 50;
+  if (import.meta.client) {
+    const el = document.getElementById(section);
+    if (el) {
+      const y =
+        el.getBoundingClientRect().top + window.scrollY - scrollNegativeOffset;
+      window.scrollTo({ top: y });
+    }
+  }
+}
 
 function changeLocale(newLocale: "en" | "es") {
   localStorage.setItem("locale", newLocale);
@@ -37,11 +73,12 @@ onMounted(() => {
 </script>
 <template>
   <v-navigation-drawer
-    color="black"
+    id="settings-drawer"
     :model-value="modelValue"
     location="right"
     mobile
     width="300"
+    class="text-white"
     @update:model-value="emit('update:modelValue', $event)"
   >
     <v-row class="ma-2 text-right" no-gutters>
@@ -54,6 +91,25 @@ onMounted(() => {
         />
       </v-col>
     </v-row>
+    <template v-if="!lgAndUp">
+    <v-row class="mx-16" no-gutters>
+      <v-col cols="12">
+        <v-list-item
+          class="section-item"
+          v-for="section in sections"
+          @click="scrollTo(section.id)"
+        >
+        <template #prepend>
+          <v-icon class="section-iconmy-3" size="22">{{
+          section.icon
+        }}</v-icon>
+        </template>
+          {{ $t(`${section.id}.title`) }}
+        </v-list-item>
+      </v-col>
+    </v-row>
+    <v-divider class="my-12 mx-6" />
+    </template>
     <v-row class="pa-4" no-gutters>
       <v-col class="text-center">
         <v-list-item class="text-h6 mb-2">{{
@@ -96,3 +152,16 @@ onMounted(() => {
     </v-row>
   </v-navigation-drawer>
 </template>
+<style scoped>
+#settings-drawer {
+  backdrop-filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+.section-item {
+  border-radius: 10px!important;
+}
+.section-item:hover {
+  border-radius: 10px!important;
+  border: 1px solid var(--v-theme-primary)!important;
+}
+</style>

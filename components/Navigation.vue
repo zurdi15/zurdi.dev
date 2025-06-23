@@ -3,7 +3,7 @@ defineEmits(["open:settings"]);
 
 const sections = [
   {
-    id: "intro",
+    id: "introduce",
     icon: "mdi-home-outline",
   },
   {

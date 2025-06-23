@@ -10,9 +10,8 @@ defineEmits(["open:settings"]);
     :class="{ desktop: lgAndUp }"
     size="small"
     variant="flat"
-    color="black"
     @click="$emit('open:settings', true)"
-    icon="mdi-cog"
+    icon="mdi-menu"
   />
 </template>
 <style scoped>
@@ -23,13 +22,12 @@ defineEmits(["open:settings"]);
   z-index: 1000 !important;
   border: 1px solid var(--v-theme-gray2);
   border-radius: 30px;
-  background-color: black;
+  background-color: var(--v-theme-gray3);
   transition: color 0.3s, border-color 0.3s , transform 0.3s;
 }
 #settings-button:hover {
   color: var(--v-theme-primary)!important;
   border-color: var(--v-theme-primary)!important;
-  transform: rotate(90deg);
 }
 #settings-button.desktop {
   top: 15px;
