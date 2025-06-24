@@ -38,7 +38,8 @@ const { lgAndUp } = useDisplay();
               </a>
             </div>
             <p
-              class="project-title text-h4 mx-3 font-weight-thin"
+              class="project-title mx-3 font-weight-thin"
+              :class="{ 'text-h4': lgAndUp, 'text-h5': !lgAndUp }"
               data-aos="fade-up"
             >
               <a
@@ -88,7 +89,66 @@ const { lgAndUp } = useDisplay();
             </p>
           </v-col>
         </v-row>
+
         <v-divider :class="{ desktop: lgAndUp, 'my-16': !lgAndUp }" />
+
+        <v-row id="homelab-container" no-gutters class="pl-1">
+          <v-col cols="12">
+            <div class="preview-img-container mb-8">
+              <v-img
+                src="/personal_projects/homelab/preview.webp"
+                class="preview-img"
+              />
+            </div>
+            <p
+              class="project-title mx-3 font-weight-thin"
+              :class="{ 'text-h4': lgAndUp, 'text-h5': !lgAndUp }"
+              data-aos="fade-up"
+            >
+              {{ $t("portfolio.homelab.title") }}
+            </p>
+            <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
+              {{ $t("portfolio.homelab.description1") }}.
+            </p>
+            <p class="quote text-grey mt-4 pr-3 pl-12" data-aos="fade-up">
+              <i18n-t keypath="portfolio.homelab.description2">
+                <template #infrastructure
+                  ><span class="accent">{{
+                    $t("portfolio.homelab.infrastructure")
+                  }}</span></template
+                > </i18n-t
+              >.
+            </p>
+            <p class="quote text-grey mt-4 pr-3 pl-12" data-aos="fade-up">
+              <i18n-t keypath="portfolio.homelab.description3">
+                <template #orchestration
+                  ><span class="accent">{{
+                    $t("portfolio.homelab.orchestration")
+                  }}</span></template
+                > </i18n-t
+              >.
+            </p>
+            <p class="quote text-grey mt-4 pr-3 pl-12" data-aos="fade-up">
+              <i18n-t keypath="portfolio.homelab.description4">
+                <template #networksecurity
+                  ><span class="accent">{{
+                    $t("portfolio.homelab.networksecurity")
+                  }}</span></template
+                > </i18n-t
+              >.
+            </p>
+            <p class="quote text-grey mt-4 pr-3 pl-12" data-aos="fade-up">
+              <i18n-t keypath="portfolio.homelab.description5">
+                <template #nas
+                  ><span class="accent">NAS</span></template
+                > </i18n-t
+              >.
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-divider :class="{ desktop: lgAndUp, 'my-16': !lgAndUp }" />
+
         <v-row id="zurdi-container" no-gutters class="pl-1">
           <v-col cols="12">
             <div class="preview-img-container mb-8">
@@ -98,7 +158,8 @@ const { lgAndUp } = useDisplay();
               />
             </div>
             <p
-              class="project-title text-h4 mx-3 font-weight-thin"
+              class="project-title mx-3 font-weight-thin"
+              :class="{ 'text-h4': lgAndUp, 'text-h5': !lgAndUp }"
               data-aos="fade-up"
             >
               zurdi.dev
@@ -138,6 +199,7 @@ const { lgAndUp } = useDisplay();
   border: 1px solid var(--v-theme-gray2);
   overflow: hidden;
   max-width: 800px;
+  max-height: 380px;
 }
 .v-divider.desktop {
   margin-top: 100px;

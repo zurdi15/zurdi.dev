@@ -82,6 +82,22 @@ export default () => ({
       description2:
         "Cada sección está cuidadosamente elaborada para demostrar mi experiencia {fullstack} y mi atención al detalle en la experiencia de usuario",
     },
+    homelab: {
+      title: "On-premises self-hosted homelab",
+      description1:
+        "Gestión y mantenimiento de un homelab propio con múltiples servicios desplegados mediante Docker, simulando entornos productivos para pruebas, automatización y aprendizaje continuo",
+      description2:
+        "{infrastructure}: red doméstica avanzada gestionada sobre mini PC y Raspberry Pi, con aprovisionamiento manual mediante docker-compose",
+      infrastructure: "Infraestructura",
+      description3:
+        "{orchestration}: gestión de contenedores con Docker Compose, control de versiones, actualización automatizada de imágenes y políticas de reinicio",
+      orchestration: "Orquestación",
+      description4:
+        "{networksecurity}: configuración de VPN (Tailscale, WireGuard), reglas de cortafuegos, DNS local, gestión del tráfico con reverse proxies y SSL mediante Let's Encrypt",
+      networksecurity: "Red y seguridad",
+      description5:
+        "{nas}: almacenamiento centralizado para backups, compartición de volúmenes vía NFS y persistencia de datos para servicios",
+    },
   },
   skills: {
     title: "Skills",
