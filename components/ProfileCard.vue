@@ -4,17 +4,22 @@ import { useDisplay } from "vuetify";
 
 const { lgAndUp } = useDisplay();
 const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
-
 const email = "contact@zurdi.dev";
-const copied = ref(false);
+const showTooltip = ref(false);
 
 const copyEmail = async () => {
   try {
     await navigator.clipboard.writeText(email);
-    copied.value = true;
-    setTimeout(() => (copied.value = false), 1500);
+    showTooltip.value = true;
+    setTimeout(() => {
+      showTooltip.value = false;
+    }, 2000);
   } catch (e) {
     console.log("Unable to copy email to clipboard");
+    showTooltip.value = true;
+    setTimeout(() => {
+      showTooltip.value = false;
+    }, 2000);
   }
 };
 </script>
@@ -58,17 +63,26 @@ const copyEmail = async () => {
             <span @click="copyEmail" class="text-body-1 pr-2">
               {{ email }}
             </span>
-            <v-btn
-              @click="copyEmail"
-              size="small"
-              variant="text"
-              rounded="0"
-              class="copy-btn"
-              icon="mdi-content-copy"
+
+            <v-tooltip
+              :open-on-hover="false"
+              :open-on-focus="false"
+              v-model="showTooltip"
+              location="top"
+              class="text-caption"
             >
-            </v-btn>
-            <v-tooltip activator="parent" location="right" v-if="copied">
-              {{ $t("copied") }}
+              <template #activator="{ props }">
+                <v-btn
+                  v-bind="props"
+                  @click="copyEmail"
+                  size="small"
+                  variant="text"
+                  rounded="0"
+                  class="copy-btn"
+                  icon="mdi-content-copy"
+                />
+              </template>
+              {{ $t("copied") }}!
             </v-tooltip>
           </v-chip>
         </v-col>
