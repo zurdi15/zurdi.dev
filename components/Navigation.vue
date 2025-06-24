@@ -71,17 +71,25 @@ onBeforeUnmount(() => {
 <template>
   <div data-aos="fade-left" data-aos-delay="60" class="main-menu text-white">
     <v-row no-gutters class="text-center py-2">
-      <v-col class="section-btn" @click="scrollTo(section.id)" cols="12" v-for="section in sections" :key="section.id" :class="{ current: currentSection === section.id }">
-        <v-icon class="my-3" size="22">{{
-          section.icon
-        }}</v-icon>
+      <v-col
+        v-for="section in sections"
+        class="section-container"
+        @click="scrollTo(section.id)"
+        cols="12"
+        :key="section.id"
+        :class="{ current: currentSection === section.id }"
+      >
+        <span class="tooltip">{{ $t(`${section.id}.title`) }}</span>
+        <v-icon class="section-btn my-3" size="22">{{ section.icon }}</v-icon>
       </v-col>
       <v-divider class="my-2" />
-      <v-col id="settings-button" @click="$emit('open:settings', true)" cols="12">
-        <v-icon
-          class="my-3"
-          >mdi-cog</v-icon
-        >
+      <v-col
+        id="settings-container"
+        @click="$emit('open:settings', true)"
+        cols="12"
+      >
+        <span class="tooltip">{{ $t("settings.title") }}</span>
+        <v-icon id="settings-btn" class="my-3">mdi-cog</v-icon>
       </v-col>
     </v-row>
   </div>
@@ -93,23 +101,56 @@ onBeforeUnmount(() => {
   border-radius: 30px;
   position: fixed;
   right: 70px;
-  top: calc(50dvh - 311px/2);
+  top: calc(50dvh - 311px / 2);
   width: 55px;
   z-index: 1;
 }
-.section-btn,
-#settings-button {
+.section-container,
+#settings-container {
   cursor: pointer;
   color: var(--v-theme-gray1);
   transition: color 0.3s, transform 0.3s;
+  display: block;
+  position: relative;
 }
-.section-btn:hover,
-#settings-button:hover,
-.section-btn.current {
+.section-container:hover,
+#settings-container:hover,
+.section-container.current {
   color: var(--v-theme-primary);
   transform: scale(1.15);
 }
-#settings-button {
+#settings-container {
   transform: rotate(-90deg);
+}
+.tooltip {
+  background: var(--v-theme-gray2);
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 12px;
+  opacity: 0;
+  padding: 3px 8px;
+  position: absolute;
+  top: 20%;
+  right: 100%;
+  transition: 0.3s;
+  visibility: hidden;
+}
+.tooltip:before {
+  background: var(--v-theme-gray2);
+  content: "";
+  height: 10px;
+  margin-top: -5px;
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  transform: rotate(54deg) skew(-8deg, -39deg);
+  width: 10px;
+  z-index: -1;
+}
+.section-container:hover .tooltip, #settings-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: calc(100% + 10px);
 }
 </style>

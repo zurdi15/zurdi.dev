@@ -1,6 +1,7 @@
 export default () => ({
   "all-rights-reserved": "All rights reserved",
   settings: {
+    title: "Settings",
     language: "Language",
   },
   introduction: {
