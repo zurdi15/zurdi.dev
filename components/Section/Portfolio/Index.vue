@@ -26,7 +26,6 @@ const { lgAndUp } = useDisplay();
           <v-col cols="12">
             <div
               class="preview-img-container mb-8"
-              :data-aos="lgAndUp ? 'fade-up' : ''"
             >
               <a
                 href="https://romm.app"
@@ -93,7 +92,6 @@ const { lgAndUp } = useDisplay();
           <v-col cols="12">
             <div
               class="preview-img-container mb-8"
-              :data-aos="lgAndUp ? 'fade-up' : ''"
             >
               <v-img
                 src="/personal_projects/zurdi.dev/preview.webp"
