@@ -24,7 +24,7 @@ const { lgAndUp } = useDisplay();
         </h2>
         <v-row no-gutters class="pl-1">
           <v-col cols="12">
-            <div class="preview-img-container mb-8" data-aos="fade-up">
+            <div class="preview-img-container mb-8" :data-aos="lgAndUp ? 'fade-up' : ''">
               <a
                 href="https://romm.app"
                 target="_blank"
