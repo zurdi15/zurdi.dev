@@ -23,7 +23,7 @@ export default () => ({
     driven: "guiado",
     "driven-design": "por el diseño",
     quote1:
-      "{mlops} (Machine Learning Operations) es la disciplina que conecta la ciencia de datos con la ingeniería de software, con el objetivo de optimizar y automatizar todo el ciclo de vida del aprendizaje automático. Combina las mejores prácticas de {devops}, ingeniería de datos y machine learning para garantizar sistemas de ML escalables, confiables y reproducibles en producción",
+      "{mlops} (Machine Learning Operations) es la disciplina que conecta la ciencia de datos con la ingeniería de software, con el objetivo de optimizar y automatizar todo el ciclo de vida del aprendizaje automático. Combina las mejores prácticas de {devops}, ingeniería de datos y machine learning para garantizar sistemas de ML escalables, confiables y reproducibles",
     quote2:
       "Como ingeniero MLOps con una sólida experiencia en entornos de nube y experiencia previa como ingeniero de datos, estoy especializado en la automatización de pipelines de entrenamiento y despliegue, {infraascode} y prácticas de DevOps aplicadas al ciclo de vida de ML",
     infraascode: "infraestructura como código",
