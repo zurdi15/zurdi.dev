@@ -1,8 +1,22 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { useDisplay } from "vuetify";
 
 const { lgAndUp } = useDisplay();
 const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
+
+const email = "contact@zurdi.dev";
+const copied = ref(false);
+
+const copyEmail = async () => {
+  try {
+    await navigator.clipboard.writeText(email);
+    copied.value = true;
+    setTimeout(() => (copied.value = false), 1500);
+  } catch (e) {
+    console.log("Unable to copy email to clipboard");
+  }
+};
 </script>
 <template>
   <v-card
@@ -37,13 +51,28 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
       </v-card-text>
     </v-card>
     <div class="text-center">
-      <div
-        class="d-flex align-center justify-center"
-        :class="{ 'mt-12': lgAndUp, 'mt-6': !lgAndUp }"
-      >
-        <v-icon class="mr-2">mdi-email-outline</v-icon
-        ><span class="text-h6">contact@zurdi.dev</span>
-      </div>
+      <v-row no-gutters :class="{ 'mt-10': lgAndUp, 'mt-6': !lgAndUp }">
+        <v-col>
+          <v-chip class="px-0">
+            <v-icon class="mx-2 pl-1">mdi-email-outline</v-icon>
+            <span @click="copyEmail" class="text-body-1 pr-2">
+              {{ email }}
+            </span>
+            <v-btn
+              @click="copyEmail"
+              size="small"
+              variant="text"
+              rounded="0"
+              class="copy-btn"
+              icon="mdi-content-copy"
+            >
+            </v-btn>
+            <v-tooltip activator="parent" location="right" v-if="copied">
+              {{ $t("copied") }}
+            </v-tooltip>
+          </v-chip>
+        </v-col>
+      </v-row>
       <div class="d-flex justify-center mt-6 social">
         <a
           href="https://www.linkedin.com/in/alejandro-atance-fernandez/"
@@ -100,5 +129,9 @@ const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
 }
 .social .v-icon {
   margin-bottom: 2px;
+}
+.copy-btn {
+  background-color: var(--v-theme-gray2);
+  transition: color 0.3s;
 }
 </style>

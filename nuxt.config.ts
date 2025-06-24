@@ -71,4 +71,13 @@ export default defineNuxtConfig({
       allowedHosts: ["ginnugagap", "dev.zurdi.dev.ginnugagap.net"],
     },
   },
+  routeRules: {
+    // Apply to all routes
+    "/**": {
+      headers: {
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Frame-Options": "SAMEORIGIN",
+      },
+    },
+  },
 });

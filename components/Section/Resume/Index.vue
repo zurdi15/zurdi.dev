@@ -33,9 +33,15 @@ const resume = computed(() =>
             class="date-container"
           >
             <span class="date">{{ item.date }}</span>
-            <p class="date-title mt-8">{{ item.title }}</p>
-            <p class="date-description">
+            <p class="date-description mt-8">
               {{ item.description }}
+            </p>
+            <p
+              v-if="item.title"
+              class="date-title text-white my-16 py-2 px-4"
+              :class="{ 'mb-0': index === resume.length - 1 }"
+            >
+              {{ item.title }}
             </p>
           </v-col>
         </v-row>
@@ -45,8 +51,8 @@ const resume = computed(() =>
 </template>
 <style scoped>
 .date-container {
-  padding-left: 74px!important;
-  padding-bottom: 68px!important;
+  padding-left: 74px !important;
+  padding-bottom: 68px !important;
 }
 .date-container::before {
   background: #656565;
@@ -82,9 +88,15 @@ const resume = computed(() =>
   transition: color 0.5s ease;
 }
 .date-title {
-  font-size: 23px;
-  line-height: 36px;
+  font-size: 21px;
+  max-width: 600px;
   color: var(--v-theme-gray1);
+  background-color: var(--v-theme-gray3);
+  border: 1px solid var(--v-theme-primary);
+  border-radius: 15px;
+  margin-left: -100px; /* Adjust this value as needed for overlap */
+  position: relative;
+  z-index: 1;
 }
 .date-description {
   font-size: 20px;

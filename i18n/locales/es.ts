@@ -1,5 +1,6 @@
 export default () => ({
   "all-rights-reserved": "Todos los derechos reservados",
+  copied: "Copiado al portapapeles",
   settings: {
     title: "Configuración",
     language: "Idioma",

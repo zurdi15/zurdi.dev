@@ -1,5 +1,6 @@
 export default () => ({
   "all-rights-reserved": "All rights reserved",
+  copied: "Copied to clipboard",
   settings: {
     title: "Settings",
     language: "Language",
@@ -34,12 +35,10 @@ export default () => ({
     experience: "Experience",
     items: [
       {
-        title: "Technology Consultant at TMC Spain",
         date: "Feb 2022 - Present",
         description: "Senior MLOps at Inditex",
       },
       {
-        title: "Technology Consultant at TMC Spain",
         date: "Jan 2021 - Feb 2022",
         description: "Senior Data Engineer at Atresmedia",
       },
