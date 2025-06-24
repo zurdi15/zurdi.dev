@@ -68,7 +68,7 @@ export default () => ({
       description1:
         "RomM (abreviatura de Rom Manager) es un gestor de bibliotecas de juegos autoalojado enfocado en el retro gaming. Administra, organiza y juega todos tus juegos desde un navegador web. Desarrollado con {vuepython}, y distribuido mediante una {dockerimage}.",
       description2:
-        "Con más de {stars} en {github}, más de {downloads} en {dockerhub}, y una comunidad de más de {users} miembros en {discord}, RomM es la opción número uno entre quienes prefieren soluciones autoalojadas.",
+        "Con más de {stars} estrellas en {github}, más de {downloads} pulls en {dockerhub}, y una comunidad de más de {users} miembros en {discord}, RomM es la opción número uno entre quienes prefieren soluciones autoalojadas.",
       dockerimage: "imagen de Docker",
     },
   },
