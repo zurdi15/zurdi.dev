@@ -22,13 +22,23 @@ const { lgAndUp } = useDisplay();
         </h2>
         <v-row no-gutters class="pl-1">
           <p data-aos="fade-up" class="quote text-grey">
-            {{ $t("about.quote1") }}.
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote1">
+              <template #mlops><span class="accent">MLOps</span></template>
+              <template #devops><span class="accent">DevOps</span></template>
+            </i18n-t>.
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
-            {{ $t("about.quote2") }}.
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote2">
+              <template #infraascode><span class="accent">{{ $t('about.infraascode') }}</span></template>
+            </i18n-t>.
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
-            {{ $t("about.quote3") }}.
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote3">
+              <template #fullstack><span class="accent">full stack</span></template>
+            </i18n-t>.
+          </p>
+          <p data-aos="fade-up" class="quote text-grey mt-8">
+            {{ $t("about.quote4") }}.
           </p>
         </v-row>
       </div>

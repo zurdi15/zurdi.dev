@@ -55,11 +55,8 @@ const { lgAndUp } = useDisplay();
             <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description1">
                 <template #romm><span class="accent">RomM</span></template>
-                <template #vuepython
-                  ><span class="accent"
-                    >Vue.js / Python (FastAPI)</span
-                  ></template
-                >
+                <template #vue><span class="accent">Vue.js</span></template>
+                <template #python><span class="accent">Python (FastAPI)</span></template>
                 <template #dockerimage
                   ><span class="accent">{{
                     $t("portfolio.romm.dockerimage")

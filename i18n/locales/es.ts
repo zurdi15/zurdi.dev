@@ -23,11 +23,14 @@ export default () => ({
     driven: "guiado",
     "driven-design": "por el diseño",
     quote1:
-      "Como ingeniero MLOps con una sólida experiencia en entornos de nube y experiencia previa como ingeniero de datos, estoy especializado en la automatización de pipelines de entrenamiento y despliegue, infraestructura como código y prácticas de DevOps aplicadas al ciclo de vida de ML",
+      "{mlops} (Machine Learning Operations) es la disciplina que conecta la ciencia de datos con la ingeniería de software, con el objetivo de optimizar y automatizar todo el ciclo de vida del aprendizaje automático. Combina las mejores prácticas de {devops}, ingeniería de datos y machine learning para garantizar sistemas de ML escalables, confiables y reproducibles en producción",
     quote2:
-      "Como desarrollador full stack, fundé el proyecto RomM, una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
+      "Como ingeniero MLOps con una sólida experiencia en entornos de nube y experiencia previa como ingeniero de datos, estoy especializado en la automatización de pipelines de entrenamiento y despliegue, {infraascode} y prácticas de DevOps aplicadas al ciclo de vida de ML",
+    infraascode: "infraestructura como código",
     quote3:
-      "Soy una persona proactiva con una gran capacidad de aprendizaje, que disfruta colaborar con equipos multidisciplinarios y multiculturales",
+      "Como desarrollador {fullstack}, fundé The RomM Project: una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
+    quote4:
+      "Soy una persona proactiva con una gran capacidad de aprendizaje que disfruta colaborar con equipos multidisciplinarios y multiculturales",
   },
   resume: {
     title: "Currículum",
@@ -66,7 +69,7 @@ export default () => ({
     projects: "Proyectos",
     romm: {
       description1:
-        "{romm} (abreviatura de Rom Manager) es un gestor de bibliotecas de juegos autoalojado enfocado en el retro gaming. Administra, organiza y juega todos tus juegos desde un navegador web. Desarrollado con {vuepython}, y distribuido mediante una {dockerimage}",
+        "{romm} (abreviatura de Rom Manager) es un gestor de bibliotecas de juegos autoalojado enfocado en el retro gaming. Administra, organiza y juega todos tus juegos desde un navegador web. Está desarrollado con {vue} y {python}, y se distribuye como una {dockerimage}",
       description2:
         "Además del desarrollo de tanto del back como del front, también he diseñado y mantenido toda la infraestructura de distribución: desde la creación de la imagen de docker, hasta el desarrollo de pipelines de integración y despliegue continuo {cicd} mediante {ghactions}, asegurando lanzamientos consistentes, versionados y listos para producción",
       description3:
@@ -77,7 +80,7 @@ export default () => ({
       description1:
         "{zurdi} es mi portafolio personal, diseñado y desarrollado desde cero para reflejar tanto mis habilidades técnicas como mi sensibilidad por el diseño. Desarrollado con {vue}, {nuxt} y {vuetify}, combina una interfaz limpia y responsiva con animaciones sutiles y un enfoque en el rendimiento y la accesibilidad",
       description2:
-        "Cada sección, desde la presentación de proyectos hasta los elementos interactivos, está cuidadosamente elaborada para demostrar mi experiencia {fullstack} y mi atención al detalle en la experiencia de usuario",
+        "Cada sección está cuidadosamente elaborada para demostrar mi experiencia {fullstack} y mi atención al detalle en la experiencia de usuario",
     },
   },
   skills: {
