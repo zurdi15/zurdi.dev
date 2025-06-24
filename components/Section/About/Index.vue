@@ -38,7 +38,15 @@ const { lgAndUp } = useDisplay();
             </i18n-t>.
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
-            {{ $t("about.quote4") }}.
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote4">
+              <template #sysadmin><span class="accent">{{ $t('about.sysadmin') }}</span></template>
+            </i18n-t>.
+          </p>
+          <p data-aos="fade-up" class="quote text-grey mt-8">
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote5">
+              <template #multidisciplinary><span class="accent">{{ $t('about.multidisciplinary') }}</span></template>
+              <template #multicultural><span class="accent">{{ $t('about.multicultural') }}</span></template>
+            </i18n-t>.
           </p>
         </v-row>
       </div>

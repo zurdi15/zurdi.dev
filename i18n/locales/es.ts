@@ -30,7 +30,12 @@ export default () => ({
     quote3:
       "Como desarrollador {fullstack}, fundé The RomM Project: una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
     quote4:
-      "Soy una persona proactiva con una gran capacidad de aprendizaje que disfruta colaborar con equipos multidisciplinarios y multiculturales",
+      "Además, gestiono mi propio servidor personal, que alberga una variedad de servicios contenerizados. Esta experiencia práctica me permite explorar continuamente nuevas tecnologías, mejorar la gestión de la infraestructura y optimizar los despliegues en un entorno del mundo real, fortaleciendo aún más mis habilidades de DevOps y {sysadmin}",
+    sysadmin: "administración de sistemas",
+    quote5:
+      "Soy una persona proactiva con una gran capacidad de aprendizaje que disfruta colaborar con equipos {multidisciplinary} y {multicultural}",
+    multidisciplinary: "multidisciplinarios",
+    multicultural: "multiculturales",
   },
   resume: {
     title: "Currículum",
@@ -76,27 +81,27 @@ export default () => ({
         "Con más de {stars} estrellas en {github}, más de {downloads} pulls en {dockerhub}, y una comunidad de más de {users} miembros en {discord}, RomM es la opción número uno entre quienes prefieren soluciones autoalojadas",
       dockerimage: "imagen de Docker",
     },
+    homelab: {
+      title: "On-premise homelab autoalojado",
+      description1:
+        "Gestión y mantenimiento de un homelab personal con múltiples servicios desplegados utilizando {docker}, {dockercompose} y {gitops} a través de {portainer}. La configuración de los servidores se gestiona con {ansible}",
+      description2:
+        "{infrastructure}: red doméstica avanzada con un mini PC como servidor central, algunas Raspberry Pis como dispositivos independientes, un NAS y un switch para interconectarlos",
+      infrastructure: "Infraestructura",
+      description3:
+        "{orchestration}: gestión de contenedores con docker-compose y GitOps a través de Portainer para el control de versiones y actualizaciones automatizadas de servicios",
+      orchestration: "Orquestación",
+      description4:
+        "{networksecurity}: configuración de la red en malla y VPN con Tailscale, reglas de firewall con UFW, DNS local con Pi-hole + Tailscale, gestión de tráfico con nginx como proxy inverso y SSL a través de Let's Encrypt",
+      networksecurity: "Red y seguridad",
+      description5:
+        "{nas}: almacenamiento centralizado con compartición de volúmenes a través de NFS/SMB, persistencia de datos para servicios y copias de seguridad automatizadas",
+    },
     zurdi: {
       description1:
         "{zurdi} es mi portafolio personal, diseñado y desarrollado desde cero para reflejar tanto mis habilidades técnicas como mi sensibilidad por el diseño. Desarrollado con {vue}, {nuxt} y {vuetify}, combina una interfaz limpia y responsiva con animaciones sutiles y un enfoque en el rendimiento y la accesibilidad",
       description2:
         "Cada sección está cuidadosamente elaborada para demostrar mi experiencia {fullstack} y mi atención al detalle en la experiencia de usuario",
-    },
-    homelab: {
-      title: "On-premises self-hosted homelab",
-      description1:
-        "Gestión y mantenimiento de un homelab propio con múltiples servicios desplegados mediante Docker, simulando entornos productivos para pruebas, automatización y aprendizaje continuo",
-      description2:
-        "{infrastructure}: red doméstica avanzada gestionada sobre mini PC y Raspberry Pi, con aprovisionamiento manual mediante docker-compose",
-      infrastructure: "Infraestructura",
-      description3:
-        "{orchestration}: gestión de contenedores con Docker Compose, control de versiones, actualización automatizada de imágenes y políticas de reinicio",
-      orchestration: "Orquestación",
-      description4:
-        "{networksecurity}: configuración de VPN (Tailscale, WireGuard), reglas de cortafuegos, DNS local, gestión del tráfico con reverse proxies y SSL mediante Let's Encrypt",
-      networksecurity: "Red y seguridad",
-      description5:
-        "{nas}: almacenamiento centralizado para backups, compartición de volúmenes vía NFS y persistencia de datos para servicios",
     },
   },
   skills: {

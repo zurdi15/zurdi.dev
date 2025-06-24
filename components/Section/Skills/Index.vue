@@ -10,6 +10,7 @@ const skills = [
   { name: "AWS", icon: "mdi-aws", delay: 300 },
   { name: "Bash", icon: "mdi-bash", delay: 350 },
   { name: "Vue.js", icon: "mdi-vuejs", delay: 400 },
+  { name: "Jenkins", icon: "jenkins", image: new URL("@/assets/img/skills/jenkins.webp", import.meta.url).href, delay: 450 },
 ];
 </script>
 <template>

@@ -108,7 +108,17 @@ const { lgAndUp } = useDisplay();
               {{ $t("portfolio.homelab.title") }}
             </p>
             <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
-              {{ $t("portfolio.homelab.description1") }}.
+              <i18n-t keypath="portfolio.homelab.description1">
+                <template #docker><span class="accent">Docker</span></template>
+                <template #dockercompose
+                  ><span class="accent">docker-compose</span></template
+                >
+                <template #gitops><span class="accent">GitOps</span></template>
+                <template #portainer
+                  ><span class="accent">Portainer</span></template
+                >
+                <template #ansible><span class="accent">Ansible</span></template>
+              </i18n-t>.
             </p>
             <p class="quote text-grey mt-4 pr-3 pl-12" data-aos="fade-up">
               <i18n-t keypath="portfolio.homelab.description2">
