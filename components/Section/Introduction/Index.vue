@@ -32,7 +32,7 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
           "{{ $t("introduction.quote") }}" - Edward V. Berard.
         </p>
         <v-row class="pl-1" no-gutters>
-          <v-col data-aos="fade-up" data-aos-delay="200" cols="6" lg="4">
+          <v-col data-aos="fade-up" data-aos-delay="200" class=px-1 cols="6" lg="4">
             <h1
               class="font-weight-regular"
               :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
@@ -43,7 +43,7 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
               {{ $t("introduction.years-of-experience") }}
             </h5>
           </v-col>
-          <v-col data-aos="fade-up" data-aos-delay="300" cols="6" lg="4">
+          <v-col data-aos="fade-up" data-aos-delay="300" class=px-1  cols="6" lg="4">
             <h1
               class="font-weight-regular"
               :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
