@@ -68,7 +68,7 @@ const { lgAndUp } = useDisplay();
                 <template #stars><span class="accent">4.5K</span></template>
                 <template #github><span class="accent">GitHub</span></template>
                 <template #downloads
-                  ><span class="accent">1.5M pulls</span></template
+                  ><span class="accent">1.5M</span></template
                 >
                 <template #dockerhub
                   ><span class="accent">DockerHub</span></template
