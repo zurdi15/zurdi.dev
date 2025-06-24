@@ -22,9 +22,12 @@ const { lgAndUp } = useDisplay();
             >
           </i18n-t>
         </h2>
-        <v-row no-gutters class="pl-1">
+        <v-row id="romm-container" no-gutters class="pl-1">
           <v-col cols="12">
-            <div class="preview-img-container mb-8" :data-aos="lgAndUp ? 'fade-up' : ''">
+            <div
+              class="preview-img-container mb-8"
+              :data-aos="lgAndUp ? 'fade-up' : ''"
+            >
               <a
                 href="https://romm.app"
                 target="_blank"
@@ -32,7 +35,7 @@ const { lgAndUp } = useDisplay();
                 class="preview-img-link"
               >
                 <v-img
-                  src="/personal_projects/romm-preview.webp"
+                  src="/personal_projects/romm/preview.webp"
                   class="preview-img"
                 />
               </a>
@@ -52,32 +55,77 @@ const { lgAndUp } = useDisplay();
             </p>
             <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description1">
+                <template #romm><span class="accent">RomM</span></template>
                 <template #vuepython
                   ><span class="accent"
-                    >Vue.js / Python[FastAPI]</span
+                    >Vue.js / Python (FastAPI)</span
                   ></template
                 >
                 <template #dockerimage
                   ><span class="accent">{{
                     $t("portfolio.romm.dockerimage")
                   }}</span></template
-                >
-              </i18n-t>
-              <br /><br />
+                > </i18n-t
+              >. <br /><br />
               <i18n-t keypath="portfolio.romm.description2">
+                <template #cicd><span class="accent">(CI/CD)</span></template>
+                <template #ghactions
+                  ><span class="accent">GitHub Actions</span></template
+                > </i18n-t
+              >. <br /><br />
+              <i18n-t keypath="portfolio.romm.description3">
                 <template #stars><span class="accent">4.5K</span></template>
                 <template #github><span class="accent">GitHub</span></template>
-                <template #downloads
-                  ><span class="accent">1.5M</span></template
-                >
+                <template #downloads><span class="accent">1.5M</span></template>
                 <template #dockerhub
                   ><span class="accent">DockerHub</span></template
                 >
                 <template #users><span class="accent">3K</span></template>
                 <template #discord
                   ><span class="accent">Discord</span></template
+                > </i18n-t
+              >.
+            </p>
+          </v-col>
+        </v-row>
+        <v-divider :class="{ desktop: lgAndUp, 'my-16': !lgAndUp }" />
+        <v-row id="zurdi-container" no-gutters class="pl-1">
+          <v-col cols="12">
+            <div
+              class="preview-img-container mb-8"
+              :data-aos="lgAndUp ? 'fade-up' : ''"
+            >
+              <v-img
+                src="/personal_projects/zurdi.dev/preview.webp"
+                class="preview-img"
+              />
+            </div>
+            <p
+              class="project-title text-h4 mx-3 font-weight-thin"
+              data-aos="fade-up"
+            >
+              zurdi.dev
+            </p>
+            <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
+              <i18n-t keypath="portfolio.zurdi.description1">
+                <template #zurdi
+                  ><span class="accent">zurdi.dev</span></template
                 >
-              </i18n-t>
+                <template #vue>
+                  <span class="accent">Vue.js</span>
+                </template>
+                <template #nuxt>
+                  <span class="accent">Nuxt</span>
+                </template>
+                <template #vuetify>
+                  <span class="accent">Vuetify</span>
+                </template> </i18n-t
+              >. <br /><br />
+              <i18n-t keypath="portfolio.zurdi.description2">
+                <template #fullstack
+                  ><span class="accent">full stack</span></template
+                > </i18n-t
+              >.
             </p>
           </v-col>
         </v-row>
@@ -88,8 +136,14 @@ const { lgAndUp } = useDisplay();
 <style scoped>
 .preview-img-container {
   border-radius: 30px;
+  border: 1px solid var(--v-theme-gray2);
   overflow: hidden;
   max-width: 800px;
+}
+.v-divider.desktop {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 80px;
 }
 .preview-img {
   transition: transform 0.3s;

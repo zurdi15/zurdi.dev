@@ -66,10 +66,18 @@ export default () => ({
     projects: "Proyectos",
     romm: {
       description1:
-        "RomM (abreviatura de Rom Manager) es un gestor de bibliotecas de juegos autoalojado enfocado en el retro gaming. Administra, organiza y juega todos tus juegos desde un navegador web. Desarrollado con {vuepython}, y distribuido mediante una {dockerimage}.",
+        "{romm} (abreviatura de Rom Manager) es un gestor de bibliotecas de juegos autoalojado enfocado en el retro gaming. Administra, organiza y juega todos tus juegos desde un navegador web. Desarrollado con {vuepython}, y distribuido mediante una {dockerimage}",
       description2:
-        "Con más de {stars} estrellas en {github}, más de {downloads} pulls en {dockerhub}, y una comunidad de más de {users} miembros en {discord}, RomM es la opción número uno entre quienes prefieren soluciones autoalojadas.",
+        "Además del desarrollo de tanto del back como del front, también he diseñado y mantenido toda la infraestructura de distribución: desde la creación de la imagen de docker, hasta el desarrollo de pipelines de integración y despliegue continuo {cicd} mediante {ghactions}, asegurando lanzamientos consistentes, versionados y listos para producción",
+      description3:
+        "Con más de {stars} estrellas en {github}, más de {downloads} pulls en {dockerhub}, y una comunidad de más de {users} miembros en {discord}, RomM es la opción número uno entre quienes prefieren soluciones autoalojadas",
       dockerimage: "imagen de Docker",
+    },
+    zurdi: {
+      description1:
+        "{zurdi} es mi portafolio personal, diseñado y desarrollado desde cero para reflejar tanto mis habilidades técnicas como mi sensibilidad por el diseño. Desarrollado con {vue}, {nuxt} y {vuetify}, combina una interfaz limpia y responsiva con animaciones sutiles y un enfoque en el rendimiento y la accesibilidad",
+      description2:
+        "Cada sección, desde la presentación de proyectos hasta los elementos interactivos, está cuidadosamente elaborada para demostrar mi experiencia {fullstack} y mi atención al detalle en la experiencia de usuario",
     },
   },
   skills: {
