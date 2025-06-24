@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
 });
 </script>
 <template>
-  <div data-aos="fade-left" data-aos-delay="60" class="main-menu text-white">
+  <div data-aos="fade-left" data-aos-delay="60" class="main-menu glass text-white">
     <v-row no-gutters class="text-center py-2">
       <v-col
         v-for="section in sections"
@@ -96,7 +96,6 @@ onBeforeUnmount(() => {
 </template>
 <style scoped>
 .main-menu {
-  backdrop-filter: blur(8px);
   border: 1px solid var(--v-theme-gray2);
   border-radius: 30px;
   position: fixed;

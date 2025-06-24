@@ -27,7 +27,7 @@ const copyEmail = async () => {
   <v-card
     data-aos="fade-right"
     data-aos-delay="60"
-    class="profile-card text-white position-relative transparent"
+    class="profile-card glass text-white position-relative transparent"
   >
     <v-row no-gutters class="justify-space-between">
       <v-col class="d-flex align-center">
@@ -108,7 +108,6 @@ const copyEmail = async () => {
 </template>
 <style scoped>
 .profile-card {
-  backdrop-filter: blur(8px);
   border: 1px solid var(--v-theme-gray2) !important;
   padding: 50px !important;
   z-index: 100 !important;

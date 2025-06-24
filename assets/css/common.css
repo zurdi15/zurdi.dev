@@ -68,6 +68,10 @@ h2.mobile {
   max-width: 800px;
 }
 
+.glass {
+  backdrop-filter: blur(8px) !important;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

@@ -12,10 +12,10 @@ defineProps<{
     <v-hover v-slot:default="{ props, isHovering }">
       <v-card
         v-bind="props"
-        class="skill-chip ma-4"
+        class="skill-chip glass transparent ma-4"
         height="244"
       >
-        <v-card-text class="text-center text-white">
+        <v-card-text class="test text-center text-white">
           <v-icon size="50" class="mb-8">{{ skill.icon }}</v-icon>
           <h3 class="font-weight-bold skill-name" :class="{ accent: isHovering }">
             {{ skill.name }}
@@ -26,8 +26,7 @@ defineProps<{
   </div>
 </template>
 <style scoped>
-.skill-chip {
-  background-color: transparent;
+.skill-chip, test {
   border: 2px solid var(--v-theme-gray2);
   border-radius: 85px;
   padding: 54px 0 48px;

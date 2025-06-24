@@ -38,7 +38,7 @@ const resume = computed(() =>
             </p>
             <p
               v-if="item.title"
-              class="date-title text-white my-16 py-2 px-4"
+              class="date-title glass transparent text-white my-16 py-2 px-4"
               :class="{ 'mb-0': index === resume.length - 1 }"
             >
               {{ item.title }}
@@ -91,7 +91,6 @@ const resume = computed(() =>
   font-size: 21px;
   max-width: 600px;
   color: var(--v-theme-gray1);
-  background-color: var(--v-theme-gray3);
   border: 1px solid var(--v-theme-primary);
   border-radius: 15px;
   margin-left: -100px; /* Adjust this value as needed for overlap */
