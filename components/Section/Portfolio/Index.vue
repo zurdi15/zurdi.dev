@@ -24,9 +24,7 @@ const { lgAndUp } = useDisplay();
         </h2>
         <v-row id="romm-container" no-gutters class="pl-1">
           <v-col cols="12">
-            <div
-              class="preview-img-container mb-8"
-            >
+            <div class="preview-img-container mb-8">
               <a
                 href="https://romm.app"
                 target="_blank"
@@ -56,19 +54,25 @@ const { lgAndUp } = useDisplay();
               <i18n-t keypath="portfolio.romm.description1">
                 <template #romm><span class="accent">RomM</span></template>
                 <template #vue><span class="accent">Vue.js</span></template>
-                <template #python><span class="accent">Python (FastAPI)</span></template>
+                <template #python
+                  ><span class="accent">Python (FastAPI)</span></template
+                >
                 <template #dockerimage
                   ><span class="accent">{{
                     $t("portfolio.romm.dockerimage")
                   }}</span></template
                 > </i18n-t
               >. <br /><br />
+            </p>
+            <p class="quote text-grey px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description2">
                 <template #cicd><span class="accent">(CI/CD)</span></template>
                 <template #ghactions
                   ><span class="accent">GitHub Actions</span></template
                 > </i18n-t
               >. <br /><br />
+            </p>
+            <p class="quote text-grey px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description3">
                 <template #stars><span class="accent">4.5K</span></template>
                 <template #github><span class="accent">GitHub</span></template>
@@ -87,9 +91,7 @@ const { lgAndUp } = useDisplay();
         <v-divider :class="{ desktop: lgAndUp, 'my-16': !lgAndUp }" />
         <v-row id="zurdi-container" no-gutters class="pl-1">
           <v-col cols="12">
-            <div
-              class="preview-img-container mb-8"
-            >
+            <div class="preview-img-container mb-8">
               <v-img
                 src="/personal_projects/zurdi.dev/preview.webp"
                 class="preview-img"
@@ -116,6 +118,8 @@ const { lgAndUp } = useDisplay();
                   <span class="accent">Vuetify</span>
                 </template> </i18n-t
               >. <br /><br />
+            </p>
+            <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.zurdi.description2">
                 <template #fullstack
                   ><span class="accent">full stack</span></template
