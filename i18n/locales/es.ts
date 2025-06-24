@@ -35,12 +35,10 @@ export default () => ({
     experience: "Experiencia",
     items: [
       {
-        title: "Consultor Tecnológico en TMC España",
         date: "Feb 2022 - Presente",
         description: "Senior MLOps en Inditex",
       },
       {
-        title: "Consultor Tecnológico en TMC España",
         date: "Ene 2021 - Feb 2022",
         description: "Senior Data Engineer en Atresmedia",
       },
