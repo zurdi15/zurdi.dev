@@ -7,6 +7,6 @@ defineProps<{
 <template>
   <span data-aos="fade-up" class="d-inline-flex font-weight-regular align-center section-chip">
     <v-icon size="15" class="mr-2">{{ icon }}</v-icon
-    >{{ $t(section) }}
+    >{{ $t(`${section}.title`) }}
   </span>
 </template>

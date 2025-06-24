@@ -59,17 +59,17 @@ onMounted(() => {
             class="mt-16 px-8"
           >
             <template v-if="displayReady">
-              <SectionIntroduce class="mt-20" />
+              <SectionIntroduction class="mt-20" />
               <SectionAbout
                 :class="{ 'mt-150': lgAndUp, 'mt-100': !lgAndUp }"
               />
               <SectionResume
                 :class="{ 'mt-150': lgAndUp, 'mt-100': !lgAndUp }"
               />
-              <SectionSkills
+              <SectionPortfolio
                 :class="{ 'mt-150': lgAndUp, 'mt-100': !lgAndUp }"
               />
-              <SectionPortfolio
+              <SectionSkills
                 :class="{ 'mt-150': lgAndUp, 'mt-100': !lgAndUp }"
               />
             </template>

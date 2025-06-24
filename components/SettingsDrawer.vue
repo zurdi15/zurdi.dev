@@ -15,7 +15,7 @@ const emit = defineEmits<{
 const { lgAndUp } = useDisplay();
 const sections = [
   {
-    id: "introduce",
+    id: "introduction",
     icon: "mdi-home-outline",
   },
   {
@@ -27,12 +27,12 @@ const sections = [
     icon: "mdi-briefcase-outline",
   },
   {
-    id: "skills",
-    icon: "mdi-shape-outline",
-  },
-  {
     id: "portfolio",
     icon: "mdi-image-filter-none",
+  },
+  {
+    id: "skills",
+    icon: "mdi-shape-outline",
   },
 ];
 const { locales, locale, setLocale } = useI18n();
@@ -119,21 +119,31 @@ onBeforeUnmount(() => {
       </v-col>
     </v-row>
     <template v-if="!lgAndUp">
-      <v-row class="mx-16" no-gutters>
+      <v-row class="mx-14" no-gutters>
         <v-col cols="12">
-          <v-list-item
+          <v-hover
             v-for="section in sections"
-            @click="scrollTo(section.id)"
-            class="section-item"
-            :class="{ current: currentSection === section.id }"
+            v-slot:default="{ props, isHovering }"
           >
-            <template #prepend>
-              <v-icon class="section-icon my-3" size="22">{{
-                section.icon
-              }}</v-icon>
-            </template>
-            {{ $t(`${section.id}.title`) }}
-          </v-list-item>
+            <v-list-item
+              @click="scrollTo(section.id)"
+              class="section-item"
+              v-bind="props"
+            >
+              <template #prepend>
+                <v-icon
+                  class="section-icon my-3"
+                  :class="{
+                    'hovering accent': isHovering,
+                    current: currentSection === section.id,
+                  }"
+                  size="22"
+                  >{{ section.icon }}</v-icon
+                >
+              </template>
+              {{ $t(`${section.id}.title`) }}
+            </v-list-item>
+          </v-hover>
         </v-col>
       </v-row>
       <v-divider class="my-12 mx-6" />
@@ -187,11 +197,12 @@ onBeforeUnmount(() => {
 }
 .section-item {
   border-radius: 10px !important;
-  border: 1px solid transparent !important;
 }
-.section-item:hover,
-.section-item.current {
-  border-radius: 10px !important;
-  border: 1px solid var(--v-theme-primary) !important;
+.section-icon {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.section-icon.hovering, .section-icon.current {
+  color: var(--v-theme-primary) !important;
+  transform: scale(1.15) !important;
 }
 </style>

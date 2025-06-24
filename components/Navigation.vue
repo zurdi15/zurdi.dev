@@ -5,7 +5,7 @@ defineEmits(["open:settings"]);
 
 const sections = [
   {
-    id: "introduce",
+    id: "introduction",
     icon: "mdi-home-outline",
   },
   {
@@ -17,12 +17,12 @@ const sections = [
     icon: "mdi-briefcase-outline",
   },
   {
-    id: "skills",
-    icon: "mdi-shape-outline",
-  },
-  {
     id: "portfolio",
     icon: "mdi-image-filter-none",
+  },
+  {
+    id: "skills",
+    icon: "mdi-shape-outline",
   },
 ];
 
@@ -71,16 +71,15 @@ onBeforeUnmount(() => {
 <template>
   <div data-aos="fade-left" data-aos-delay="60" class="main-menu text-white">
     <v-row no-gutters class="text-center py-2">
-      <v-col class="section-btn" cols="12" v-for="section in sections" :key="section.id" :class="{ current: currentSection === section.id }">
-        <v-icon class="my-3" @click="scrollTo(section.id)" size="22">{{
+      <v-col class="section-btn" @click="scrollTo(section.id)" cols="12" v-for="section in sections" :key="section.id" :class="{ current: currentSection === section.id }">
+        <v-icon class="my-3" size="22">{{
           section.icon
         }}</v-icon>
       </v-col>
       <v-divider class="my-2" />
-      <v-col id="settings-button" cols="12">
+      <v-col id="settings-button" @click="$emit('open:settings', true)" cols="12">
         <v-icon
           class="my-3"
-          @click="$emit('open:settings', true)"
           >mdi-cog</v-icon
         >
       </v-col>

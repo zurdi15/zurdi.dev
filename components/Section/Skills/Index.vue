@@ -32,7 +32,7 @@ const skills = [
             >
           </i18n-t>
         </h2>
-        <v-row no-gutters class="pl-1">
+        <v-row no-gutters class="pl-1 chips-container">
           <v-col cols="6" sm="4" md="3" v-for="(skill, index) in skills">
             <SectionSkillsChip :skill="skill" :key="index" />
           </v-col>
@@ -41,3 +41,8 @@ const skills = [
     </div>
   </section>
 </template>
+<style scoped>
+.chips-container {
+  max-width: 800px;
+}
+</style>

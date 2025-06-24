@@ -11,6 +11,7 @@ const { lgAndUp } = useDisplay();
         <h2
           class="font-weight-thin mb-10"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
+          data-aos="fade-up"
         >
           <span class="accent">{{ $t("about.automating") }}</span>
           {{ $t("about.automating-purpose") }},<br />

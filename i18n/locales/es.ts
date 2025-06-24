@@ -3,7 +3,7 @@ export default () => ({
   settings: {
     language: "Idioma",
   },
-  introduce: {
+  introduction: {
     title: "Introducción",
     "mlops-by-profession": "{mlops} por profesión",
     "fullstack-by-passion": "{fullstack} por pasión",
@@ -25,7 +25,7 @@ export default () => ({
     quote2:
       "Como desarrollador full stack, fundé el proyecto RomM, una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
     quote3:
-      "Me considero una persona proactiva con una gran capacidad de aprendizaje, que disfruta colaborar con equipos multidisciplinarios y multiculturales",
+      "Soy una persona proactiva con una gran capacidad de aprendizaje, que disfruta colaborar con equipos multidisciplinarios y multiculturales",
   },
   resume: {
     title: "Currículum",
@@ -59,16 +59,23 @@ export default () => ({
       },
     ],
   },
-  skills: {
-    title: "Skills",
-    "tech-stack": "{stack} {tech}",
-    tech: "Tecnológico",
-    stack: "Stack",
-  },
   portfolio: {
     title: "Portfolio",
     "personal-projects": "{projects} {personal}",
     personal: "Personales",
     projects: "Proyectos",
+    romm: {
+      description1:
+        "RomM (abreviatura de Rom Manager) es un gestor de bibliotecas de juegos autoalojado enfocado en el retro gaming. Administra, organiza y juega todos tus juegos desde un navegador web. Desarrollado con {vuepython}, y distribuido mediante una {dockerimage}.",
+      description2:
+        "Con más de {stars} en {github}, más de {downloads} en {dockerhub}, y una comunidad de más de {users} miembros en {discord}, RomM es la opción número uno entre quienes prefieren soluciones autoalojadas.",
+      dockerimage: "imagen de Docker",
+    },
+  },
+  skills: {
+    title: "Skills",
+    "tech-stack": "{stack} {tech}",
+    tech: "Tecnológico",
+    stack: "Stack",
   },
 });
