@@ -7,10 +7,7 @@ export default defineNuxtConfig({
           name: "description",
           content: "MLOps by profession, Full Stack by passion.",
         },
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1.0, user-scalable=no",
-        },
+
         // Open Graph
         { property: "og:title", content: "MLOps and Full Stack | zurdi.dev" },
         { property: "og:type", content: "website" },
@@ -22,11 +19,15 @@ export default defineNuxtConfig({
 
         {
           property: "og:image",
-          content: "https://zurdi.dev/social-preview.png",
+          content: "https://zurdi.dev/social-preview.jpg",
         },
         { property: "og:image:type", content: "image/png" },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
+        {
+          property: "og:image:secure_url",
+          content: "https://zurdi.dev/social-preview.jpg",
+        },
 
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
@@ -39,7 +40,7 @@ export default defineNuxtConfig({
         { name: "twitter:url", content: "https://zurdi.dev" },
         {
           name: "twitter:image",
-          content: "https://zurdi.dev/social-preview.png",
+          content: "https://zurdi.dev/social-preview.jpg",
         },
       ],
       link: [{ rel: "canonical", href: "https://zurdi.dev" }],
