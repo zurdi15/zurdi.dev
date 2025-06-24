@@ -23,7 +23,7 @@ export default () => ({
     driven: "driven",
     "driven-design": "by design",
     quote1:
-      "{mlops} (Machine Learning Operations) is the discipline that bridges the gap between data science and software engineering, aiming to streamline and automate the entire machine learning lifecycle. It combines best practices from {devops}, data engineering, and machine learning to ensure scalable, reliable, and reproducible ML systems in production",
+      "{mlops} (Machine Learning Operations) is the discipline that bridges the gap between data science and software engineering, aiming to streamline and automate the entire machine learning lifecycle. It combines best practices from {devops}, data engineering, and machine learning to ensure scalable, reliable, and reproducible ML systems",
     quote2:
       "As a MLOps Engineer with a solid background in cloud environments and previous experience as a data engineer, I am specialized in automating training and deployment pipelines, {infraascode} and DevOps practices applied to the ML lifecycle",
     infraascode: "infrastructure as code",
