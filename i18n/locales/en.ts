@@ -82,7 +82,7 @@ export default () => ({
       dockerimage: "Docker image",
     },
     homelab: {
-      title: "On-premises self-hosted homelab",
+      title: "On-premise self-hosted homelab",
       description1:
         "Management and maintenance of a personal homelab with multiple services deployed using {docker}, {dockercompose} and {gitops} through {portainer}. Servers setup is managed with {ansible}",
       description2:
