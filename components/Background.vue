@@ -11,7 +11,7 @@ const props = withDefaults(
 
 <template>
   <video v-if="props.bg" id="background" muted autoplay loop :key="props.bg">
-    <source :src="`/bg_${props.bg}.mp4`" type="video/mp4" />
+    <source :src="`/background/bg_${props.bg}.mp4`" type="video/mp4" />
   </video>
 </template>
 
