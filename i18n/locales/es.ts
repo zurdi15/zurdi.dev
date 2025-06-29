@@ -34,7 +34,7 @@ export default () => ({
     sysadmin: "administración de sistemas",
     quote5:
       "Soy una persona proactiva con una gran capacidad de aprendizaje que disfruta colaborar con equipos {multidisciplinary} y {multicultural}",
-    multidisciplinary: "multidisciplinarios",
+    multidisciplinary: "multidisciplinares",
     multicultural: "multiculturales",
   },
   resume: {
