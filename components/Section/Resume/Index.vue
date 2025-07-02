@@ -38,7 +38,7 @@ const resume = computed(() =>
             <p class="date-description mt-8">
               {{ item.description }}
             </p>
-            <v-chip size="small" v-if="item.compute_target">
+            <v-chip size="small" class="mt-1" v-if="item.compute_target" label>
               <v-icon size="20" class="mr-2 accent">{{ item.compute_target_icon }}</v-icon>{{ item.compute_target }}
             </v-chip>
             <p
