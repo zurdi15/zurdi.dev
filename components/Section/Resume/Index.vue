@@ -9,6 +9,8 @@ const resume = computed(() =>
     title: item.title,
     date: item.date,
     description: item.description,
+    compute_target: item.compute_target,
+    compute_target_icon: item.compute_target_icon,
   }))
 );
 </script>
@@ -36,6 +38,9 @@ const resume = computed(() =>
             <p class="date-description mt-8">
               {{ item.description }}
             </p>
+            <v-chip size="small" v-if="item.compute_target">
+              <v-icon size="20" class="mr-2 accent">{{ item.compute_target_icon }}</v-icon>{{ item.compute_target }}
+            </v-chip>
             <p
               v-if="item.title"
               class="date-title glass transparent text-white my-16 py-2 px-4"
@@ -99,5 +104,8 @@ const resume = computed(() =>
 }
 .date-description {
   font-size: 20px;
+}
+.date-compute_target {
+  font-size: 16px;
 }
 </style>

@@ -45,20 +45,28 @@ export default () => ({
       {
         date: "Feb 2022 - Presente",
         description: "Senior MLOps en Inditex",
+        compute_target: "Azure",
+        compute_target_icon: "mdi-microsoft-azure",
       },
       {
         date: "Ene 2021 - Feb 2022",
         description: "Senior Data Engineer en Atresmedia",
+        compute_target: "AWS",
+        compute_target_icon: "mdi-aws",
       },
       {
         title: "Consultor Tecnológico en TMC España",
         date: "Dic 2019 - Ene 2021",
         description: "Data Engineer en Orange España",
+        compute_target: "On-premise",
+        compute_target_icon: "mdi-server-network",
       },
       {
         title: "Consultor Tecnológico en Alten",
         date: "May 2017 - Dic 2019",
         description: "Data Engineer en Unidad Editorial",
+        compute_target: "On-premise",
+        compute_target_icon: "mdi-server-network",
       },
       {
         title: "Universidad de Alcalá de Henares, Madrid, España",
