@@ -94,7 +94,7 @@ export default () => ({
       description1:
         "Management and maintenance of a personal homelab with multiple services deployed using {docker}, {dockercompose} and {gitops} through {portainer}. Servers setup is managed with {ansible}",
       description2:
-        "{infrastructure}: advanced home network with a mini PC as central server, some Raspberry Pis as standalone devices, one NAS and one switch to interconnect them",
+        "{infrastructure}: advanced home network with a mini PC as central server, some Raspberry Pis as standalone devices, one NAS and one network switch",
       infrastructure: "Infrastructure",
       description3:
         "{orchestration}: container management with docker-compose and GitOps through Portainer for version control and automated service updates",
