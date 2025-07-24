@@ -75,9 +75,9 @@ const { lgAndUp } = useDisplay();
             </p>
             <p class="quote text-grey px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description3">
-                <template #stars><span class="accent">4.5K</span></template>
+                <template #stars><span class="accent">5.7K</span></template>
                 <template #github><span class="accent">GitHub</span></template>
-                <template #downloads><span class="accent">1.5M</span></template>
+                <template #downloads><span class="accent">2M</span></template>
                 <template #dockerhub
                   ><span class="accent">DockerHub</span></template
                 >
