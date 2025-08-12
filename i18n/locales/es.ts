@@ -43,7 +43,13 @@ export default () => ({
     experience: "Experiencia",
     items: [
       {
-        date: "Feb 2022 - Presente",
+        date: "Ago 2025 - Presente",
+        description: "Senior CloudOps en Busuu",
+        compute_target: "AWS",
+        compute_target_icon: "mdi-aws",
+      },
+      {
+        date: "Feb 2022 - Ago 2025",
         description: "Senior MLOps en Inditex",
         compute_target: "Azure",
         compute_target_icon: "mdi-microsoft-azure",
