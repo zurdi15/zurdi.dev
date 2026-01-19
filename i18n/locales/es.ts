@@ -7,12 +7,11 @@ export default () => ({
   },
   introduction: {
     title: "Introducción",
-    "mlops-by-profession": "{mlops} por profesión",
+    "cloudops-by-profession": "{cloudops} por profesión",
     "fullstack-by-passion": "{fullstack} por pasión",
     quote:
       "Caminar sobre el agua y desarrollar software a partir de una especificación son fáciles si ambos están congelados",
     "years-of-experience": "Años de experiencia",
-    "ml-projects": "Proyectos de ML escalados utilizando estándares MLOps",
   },
   about: {
     title: "Acerca de",
@@ -23,9 +22,9 @@ export default () => ({
     driven: "guiado",
     "driven-design": "por el diseño",
     quote1:
-      "{mlops} (Machine Learning Operations) es la disciplina que conecta la ciencia de datos con la ingeniería de software, con el objetivo de optimizar y automatizar todo el ciclo de vida del aprendizaje automático. Combina las mejores prácticas de {devops}, ingeniería de datos y machine learning para garantizar sistemas de ML escalables, confiables y reproducibles",
+      "{cloudops} (Cloud Operations) es la disciplina que se enfoca en optimizar, gestionar y automatizar la infraestructura y los servicios en la nube. Combina las mejores prácticas de {devops}, gestión de infraestructura e ingeniería de nube para garantizar sistemas de nube escalables, confiables y eficientes",
     quote2:
-      "Como ingeniero MLOps con una sólida experiencia en entornos de nube y experiencia previa como ingeniero de datos, estoy especializado en la automatización de pipelines de entrenamiento y despliegue, {infraascode} y prácticas de DevOps aplicadas al ciclo de vida de ML",
+      "Como ingeniero CloudOps con una sólida experiencia en entornos de nube y experiencia previa como ingeniero de datos, estoy especializado en automatización de infraestructura, optimización de nube, {infraascode} y prácticas de DevOps aplicadas a infraestructura de nube",
     infraascode: "infraestructura como código",
     quote3:
       "Como desarrollador {fullstack}, fundé The RomM Project: una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
@@ -43,6 +42,7 @@ export default () => ({
     experience: "Experiencia",
     items: [
       {
+        title: "CloudOps en Busuu",
         date: "Ago 2025 - Presente",
         description: "CloudOps en Busuu",
         compute_target: "AWS",

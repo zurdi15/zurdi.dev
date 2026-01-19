@@ -37,7 +37,7 @@ const copyEmail = async () => {
       </v-col>
       <v-col>
         <div class="d-flex align-center justify-end text-subtitle-1">
-          <span class="designation">MLOps &</span>
+          <span class="designation">CloudOps &</span>
         </div>
         <div
           class="d-flex align-center justify-end text-subtitle-1 text-weight-thin"

@@ -7,12 +7,11 @@ export default () => ({
   },
   introduction: {
     title: "Introduction",
-    "mlops-by-profession": "{mlops} by profession",
+    "cloudops-by-profession": "{cloudops} by profession",
     "fullstack-by-passion": "{fullstack} by passion",
     quote:
       "Walking on water and developing software from a specification are easy if both are frozen",
     "years-of-experience": "Years of experience",
-    "ml-projects": "ML projects scaled using MLOps standards",
   },
   about: {
     title: "About",
@@ -23,9 +22,9 @@ export default () => ({
     driven: "driven",
     "driven-design": "by design",
     quote1:
-      "{mlops} (Machine Learning Operations) is the discipline that bridges the gap between data science and software engineering, aiming to streamline and automate the entire machine learning lifecycle. It combines best practices from {devops}, data engineering, and machine learning to ensure scalable, reliable, and reproducible ML systems",
+      "{cloudops} (Cloud Operations) is the discipline that focuses on optimizing, managing, and automating cloud infrastructure and services. It combines best practices from {devops}, infrastructure management, and cloud engineering to ensure scalable, reliable, and efficient cloud systems",
     quote2:
-      "As a MLOps Engineer with a solid background in cloud environments and previous experience as a data engineer, I am specialized in automating training and deployment pipelines, {infraascode} and DevOps practices applied to the ML lifecycle",
+      "As a CloudOps Engineer with a solid background in cloud environments and previous experience as a data engineer, I am specialized in infrastructure automation, cloud optimization, {infraascode} and DevOps practices applied to cloud infrastructure",
     infraascode: "infrastructure as code",
     quote3:
       "As a {fullstack} developer, I founded The RomM Project: an open-source, self-hosted solution that helps manage retro game libraries, focused on design and user experience",
@@ -43,6 +42,7 @@ export default () => ({
     experience: "Experience",
     items: [
       {
+        title: "CloudOps at Busuu",
         date: "Aug 2025 - Present",
         description: "CloudOps at Busuu",
         compute_target: "AWS",

@@ -15,8 +15,8 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
           class="font-weight-regular mb-10"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
-          <i18n-t keypath="introduction.mlops-by-profession">
-            <template #mlops><span class="accent">MLOps</span></template>
+          <i18n-t keypath="introduction.cloudops-by-profession">
+            <template #cloudops><span class="accent">CloudOps</span></template>
           </i18n-t>,
           <br />
           <i18n-t keypath="introduction.fullstack-by-passion">
@@ -31,30 +31,6 @@ const yearsOfExperience = ref(new Date().getFullYear() - 2017);
         >
           "{{ $t("introduction.quote") }}" - Edward V. Berard.
         </p>
-        <v-row class="pl-1" no-gutters>
-          <v-col data-aos="fade-up" data-aos-delay="200" class=px-1 cols="6" lg="4">
-            <h1
-              class="font-weight-regular"
-              :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
-            >
-              <span class="accent">{{ yearsOfExperience }}+</span>
-            </h1>
-            <h5 class="text-grey text-uppercase">
-              {{ $t("introduction.years-of-experience") }}
-            </h5>
-          </v-col>
-          <v-col data-aos="fade-up" data-aos-delay="300" class=px-1  cols="6" lg="4">
-            <h1
-              class="font-weight-regular"
-              :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
-            >
-              <span class="accent">30+</span>
-            </h1>
-            <h5 class="text-grey text-uppercase">
-              {{ $t("introduction.ml-projects") }}
-            </h5>
-          </v-col>
-        </v-row>
       </div>
     </div>
   </section>

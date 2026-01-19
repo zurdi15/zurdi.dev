@@ -23,7 +23,7 @@ const { lgAndUp } = useDisplay();
         <v-row no-gutters class="pl-1">
           <p data-aos="fade-up" class="quote text-grey">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote1">
-              <template #mlops><span class="accent">MLOps</span></template>
+              <template #cloudops><span class="accent">CloudOps</span></template>
               <template #devops><span class="accent">DevOps</span></template>
             </i18n-t>.
           </p>
