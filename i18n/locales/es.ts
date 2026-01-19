@@ -44,7 +44,7 @@ export default () => ({
     items: [
       {
         date: "Ago 2025 - Presente",
-        description: "Senior CloudOps en Busuu",
+        description: "CloudOps en Busuu",
         compute_target: "AWS",
         compute_target_icon: "mdi-aws",
       },
