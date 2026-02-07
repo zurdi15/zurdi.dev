@@ -24,7 +24,7 @@ export default () => ({
     quote1:
       "{cloudops} (Cloud Operations) is the discipline that focuses on optimizing, managing, and automating cloud infrastructure and services. It combines best practices from {devops}, infrastructure management, and cloud engineering to ensure scalable, reliable, and efficient cloud systems",
     quote2:
-      "As a CloudOps Engineer with a solid background in cloud environments and previous experience as a data engineer, I am specialized in infrastructure automation, cloud optimization, {infraascode} and DevOps practices applied to cloud infrastructure",
+      "As a CloudOps Engineer with previous experience as a MLOps Engineer and Data Engineer, I am specialized in infrastructure automation, cloud optimization, {infraascode} and DevOps practices applied to cloud infrastructure",
     infraascode: "infrastructure as code",
     quote3:
       "As a {fullstack} developer, I founded The RomM Project: an open-source, self-hosted solution that helps manage retro game libraries, focused on design and user experience",

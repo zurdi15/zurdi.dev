@@ -24,7 +24,7 @@ export default () => ({
     quote1:
       "{cloudops} (Cloud Operations) es la disciplina que se enfoca en optimizar, gestionar y automatizar la infraestructura y los servicios en la nube. Combina las mejores prácticas de {devops}, gestión de infraestructura e ingeniería de nube para garantizar sistemas de nube escalables, confiables y eficientes",
     quote2:
-      "Como ingeniero CloudOps con una sólida experiencia en entornos de nube y experiencia previa como ingeniero de datos, estoy especializado en automatización de infraestructura, optimización de nube, {infraascode} y prácticas de DevOps aplicadas a infraestructura de nube",
+      "Como ingeniero CloudOps con experiencia previa como Ingeniero MLOps e Ingeniero de Datos, estoy especializado en automatización de infraestructura, optimización de nube, {infraascode} y prácticas de DevOps aplicadas a infraestructura de nube",
     infraascode: "infraestructura como código",
     quote3:
       "Como desarrollador {fullstack}, fundé The RomM Project: una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
