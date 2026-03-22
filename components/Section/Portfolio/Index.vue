@@ -83,13 +83,21 @@ const { data: rommStats } = useFetch<{
             </p>
             <p class="quote text-grey px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description3">
-                <template #stars><span class="accent">{{ rommStats.stars }}</span></template>
+                <template #stars
+                  ><span class="accent">{{ rommStats.stars }}</span></template
+                >
                 <template #github><span class="accent">GitHub</span></template>
-                <template #downloads><span class="accent">{{ rommStats.downloads }}</span></template>
+                <template #downloads
+                  ><span class="accent">{{
+                    rommStats.downloads
+                  }}</span></template
+                >
                 <template #dockerhub
                   ><span class="accent">DockerHub</span></template
                 >
-                <template #users><span class="accent">{{ rommStats.users }}</span></template>
+                <template #users
+                  ><span class="accent">{{ rommStats.users }}</span></template
+                >
                 <template #discord
                   ><span class="accent">Discord</span></template
                 > </i18n-t
@@ -125,8 +133,10 @@ const { data: rommStats } = useFetch<{
                 <template #portainer
                   ><span class="accent">Portainer</span></template
                 >
-                <template #ansible><span class="accent">Ansible</span></template>
-              </i18n-t>.
+                <template #ansible
+                  ><span class="accent">Ansible</span></template
+                > </i18n-t
+              >.
             </p>
             <p class="quote text-grey mt-4 pr-3 pl-12" data-aos="fade-up">
               <i18n-t keypath="portfolio.homelab.description2">
@@ -236,7 +246,9 @@ const { data: rommStats } = useFetch<{
 }
 .project-title {
   width: fit-content;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 .project-title a {
