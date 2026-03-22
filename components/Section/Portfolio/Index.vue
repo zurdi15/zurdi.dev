@@ -2,6 +2,14 @@
 import { useDisplay } from "vuetify";
 
 const { lgAndUp } = useDisplay();
+
+const { data: rommStats } = useFetch<{
+  stars: string;
+  downloads: string;
+  users: string;
+}>("/api/romm-stats", {
+  default: () => ({ stars: "...", downloads: "...", users: "..." }),
+});
 </script>
 <template>
   <section id="portfolio">
@@ -75,13 +83,13 @@ const { lgAndUp } = useDisplay();
             </p>
             <p class="quote text-grey px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description3">
-                <template #stars><span class="accent">5.7K</span></template>
+                <template #stars><span class="accent">{{ rommStats.stars }}</span></template>
                 <template #github><span class="accent">GitHub</span></template>
-                <template #downloads><span class="accent">2M</span></template>
+                <template #downloads><span class="accent">{{ rommStats.downloads }}</span></template>
                 <template #dockerhub
                   ><span class="accent">DockerHub</span></template
                 >
-                <template #users><span class="accent">3K</span></template>
+                <template #users><span class="accent">{{ rommStats.users }}</span></template>
                 <template #discord
                   ><span class="accent">Discord</span></template
                 > </i18n-t
