@@ -6,6 +6,7 @@ const { lgAndUp } = useDisplay();
 const profileImg = new URL("@/assets/img/profile.webp", import.meta.url).href;
 const email = "contact@zurdi.dev";
 const showTooltip = ref(false);
+const currentYear = new Date().getFullYear();
 
 const copyEmail = async () => {
   try {
@@ -100,7 +101,7 @@ const copyEmail = async () => {
       </div>
       <div class="text-grey mt-6">
         <span class="text-caption"
-          >© 2025 Zurdi. {{ $t("all-rights-reserved") }}.</span
+          >© {{ currentYear }} Zurdi. {{ $t("all-rights-reserved") }}.</span
         >
       </div>
     </div>

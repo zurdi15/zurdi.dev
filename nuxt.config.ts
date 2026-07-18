@@ -1,19 +1,22 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "MLOps and Full Stack | zurdi.dev",
+      title: "CloudOps and Full Stack | zurdi.dev",
       meta: [
         {
           name: "description",
-          content: "MLOps by profession, Full Stack by passion.",
+          content: "CloudOps by profession, Full Stack by passion.",
         },
 
         // Open Graph
-        { property: "og:title", content: "MLOps and Full Stack | zurdi.dev" },
+        {
+          property: "og:title",
+          content: "CloudOps and Full Stack | zurdi.dev",
+        },
         { property: "og:type", content: "website" },
         {
           property: "og:description",
-          content: "MLOps by profession, Full Stack by passion.",
+          content: "CloudOps by profession, Full Stack by passion.",
         },
         { property: "og:url", content: "https://zurdi.dev" },
 
@@ -31,10 +34,13 @@ export default defineNuxtConfig({
 
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: "MLOps and Full Stack | zurdi.dev" },
+        {
+          name: "twitter:title",
+          content: "CloudOps and Full Stack | zurdi.dev",
+        },
         {
           name: "twitter:description",
-          content: "MLOps by profession, Full Stack by passion.",
+          content: "CloudOps by profession, Full Stack by passion.",
         },
         { name: "twitter:domain", content: "zurdi.dev" },
         { name: "twitter:url", content: "https://zurdi.dev" },

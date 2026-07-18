@@ -27,11 +27,15 @@ export default () => ({
       "As a CloudOps Engineer with previous experience as a MLOps Engineer and Data Engineer, I am specialized in infrastructure automation, cloud optimization, {infraascode} and DevOps practices applied to cloud infrastructure",
     infraascode: "infrastructure as code",
     quote3:
-      "As a {fullstack} developer, I founded The RomM Project: an open-source, self-hosted solution that helps manage retro game libraries, focused on design and user experience",
+      "Beyond infrastructure, I focus on bringing modern AI into {workflows}, where it actually pays off. I have developed {agentic} solutions that automatically diagnose {newrelic} alerts, cross-referencing their metrics with the infrastructure state in {aws} and the affected service's own repository to deliver a focused root-cause analysis",
+    workflows: "real operational workflows",
+    agentic: "agentic",
     quote4:
+      "As a {fullstack} developer, I founded The RomM Project: an open-source, self-hosted solution that helps manage retro game libraries, focused on design and user experience",
+    quote5:
       "In addition, I manage my own personal server, which hosts a variety of containerized services. This hands-on experience allows me to continuously explore new technologies, improve infrastructure management and fine-tune deployments in a real-world environment, further strengthening my DevOps and {sysadmin} skills",
     sysadmin: "system administration",
-    quote5:
+    quote6:
       "I am a proactive individual with a strong ability to learn who enjoys collaborating with {multidisciplinary} and {multicultural} teams",
     multidisciplinary: "multidisciplinary",
     multicultural: "multicultural",
@@ -42,37 +46,37 @@ export default () => ({
     experience: "Experience",
     items: [
       {
-        title: "CloudOps at Busuu",
         date: "Aug 2025 - Present",
         description: "CloudOps at Busuu",
-        compute_target: "AWS",
-        compute_target_icon: "mdi-aws",
+        stack: [
+          { name: "AWS", icon: "mdi-aws" },
+          { name: "Kubernetes", icon: "mdi-kubernetes" },
+          { name: "Terraform", icon: "mdi-terraform" },
+          { name: "ArgoCD", image: "argocd" },
+          { name: "New Relic", image: "newrelic" },
+        ],
       },
       {
         date: "Feb 2022 - Aug 2025",
         description: "Senior MLOps at Inditex",
-        compute_target: "Azure",
-        compute_target_icon: "mdi-microsoft-azure",
+        stack: [{ name: "Azure", icon: "mdi-microsoft-azure" }],
       },
       {
         date: "Jan 2021 - Feb 2022",
         description: "Senior Data Engineer at Atresmedia",
-        compute_target: "AWS",
-        compute_target_icon: "mdi-aws",
+        stack: [{ name: "AWS", icon: "mdi-aws" }],
       },
       {
         title: "Technology Consultant at TMC Spain",
         date: "Dec 2019 - Jan 2021",
         description: "Data Engineer at Orange España",
-        compute_target: "On-premise",
-        compute_target_icon: "mdi-server-network",
+        stack: [{ name: "On-premise", icon: "mdi-server-network" }],
       },
       {
         title: "Technology Consultant at Alten",
         date: "May 2017 - Dec 2019",
         description: "Data Engineer at Unidad Editorial",
-        compute_target: "On-premise",
-        compute_target_icon: "mdi-server-network",
+        stack: [{ name: "On-premise", icon: "mdi-server-network" }],
       },
       {
         title: "University of Alcalá de Henares, Madrid, Spain",
@@ -123,5 +127,10 @@ export default () => ({
     "tech-stack": "{tech} {stack}",
     tech: "Tech",
     stack: "Stack",
+    groups: {
+      cloud: "Cloud & Infrastructure as Code",
+      gitops: "GitOps & Observability",
+      dev: "Development",
+    },
   },
 });

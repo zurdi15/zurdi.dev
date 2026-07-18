@@ -2,9 +2,9 @@
 defineProps<{
   skill: {
     name: string;
-    icon: string;
     delay: number;
-    image?: string; // Optional for skills that use an image instead of an icon
+    icon?: string;
+    image?: string; // Takes precedence: for skills that mdi has no icon for
   };
 }>();
 </script>

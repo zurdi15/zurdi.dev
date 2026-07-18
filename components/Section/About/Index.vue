@@ -34,16 +34,24 @@ const { lgAndUp } = useDisplay();
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote3">
-              <template #fullstack><span class="accent">full stack</span></template>
+              <template #workflows><span class="accent">{{ $t('about.workflows') }}</span></template>
+              <template #agentic><span class="accent">{{ $t('about.agentic') }}</span></template>
+              <template #newrelic><span class="accent">New Relic</span></template>
+              <template #aws><span class="accent">AWS</span></template>
             </i18n-t>.
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote4">
-              <template #sysadmin><span class="accent">{{ $t('about.sysadmin') }}</span></template>
+              <template #fullstack><span class="accent">full stack</span></template>
             </i18n-t>.
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote5">
+              <template #sysadmin><span class="accent">{{ $t('about.sysadmin') }}</span></template>
+            </i18n-t>.
+          </p>
+          <p data-aos="fade-up" class="quote text-grey mt-8">
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote6">
               <template #multidisciplinary><span class="accent">{{ $t('about.multidisciplinary') }}</span></template>
               <template #multicultural><span class="accent">{{ $t('about.multicultural') }}</span></template>
             </i18n-t>.

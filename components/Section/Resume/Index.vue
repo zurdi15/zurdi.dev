@@ -4,15 +4,19 @@ import { useI18n } from "vue-i18n";
 
 const { lgAndUp } = useDisplay();
 const { tm } = useI18n();
+const skillIcons = useSkillIcons();
 const resume = computed(() =>
   (tm("resume.items") as any[]).map((item) => ({
     title: item.title,
     date: item.date,
     description: item.description,
-    compute_target: item.compute_target,
-    compute_target_icon: item.compute_target_icon,
+    stack: (item.stack ?? []) as { name: string; icon?: string; image?: string }[],
   }))
 );
+
+// Vite inlines SVGs under 4kB as data URIs that keep their single quotes, and an
+// unquoted url() rejects those, taking the whole declaration down with it.
+const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` });
 </script>
 <template>
   <section id="resume" :class="{ 'mr-65': !lgAndUp }">
@@ -30,6 +34,7 @@ const resume = computed(() =>
         <v-row no-gutters class="pl-5">
           <v-col
             v-for="(item, index) in resume"
+            :key="index"
             cols="12"
             :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
             class="date-container"
@@ -38,9 +43,23 @@ const resume = computed(() =>
             <p class="date-description mt-8">
               {{ item.description }}
             </p>
-            <v-chip size="small" class="mt-1" v-if="item.compute_target" label>
-              <v-icon size="20" class="mr-2 accent">{{ item.compute_target_icon }}</v-icon>{{ item.compute_target }}
-            </v-chip>
+            <div class="d-flex flex-wrap ga-1">
+              <v-chip
+                v-for="tech in item.stack"
+                :key="tech.name"
+                size="small"
+                class="mt-1"
+                label
+              >
+                <span
+                  v-if="tech.image"
+                  class="tech-mask mr-2"
+                  :style="maskStyle(tech.image)"
+                />
+                <v-icon v-else size="20" class="mr-2 accent">{{ tech.icon }}</v-icon
+                >{{ tech.name }}
+              </v-chip>
+            </div>
             <p
               v-if="item.title"
               class="date-title glass transparent text-white my-16 py-2 px-4"
@@ -105,7 +124,14 @@ const resume = computed(() =>
 .date-description {
   font-size: 20px;
 }
-.date-compute_target {
-  font-size: 16px;
+/* Logos ship as flat SVGs, so they are masked rather than drawn: that lets the
+   accent color come from CSS, matching the mdi icons in the sibling chips. */
+.tech-mask {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--v-theme-primary);
+  -webkit-mask: var(--mask) no-repeat center / contain;
+  mask: var(--mask) no-repeat center / contain;
 }
 </style>

@@ -27,11 +27,15 @@ export default () => ({
       "Como ingeniero CloudOps con experiencia previa como Ingeniero MLOps e Ingeniero de Datos, estoy especializado en automatización de infraestructura, optimización de nube, {infraascode} y prácticas de DevOps aplicadas a infraestructura de nube",
     infraascode: "infraestructura como código",
     quote3:
-      "Como desarrollador {fullstack}, fundé The RomM Project: una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
+      "Más allá de la infraestructura, me centro en llevar la IA moderna a {workflows}, donde de verdad aporta. He desarrollado soluciones {agentic} que auto-diagnostican alertas de {newrelic}, cruzando sus métricas con el estado de la infraestructura en {aws} y el propio repositorio del servicio afectado para entregar un análisis de causa raíz enfocado",
+    workflows: "workflows operativos reales",
+    agentic: "agénticas",
     quote4:
+      "Como desarrollador {fullstack}, fundé The RomM Project: una solución de código abierto y autohospedada que ayuda a gestionar bibliotecas de juegos retro, enfocada en el diseño y la experiencia de usuario",
+    quote5:
       "Además, gestiono mi propio servidor personal, que alberga una variedad de servicios contenerizados. Esta experiencia práctica me permite explorar continuamente nuevas tecnologías, mejorar la gestión de la infraestructura y optimizar los despliegues en un entorno del mundo real, fortaleciendo aún más mis habilidades de DevOps y {sysadmin}",
     sysadmin: "administración de sistemas",
-    quote5:
+    quote6:
       "Soy una persona proactiva con una gran capacidad de aprendizaje que disfruta colaborar con equipos {multidisciplinary} y {multicultural}",
     multidisciplinary: "multidisciplinares",
     multicultural: "multiculturales",
@@ -42,37 +46,37 @@ export default () => ({
     experience: "Experiencia",
     items: [
       {
-        title: "CloudOps en Busuu",
         date: "Ago 2025 - Presente",
         description: "CloudOps en Busuu",
-        compute_target: "AWS",
-        compute_target_icon: "mdi-aws",
+        stack: [
+          { name: "AWS", icon: "mdi-aws" },
+          { name: "Kubernetes", icon: "mdi-kubernetes" },
+          { name: "Terraform", icon: "mdi-terraform" },
+          { name: "ArgoCD", image: "argocd" },
+          { name: "New Relic", image: "newrelic" },
+        ],
       },
       {
         date: "Feb 2022 - Ago 2025",
         description: "Senior MLOps en Inditex",
-        compute_target: "Azure",
-        compute_target_icon: "mdi-microsoft-azure",
+        stack: [{ name: "Azure", icon: "mdi-microsoft-azure" }],
       },
       {
         date: "Ene 2021 - Feb 2022",
         description: "Senior Data Engineer en Atresmedia",
-        compute_target: "AWS",
-        compute_target_icon: "mdi-aws",
+        stack: [{ name: "AWS", icon: "mdi-aws" }],
       },
       {
         title: "Consultor Tecnológico en TMC España",
         date: "Dic 2019 - Ene 2021",
         description: "Data Engineer en Orange España",
-        compute_target: "On-premise",
-        compute_target_icon: "mdi-server-network",
+        stack: [{ name: "On-premise", icon: "mdi-server-network" }],
       },
       {
         title: "Consultor Tecnológico en Alten",
         date: "May 2017 - Dic 2019",
         description: "Data Engineer en Unidad Editorial",
-        compute_target: "On-premise",
-        compute_target_icon: "mdi-server-network",
+        stack: [{ name: "On-premise", icon: "mdi-server-network" }],
       },
       {
         title: "Universidad de Alcalá de Henares, Madrid, España",
@@ -123,5 +127,10 @@ export default () => ({
     "tech-stack": "{stack} {tech}",
     tech: "Tecnológico",
     stack: "Stack",
+    groups: {
+      cloud: "Cloud e Infraestructura como Código",
+      gitops: "GitOps y Observabilidad",
+      dev: "Desarrollo",
+    },
   },
 });
