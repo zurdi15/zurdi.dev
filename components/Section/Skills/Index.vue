@@ -9,28 +9,45 @@ const groups = [
     skills: [
       { name: "AWS", icon: "mdi-aws" },
       { name: "Azure", icon: "mdi-microsoft-azure" },
-      { name: "Kubernetes", icon: "mdi-kubernetes" },
       { name: "Terraform", icon: "mdi-terraform" },
       // Terragrunt has no logo in any icon set, so it borrows Terraform's.
       { name: "Terragrunt", icon: "mdi-terraform" },
     ],
   },
   {
-    key: "gitops",
+    key: "kubernetes",
+    skills: [
+      { name: "Kubernetes", icon: "mdi-kubernetes" },
+      { name: "Karpenter", image: "karpenter" },
+      { name: "KEDA", image: "keda" },
+      { name: "Docker", icon: "mdi-docker" },
+    ],
+  },
+  {
+    key: "cicd",
     skills: [
       { name: "ArgoCD", image: "argocd" },
-      { name: "Jenkins", image: "jenkins" },
-      { name: "Docker", icon: "mdi-docker" },
+      { name: "GitHub Actions", image: "githubactions" },
+      { name: "Azure DevOps", image: "azuredevops" },
+      { name: "Ansible", icon: "mdi-ansible" },
+    ],
+  },
+  {
+    key: "observability",
+    skills: [
       { name: "New Relic", image: "newrelic" },
+      { name: "Prometheus", image: "prometheus" },
+      { name: "Grafana", image: "grafana" },
+      { name: "PostgreSQL", image: "postgresql" },
     ],
   },
   {
     key: "dev",
     skills: [
       { name: "Python", icon: "mdi-language-python" },
+      { name: "TypeScript", icon: "mdi-language-typescript" },
       { name: "Vue.js", icon: "mdi-vuejs" },
       { name: "Bash", icon: "mdi-bash" },
-      { name: "Git", icon: "mdi-git" },
     ],
   },
 ];

@@ -34,24 +34,43 @@ const { lgAndUp } = useDisplay();
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote3">
-              <template #workflows><span class="accent">{{ $t('about.workflows') }}</span></template>
-              <template #agentic><span class="accent">{{ $t('about.agentic') }}</span></template>
-              <template #newrelic><span class="accent">New Relic</span></template>
-              <template #aws><span class="accent">AWS</span></template>
+              <template #multiaccount><span class="accent">{{ $t('about.multiaccount') }}</span></template>
+              <template #terraform><span class="accent">{{ $t('about.terraform') }}</span></template>
+              <template #gitops><span class="accent">GitOps</span></template>
             </i18n-t>.
           </p>
-          <p data-aos="fade-up" class="quote text-grey mt-8">
+          <!-- <p data-aos="fade-up" class="quote text-grey mt-8">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote4">
-              <template #fullstack><span class="accent">full stack</span></template>
+              <template #karpenter><span class="accent">Karpenter</span></template>
+              <template #keda><span class="accent">KEDA</span></template>
+              <template #spot><span class="accent">{{ $t('about.spot') }}</span></template>
+              <template #costchecks><span class="accent">{{ $t('about.costchecks') }}</span></template>
             </i18n-t>.
-          </p>
+          </p> -->
           <p data-aos="fade-up" class="quote text-grey mt-8">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote5">
-              <template #sysadmin><span class="accent">{{ $t('about.sysadmin') }}</span></template>
+              <template #workflows><span class="accent">{{ $t('about.workflows') }}</span></template>
+              <template #agentic><span class="accent">{{ $t('about.agentic') }}</span></template>
+              <template #mcp><span class="accent">{{ $t('about.mcp') }}</span></template>
+              <template #teams><span class="accent">Microsoft Teams</span></template>
             </i18n-t>.
           </p>
           <p data-aos="fade-up" class="quote text-grey mt-8">
             <i18n-t class="quote text-grey mt-8" keypath="about.quote6">
+              <template #fullstack><span class="accent">full stack</span></template>
+              <template #rommapp><a href="https://romm.app" class="accent" target="_blank" rel="noopener noreferrer">The RomM Project</a></template>
+              <template #turtletrips><a href="https://github.com/zurdi15/turtletrips" class="accent" target="_blank" rel="noopener noreferrer">TurtleTrips</a></template>
+            </i18n-t>.
+          </p>
+          <p data-aos="fade-up" class="quote text-grey mt-8">
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote7">
+              <template #k3s><span class="accent">k3s</span></template>
+              <template #argocd><span class="accent">Argo CD</span></template>
+              <template #sysadmin><span class="accent">{{ $t('about.sysadmin') }}</span></template>
+            </i18n-t>.
+          </p>
+          <p data-aos="fade-up" class="quote text-grey mt-8">
+            <i18n-t class="quote text-grey mt-8" keypath="about.quote8">
               <template #multidisciplinary><span class="accent">{{ $t('about.multidisciplinary') }}</span></template>
               <template #multicultural><span class="accent">{{ $t('about.multicultural') }}</span></template>
             </i18n-t>.

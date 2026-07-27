@@ -56,13 +56,18 @@ const { data: rommStats } = useFetch<{
                 rel="noopener noreferrer"
                 class="preview-img-link"
               >
-                RomM
+                The RomM Project
               </a>
             </p>
             <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.romm.description1">
                 <template #romm><span class="accent">RomM</span></template>
                 <template #vue><span class="accent">Vue.js</span></template>
+                <template #customui
+                  ><span class="accent">{{
+                    $t("portfolio.romm.customui")
+                  }}</span></template
+                >
                 <template #python
                   ><span class="accent">Python (FastAPI)</span></template
                 >
@@ -108,6 +113,71 @@ const { data: rommStats } = useFetch<{
 
         <v-divider :class="{ desktop: lgAndUp, 'my-16': !lgAndUp }" />
 
+        <v-row id="turtletrips-container" no-gutters class="pl-1">
+          <v-col cols="12">
+            <div class="preview-img-container mb-8">
+              <a
+                href="https://github.com/zurdi15/turtletrips"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="preview-img-link"
+              >
+                <v-img
+                  src="/personal_projects/turtletrips/preview.webp"
+                  class="preview-img"
+                />
+              </a>
+            </div>
+            <p
+              class="project-title mx-3 font-weight-thin"
+              :class="{ 'text-h4': lgAndUp, 'text-h5': !lgAndUp }"
+              data-aos="fade-up"
+            >
+              <a
+                href="https://github.com/zurdi15/turtletrips"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="preview-img-link"
+              >
+                TurtleTrips
+              </a>
+            </p>
+            <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
+              <i18n-t keypath="portfolio.turtletrips.description1">
+                <template #turtletrips
+                  ><span class="accent">TurtleTrips</span></template
+                >
+                <template #tripplanner
+                  ><span class="accent">{{
+                    $t("portfolio.turtletrips.tripplanner")
+                  }}</span></template
+                >
+                <template #expenses
+                  ><span class="accent">{{
+                    $t("portfolio.turtletrips.expenses")
+                  }}</span></template
+                > </i18n-t
+              >. <br /><br />
+            </p>
+            <p class="quote text-grey px-3" data-aos="fade-up">
+              <i18n-t keypath="portfolio.turtletrips.description2">
+                <template #frontend
+                  ><span class="accent">Vue 3, PrimeVue</span></template
+                >
+                <template #backend
+                  ><span class="accent">FastAPI</span></template
+                >
+                <template #pwa><span class="accent">PWA</span></template>
+                <template #ghcr
+                  ><span class="accent">GHCR</span></template
+                > </i18n-t
+              >.
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-divider :class="{ desktop: lgAndUp, 'my-16': !lgAndUp }" />
+
         <v-row id="homelab-container" no-gutters class="pl-1">
           <v-col cols="12">
             <div class="preview-img-container mb-8">
@@ -125,13 +195,9 @@ const { data: rommStats } = useFetch<{
             </p>
             <p class="quote text-grey mt-4 px-3" data-aos="fade-up">
               <i18n-t keypath="portfolio.homelab.description1">
-                <template #docker><span class="accent">Docker</span></template>
-                <template #dockercompose
-                  ><span class="accent">docker-compose</span></template
-                >
-                <template #gitops><span class="accent">GitOps</span></template>
-                <template #portainer
-                  ><span class="accent">Portainer</span></template
+                <template #k3s><span class="accent">k3s</span></template>
+                <template #argocd
+                  ><span class="accent">Argo CD</span></template
                 >
                 <template #ansible
                   ><span class="accent">Ansible</span></template
@@ -149,9 +215,9 @@ const { data: rommStats } = useFetch<{
             </p>
             <p class="quote text-grey mt-4 pr-3 pl-12" data-aos="fade-up">
               <i18n-t keypath="portfolio.homelab.description3">
-                <template #orchestration
+                <template #delivery
                   ><span class="accent">{{
-                    $t("portfolio.homelab.orchestration")
+                    $t("portfolio.homelab.delivery")
                   }}</span></template
                 > </i18n-t
               >.

@@ -28,8 +28,8 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
           class="font-weight-thin mb-10"
           :class="{ desktop: lgAndUp, mobile: !lgAndUp }"
         >
-          {{ $t("resume.education") }} &
-          <span class="accent">{{ $t("resume.experience") }}</span>
+          {{ $t("resume.experience") }} &
+          <span class="accent">{{ $t("resume.education") }}</span>
         </h2>
         <v-row no-gutters class="pl-5">
           <v-col

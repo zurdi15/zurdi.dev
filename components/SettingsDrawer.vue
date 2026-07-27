@@ -36,7 +36,16 @@ const sections = [
   },
 ];
 const { locales, locale, setLocale } = useI18n();
+const route = useRoute();
 const backgrounds = ["geometric", "rounded"];
+
+// The URL is the source of truth for language. `prefix_except_default` only
+// prefixes non-default locales, so a prefixed path is an explicit request that
+// must outrank whatever the visitor picked last time.
+const routeHasLocalePrefix = () =>
+  locales.value.some(
+    (l) => route.path === `/${l.code}` || route.path.startsWith(`/${l.code}/`)
+  );
 const currentBackground = ref("");
 const currentSection = ref("");
 
@@ -83,9 +92,15 @@ function changeBackground(newBackground: "geometric" | "rounded") {
 }
 
 onMounted(() => {
-  const currentLocale = localStorage.getItem("locale") || "en";
-  localStorage.setItem("locale", currentLocale);
-  setLocale(currentLocale as "en" | "es");
+  // Only the unprefixed route falls back to the remembered choice; forcing it
+  // unconditionally made /es render Spanish on the server and flip to English
+  // on hydration.
+  const stored = localStorage.getItem("locale");
+  if (!routeHasLocalePrefix() && stored && stored !== locale.value) {
+    setLocale(stored as "en" | "es");
+  } else {
+    localStorage.setItem("locale", locale.value);
+  }
 
   currentBackground.value = localStorage.getItem("background") || "geometric";
   changeBackground(currentBackground.value as "geometric" | "rounded");
