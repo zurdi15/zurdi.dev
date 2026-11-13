@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
+import { getRommStats } from "~/utils/romm-stats";
 
 const { lgAndUp } = useDisplay();
 
-const { data: rommStats } = useFetch<{
-  stars: string;
-  downloads: string;
-  users: string;
-}>("/api/romm-stats", {
-  default: () => ({ stars: "...", downloads: "...", users: "..." }),
+const rommStats = ref({ stars: "...", downloads: "...", users: "..." });
+onMounted(async () => {
+  rommStats.value = await getRommStats();
 });
 </script>
 <template>
