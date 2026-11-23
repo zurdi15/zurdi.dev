@@ -53,12 +53,15 @@ export default () => ({
     title: "Currículum",
     education: "Educación",
     experience: "Experiencia",
-    consulting: "Consultoría",
-    internal: "Interno",
+    groups: {
+      tmc: "TMC",
+      busuu: "Busuu",
+      alten: "Alten",
+      education: "Educación",
+    },
     items: [
       {
-        type: "consulting",
-        title: "Consultor Tecnológico en TMC España",
+        group: "tmc",
         date: "13 Nov 2026 - Presente",
         description: "DevOps/Sysadmin en ENGIE",
         stack: [
@@ -69,7 +72,7 @@ export default () => ({
         ],
       },
       {
-        type: "internal",
+        group: "busuu",
         date: "Ago 2025 - Jul 2026",
         description: "Platform Engineer (CloudOps) en Busuu",
         stack: [
@@ -82,7 +85,7 @@ export default () => ({
         ],
       },
       {
-        type: "internal",
+        group: "tmc",
         date: "Feb 2022 - Ago 2025",
         description: "Senior MLOps Engineer en Inditex",
         stack: [
@@ -93,7 +96,7 @@ export default () => ({
         ],
       },
       {
-        type: "internal",
+        group: "tmc",
         date: "Ene 2021 - Feb 2022",
         description: "Senior Data Engineer en Atresmedia",
         stack: [
@@ -103,8 +106,7 @@ export default () => ({
         ],
       },
       {
-        type: "consulting",
-        title: "Consultor Tecnológico en TMC España",
+        group: "tmc",
         date: "Dic 2019 - Ene 2021",
         description: "Data Engineer en Orange España",
         stack: [
@@ -113,8 +115,7 @@ export default () => ({
         ],
       },
       {
-        type: "consulting",
-        title: "Consultor Tecnológico en Alten",
+        group: "alten",
         date: "May 2017 - Dic 2019",
         description: "Data Engineer en Unidad Editorial",
         stack: [
@@ -123,7 +124,7 @@ export default () => ({
         ],
       },
       {
-        type: "education",
+        group: "education",
         title: "Universidad de Alcalá de Henares, Madrid, España",
         date: "2011",
         description: "Grado en Ingeniería Informática",

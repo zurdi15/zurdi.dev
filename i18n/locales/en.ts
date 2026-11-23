@@ -53,12 +53,15 @@ export default () => ({
     title: "Resume",
     education: "Education",
     experience: "Experience",
-    consulting: "Consulting",
-    internal: "Internal",
+    groups: {
+      tmc: "TMC",
+      busuu: "Busuu",
+      alten: "Alten",
+      education: "Education",
+    },
     items: [
       {
-        type: "consulting",
-        title: "Technology Consultant at TMC Spain",
+        group: "tmc",
         date: "13 Nov 2026 - Present",
         description: "DevOps/Sysadmin at ENGIE",
         stack: [
@@ -69,7 +72,7 @@ export default () => ({
         ],
       },
       {
-        type: "internal",
+        group: "busuu",
         date: "Aug 2025 - Jul 2026",
         description: "Platform Engineer (CloudOps) at Busuu",
         stack: [
@@ -82,7 +85,7 @@ export default () => ({
         ],
       },
       {
-        type: "internal",
+        group: "tmc",
         date: "Feb 2022 - Aug 2025",
         description: "Senior MLOps Engineer at Inditex",
         stack: [
@@ -93,7 +96,7 @@ export default () => ({
         ],
       },
       {
-        type: "internal",
+        group: "tmc",
         date: "Jan 2021 - Feb 2022",
         description: "Senior Data Engineer at Atresmedia",
         stack: [
@@ -103,8 +106,7 @@ export default () => ({
         ],
       },
       {
-        type: "consulting",
-        title: "Technology Consultant at TMC Spain",
+        group: "tmc",
         date: "Dec 2019 - Jan 2021",
         description: "Data Engineer at Orange España",
         stack: [
@@ -113,8 +115,7 @@ export default () => ({
         ],
       },
       {
-        type: "consulting",
-        title: "Technology Consultant at Alten",
+        group: "alten",
         date: "May 2017 - Dec 2019",
         description: "Data Engineer at Unidad Editorial",
         stack: [
@@ -123,7 +124,7 @@ export default () => ({
         ],
       },
       {
-        type: "education",
+        group: "education",
         title: "University of Alcalá de Henares, Madrid, Spain",
         date: "2011",
         description: "Bachelor's Degree in Computer Engineering",

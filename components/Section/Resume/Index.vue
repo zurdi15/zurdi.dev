@@ -5,15 +5,41 @@ import { useI18n } from "vue-i18n";
 const { lgAndUp } = useDisplay();
 const { tm } = useI18n();
 const skillIcons = useSkillIcons();
-const resume = computed(() =>
-  (tm("resume.items") as any[]).map((item) => ({
-    title: item.title,
-    type: item.type,
-    date: item.date,
-    description: item.description,
-    stack: (item.stack ?? []) as { name: string; icon?: string; image?: string }[],
-  }))
-);
+const resume = computed(() => {
+  const groups: {
+    key: string;
+    items: {
+      title?: string;
+      group: string;
+      date: string;
+      description: string;
+      stack: { name: string; icon?: string; image?: string }[];
+    }[];
+  }[] = [];
+
+  for (const item of tm("resume.items") as any[]) {
+    const role = {
+      title: item.title,
+      group: item.group,
+      date: item.date,
+      description: item.description,
+      stack: (item.stack ?? []) as {
+        name: string;
+        icon?: string;
+        image?: string;
+      }[],
+    };
+    const currentGroup = groups.at(-1);
+
+    if (currentGroup?.key === role.group) {
+      currentGroup.items.push(role);
+    } else {
+      groups.push({ key: role.group, items: [role] });
+    }
+  }
+
+  return groups;
+});
 
 // Vite inlines SVGs under 4kB as data URIs that keep their single quotes, and an
 // unquoted url() rejects those, taking the whole declaration down with it.
@@ -34,43 +60,52 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
         </h2>
         <v-row no-gutters class="pl-5">
           <v-col
-            v-for="(item, index) in resume"
-            :key="index"
+            v-for="(group, groupIndex) in resume"
+            :key="groupIndex"
             cols="12"
-            :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-            class="date-container"
+            :data-aos="groupIndex % 2 === 0 ? 'fade-right' : 'fade-left'"
+            class="role-group-container"
           >
-            <div class="role-card" :class="`role-card-${item.type}`">
-              <div v-if="item.type !== 'internal'" class="role-header">
-                <span class="role-type">{{ $t(`resume.${item.type}`) }}</span>
-                <span v-if="item.title" class="role-company">{{
-                  item.title
-                }}</span>
+            <div class="role-group">
+              <div class="role-group-header">
+                {{ $t(`resume.groups.${group.key}`) }}
               </div>
-              <span class="date">{{ item.date }}</span>
-              <p class="date-description mt-4">
-                {{ item.description }}
-              </p>
-              <div class="d-flex flex-wrap ga-1">
-                <v-chip
-                  v-for="tech in item.stack"
-                  :key="tech.name"
-                  size="small"
-                  class="mt-1"
-                  label
+              <div
+                v-for="(item, index) in group.items"
+                :key="index"
+                class="date-container"
+              >
+                <span class="date">{{ item.date }}</span>
+                <p class="date-description mt-4">
+                  {{ item.description }}
+                </p>
+                <p
+                  v-if="item.title && group.key === 'education'"
+                  class="role-company"
                 >
-                  <span
-                    v-if="tech.image"
-                    class="tech-mask mr-2"
-                    :style="maskStyle(tech.image)"
-                  />
-                  <v-icon
-                    v-else
-                    size="20"
-                    class="mr-2 accent"
-                    >{{ tech.icon }}</v-icon
-                  >{{ tech.name }}
-                </v-chip>
+                  {{ item.title }}
+                </p>
+                <div class="d-flex flex-wrap ga-1">
+                  <v-chip
+                    v-for="tech in item.stack"
+                    :key="tech.name"
+                    size="small"
+                    class="mt-1"
+                    label
+                  >
+                    <span
+                      v-if="tech.image"
+                      class="tech-mask mr-2"
+                      :style="maskStyle(tech.image)"
+                    />
+                    <v-icon
+                      v-else
+                      size="20"
+                      class="mr-2 accent"
+                      >{{ tech.icon }}</v-icon
+                    >{{ tech.name }}
+                  </v-chip>
+                </div>
               </div>
             </div>
           </v-col>
@@ -83,6 +118,22 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
 .date-container {
   padding-left: 74px !important;
   padding-bottom: 68px !important;
+}
+.role-group-container {
+  padding-bottom: 28px !important;
+}
+.role-group {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 20px 22px 0;
+  background: rgba(0, 0, 0, 0.08);
+}
+.role-group-header {
+  color: var(--v-theme-primary);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
 }
 .date-container::before {
   background: #656565;
@@ -117,39 +168,10 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   color: var(--v-theme-gray1);
   transition: color 0.5s ease;
 }
-.role-card {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-left: 3px solid var(--v-theme-gray1);
-  border-radius: 16px;
-  padding: 18px 22px;
-  background: rgba(0, 0, 0, 0.12);
-}
-.role-card-consulting {
-  border-color: var(--v-theme-primary);
-}
-.role-card-education {
-  border-color: var(--v-theme-gray1);
-}
-.role-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px 14px;
-  margin-bottom: 12px;
-}
-.role-type {
-  color: var(--v-theme-primary);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.role-card-education .role-type {
-  color: var(--v-theme-gray1);
-}
 .role-company {
   color: var(--v-theme-gray1);
   font-size: 15px;
+  margin: 0 0 12px;
 }
 .date-description {
   font-size: 20px;
