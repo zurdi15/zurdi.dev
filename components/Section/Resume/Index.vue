@@ -8,6 +8,7 @@ const skillIcons = useSkillIcons();
 const resume = computed(() =>
   (tm("resume.items") as any[]).map((item) => ({
     title: item.title,
+    type: item.type,
     date: item.date,
     description: item.description,
     stack: (item.stack ?? []) as { name: string; icon?: string; image?: string }[],
@@ -39,34 +40,39 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
             :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
             class="date-container"
           >
-            <span class="date">{{ item.date }}</span>
-            <p class="date-description mt-8">
-              {{ item.description }}
-            </p>
-            <div class="d-flex flex-wrap ga-1">
-              <v-chip
-                v-for="tech in item.stack"
-                :key="tech.name"
-                size="small"
-                class="mt-1"
-                label
-              >
-                <span
-                  v-if="tech.image"
-                  class="tech-mask mr-2"
-                  :style="maskStyle(tech.image)"
-                />
-                <v-icon v-else size="20" class="mr-2 accent">{{ tech.icon }}</v-icon
-                >{{ tech.name }}
-              </v-chip>
+            <div class="role-card" :class="`role-card-${item.type}`">
+              <div class="role-header">
+                <span class="role-type">{{ $t(`resume.${item.type}`) }}</span>
+                <span v-if="item.title" class="role-company">{{
+                  item.title
+                }}</span>
+              </div>
+              <span class="date">{{ item.date }}</span>
+              <p class="date-description mt-4">
+                {{ item.description }}
+              </p>
+              <div class="d-flex flex-wrap ga-1">
+                <v-chip
+                  v-for="tech in item.stack"
+                  :key="tech.name"
+                  size="small"
+                  class="mt-1"
+                  label
+                >
+                  <span
+                    v-if="tech.image"
+                    class="tech-mask mr-2"
+                    :style="maskStyle(tech.image)"
+                  />
+                  <v-icon
+                    v-else
+                    size="20"
+                    class="mr-2 accent"
+                    >{{ tech.icon }}</v-icon
+                  >{{ tech.name }}
+                </v-chip>
+              </div>
             </div>
-            <p
-              v-if="item.title"
-              class="date-title glass transparent text-white my-16 py-2 px-4"
-              :class="{ 'mb-0': index === resume.length - 1 }"
-            >
-              {{ item.title }}
-            </p>
           </v-col>
         </v-row>
       </div>
@@ -103,7 +109,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   width: 1px;
   z-index: -1;
 }
-.date-container:hover > .date {
+.date-container:hover .date {
   color: var(--v-theme-primary);
   transition: color 0.5s ease;
 }
@@ -111,15 +117,40 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   color: var(--v-theme-gray1);
   transition: color 0.5s ease;
 }
-.date-title {
-  font-size: 21px;
-  max-width: 600px;
+.role-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid var(--v-theme-gray1);
+  border-radius: 16px;
+  padding: 18px 22px;
+  background: rgba(0, 0, 0, 0.12);
+}
+.role-card-consulting {
+  border-color: var(--v-theme-primary);
+}
+.role-card-education {
+  border-color: var(--v-theme-gray1);
+}
+.role-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+  margin-bottom: 12px;
+}
+.role-type {
+  color: var(--v-theme-primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.role-card-internal .role-type,
+.role-card-education .role-type {
   color: var(--v-theme-gray1);
-  border: 1px solid var(--v-theme-primary);
-  border-radius: 15px;
-  margin-left: -100px; /* Adjust this value as needed for overlap */
-  position: relative;
-  z-index: 1;
+}
+.role-company {
+  color: var(--v-theme-gray1);
+  font-size: 15px;
 }
 .date-description {
   font-size: 20px;

@@ -53,8 +53,11 @@ export default () => ({
     title: "Resume",
     education: "Education",
     experience: "Experience",
+    consulting: "Consulting",
+    internal: "Internal",
     items: [
       {
+        type: "consulting",
         title: "Technology Consultant at TMC Spain",
         date: "13 Nov 2026 - Present",
         description: "DevOps/Sysadmin at ENGIE",
@@ -66,6 +69,7 @@ export default () => ({
         ],
       },
       {
+        type: "internal",
         date: "Aug 2025 - Jul 2026",
         description: "Platform Engineer (CloudOps) at Busuu",
         stack: [
@@ -78,6 +82,7 @@ export default () => ({
         ],
       },
       {
+        type: "internal",
         date: "Feb 2022 - Aug 2025",
         description: "Senior MLOps Engineer at Inditex",
         stack: [
@@ -88,6 +93,7 @@ export default () => ({
         ],
       },
       {
+        type: "internal",
         date: "Jan 2021 - Feb 2022",
         description: "Senior Data Engineer at Atresmedia",
         stack: [
@@ -97,6 +103,7 @@ export default () => ({
         ],
       },
       {
+        type: "consulting",
         title: "Technology Consultant at TMC Spain",
         date: "Dec 2019 - Jan 2021",
         description: "Data Engineer at Orange España",
@@ -106,6 +113,7 @@ export default () => ({
         ],
       },
       {
+        type: "consulting",
         title: "Technology Consultant at Alten",
         date: "May 2017 - Dec 2019",
         description: "Data Engineer at Unidad Editorial",
@@ -115,6 +123,7 @@ export default () => ({
         ],
       },
       {
+        type: "education",
         title: "University of Alcalá de Henares, Madrid, Spain",
         date: "2011",
         description: "Bachelor's Degree in Computer Engineering",

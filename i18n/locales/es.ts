@@ -53,8 +53,11 @@ export default () => ({
     title: "Currículum",
     education: "Educación",
     experience: "Experiencia",
+    consulting: "Consultoría",
+    internal: "Interno",
     items: [
       {
+        type: "consulting",
         title: "Consultor Tecnológico en TMC España",
         date: "13 Nov 2026 - Presente",
         description: "DevOps/Sysadmin en ENGIE",
@@ -66,6 +69,7 @@ export default () => ({
         ],
       },
       {
+        type: "internal",
         date: "Ago 2025 - Jul 2026",
         description: "Platform Engineer (CloudOps) en Busuu",
         stack: [
@@ -78,6 +82,7 @@ export default () => ({
         ],
       },
       {
+        type: "internal",
         date: "Feb 2022 - Ago 2025",
         description: "Senior MLOps Engineer en Inditex",
         stack: [
@@ -88,6 +93,7 @@ export default () => ({
         ],
       },
       {
+        type: "internal",
         date: "Ene 2021 - Feb 2022",
         description: "Senior Data Engineer en Atresmedia",
         stack: [
@@ -97,6 +103,7 @@ export default () => ({
         ],
       },
       {
+        type: "consulting",
         title: "Consultor Tecnológico en TMC España",
         date: "Dic 2019 - Ene 2021",
         description: "Data Engineer en Orange España",
@@ -106,6 +113,7 @@ export default () => ({
         ],
       },
       {
+        type: "consulting",
         title: "Consultor Tecnológico en Alten",
         date: "May 2017 - Dic 2019",
         description: "Data Engineer en Unidad Editorial",
@@ -115,6 +123,7 @@ export default () => ({
         ],
       },
       {
+        type: "education",
         title: "Universidad de Alcalá de Henares, Madrid, España",
         date: "2011",
         description: "Grado en Ingeniería Informática",
