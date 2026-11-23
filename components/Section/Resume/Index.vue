@@ -138,7 +138,6 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
 .role-group-container {
   position: relative;
   padding-bottom: 28px !important;
-  z-index: 4;
 }
 .role-group {
   border-radius: 18px;
