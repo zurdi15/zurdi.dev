@@ -55,6 +55,18 @@ export default () => ({
     experience: "Experiencia",
     items: [
       {
+        title: "DevOps / Sysadmin en TMC para ENGIE",
+        date: "13 Nov 2026 - Presente",
+        description:
+          "Infraestructura on-premise y cloud en Azure, con servidores Linux y Windows",
+        stack: [
+          { name: "On-premise", icon: "mdi-server-network" },
+          { name: "Azure", icon: "mdi-microsoft-azure" },
+          { name: "Linux", icon: "mdi-linux" },
+          { name: "Windows", icon: "mdi-microsoft-windows" },
+        ],
+      },
+      {
         date: "Ago 2025 - Jul 2026",
         description: "Platform Engineer (CloudOps) en Busuu",
         stack: [
