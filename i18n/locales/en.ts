@@ -55,10 +55,9 @@ export default () => ({
     experience: "Experience",
     items: [
       {
-        title: "DevOps / Sysadmin at TMC for ENGIE",
+        title: "Technology Consultant at TMC Spain",
         date: "13 Nov 2026 - Present",
-        description:
-          "On-premise and Azure cloud infrastructure across Linux and Windows servers",
+        description: "DevOps/Sysadmin at ENGIE",
         stack: [
           { name: "On-premise", icon: "mdi-server-network" },
           { name: "Azure", icon: "mdi-microsoft-azure" },

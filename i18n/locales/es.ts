@@ -55,10 +55,9 @@ export default () => ({
     experience: "Experiencia",
     items: [
       {
-        title: "DevOps / Sysadmin en TMC para ENGIE",
+        title: "Consultor Tecnológico en TMC España",
         date: "13 Nov 2026 - Presente",
-        description:
-          "Infraestructura on-premise y cloud en Azure, con servidores Linux y Windows",
+        description: "DevOps/Sysadmin en ENGIE",
         stack: [
           { name: "On-premise", icon: "mdi-server-network" },
           { name: "Azure", icon: "mdi-microsoft-azure" },
