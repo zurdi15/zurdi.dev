@@ -116,6 +116,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
 </template>
 <style scoped>
 .date-container {
+  position: relative;
   padding-left: 74px !important;
   padding-bottom: 68px !important;
 }
@@ -126,6 +127,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
   padding: 20px 22px 0;
+  margin-left: -18px;
   background: rgba(0, 0, 0, 0.08);
 }
 .role-group-header {
