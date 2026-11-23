@@ -141,10 +141,10 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   z-index: 1;
 }
 .role-group {
-  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
   padding: 20px 22px 0 50px;
-  background: rgba(20, 20, 20, 0.2);
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.25);
 }
 .role-group-header {
   color: var(--v-theme-primary);
@@ -158,7 +158,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   border-radius: 50%;
   content: "";
   height: 12px;
-  left: -28px;
+  left: -35px;
   position: absolute;
   top: 7px;
   transition: 0.3s;
