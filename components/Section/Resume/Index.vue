@@ -58,7 +58,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
           {{ $t("resume.experience") }} &
           <span class="accent">{{ $t("resume.education") }}</span>
         </h2>
-        <v-row no-gutters class="pl-5">
+        <v-row no-gutters class="resume-timeline">
           <v-col
             v-for="(group, groupIndex) in resume"
             :key="groupIndex"
@@ -115,20 +115,35 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   </section>
 </template>
 <style scoped>
+.resume-timeline {
+  position: relative;
+  padding-left: 0 !important;
+}
+.resume-timeline::before {
+  background: #333;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 28px;
+  left: 22px;
+  width: 1px;
+  z-index: 0;
+}
 .date-container {
   position: relative;
-  padding-left: 74px !important;
+  padding-left: 0 !important;
   padding-bottom: 68px !important;
 }
 .role-group-container {
+  position: relative;
   padding-bottom: 28px !important;
+  z-index: 1;
 }
 .role-group {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
-  padding: 20px 22px 0;
-  margin-left: -18px;
-  background: rgba(0, 0, 0, 0.08);
+  padding: 20px 22px 0 50px;
+  background: rgba(20, 20, 20, 0.92);
 }
 .role-group-header {
   color: var(--v-theme-primary);
@@ -142,25 +157,16 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   border-radius: 50%;
   content: "";
   height: 12px;
-  left: -6px;
+  left: -28px;
   position: absolute;
   top: 7px;
   transition: 0.3s;
   width: 12px;
+  z-index: 2;
   transition: background 0.5s ease;
 }
 .date-container:hover::before {
   background: var(--v-theme-primary);
-}
-.date-container::after {
-  background: #333;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 10px;
-  width: 1px;
-  z-index: -1;
 }
 .date-container:hover .date {
   color: var(--v-theme-primary);
