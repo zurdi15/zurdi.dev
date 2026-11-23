@@ -41,7 +41,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
             class="date-container"
           >
             <div class="role-card" :class="`role-card-${item.type}`">
-              <div class="role-header">
+              <div v-if="item.type !== 'internal'" class="role-header">
                 <span class="role-type">{{ $t(`resume.${item.type}`) }}</span>
                 <span v-if="item.title" class="role-company">{{
                   item.title
@@ -144,7 +144,6 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.role-card-internal .role-type,
 .role-card-education .role-type {
   color: var(--v-theme-gray1);
 }
