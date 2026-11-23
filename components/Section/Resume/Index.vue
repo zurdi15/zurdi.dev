@@ -127,7 +127,8 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   bottom: 28px;
   left: 22px;
   width: 1px;
-  z-index: 0;
+  pointer-events: none;
+  z-index: 3;
 }
 .date-container {
   position: relative;
@@ -143,7 +144,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
   padding: 20px 22px 0 50px;
-  background: rgba(20, 20, 20, 0.92);
+  background: rgba(20, 20, 20, 0.2);
 }
 .role-group-header {
   color: var(--v-theme-primary);
@@ -162,7 +163,7 @@ const maskStyle = (image: string) => ({ "--mask": `url("${skillIcons[image]}")` 
   top: 7px;
   transition: 0.3s;
   width: 12px;
-  z-index: 2;
+  z-index: 4;
   transition: background 0.5s ease;
 }
 .date-container:hover::before {
